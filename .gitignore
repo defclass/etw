@@ -1,0 +1,12 @@
+GRTAGS
+GTAGS
+GPATH
+testdrive/protected/config
+testdrive/assets
+testdrive/protected/runtime
+testdrive/assets
+demos/blog/protected/config/
+demos/blog/protected/runtime/
+demos/blog/assets
+/nbproject/private/
+nbproject
