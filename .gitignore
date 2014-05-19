@@ -10,3 +10,4 @@ demos/blog/protected/runtime/
 demos/blog/assets
 /nbproject/private/
 nbproject
+app/protected/runtime/
