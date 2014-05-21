@@ -10,8 +10,8 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('headline')); ?>:</b>
 	<?php echo CHtml::encode($data->headline); ?>
 	<br />
-	<b><?php echo CHtml::encode($data->getAttributeLabel('author')); ?>:</b>
-	<?php echo CHtml::encode($data->author); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('author_id')); ?>:</b>
+	<?php echo CHtml::encode($data->author_id); ?>
 	<br />
 	<b><?php echo CHtml::encode($data->getAttributeLabel('date')); ?>:</b>
 	<?php echo CHtml::encode($data->date); ?>

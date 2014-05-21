@@ -22,38 +22,38 @@ class CategoryController extends Controller
 	}
 
     /**
-    * @return array
-    * easyUi 跟dwz 是互斥的两个css 只能二选一！！
-    */
+     * @return array
+     * easyUi 跟dwz 是互斥的两个css 只能二选一！！
+     */
     public function behaviors(){
         return array(
-          //'dwz'=>array('class'=>'dwz.behaviors.DwzControllerBehavior'),
+            //'dwz'=>array('class'=>'dwz.behaviors.DwzControllerBehavior'),
         );
     }
 
 
 /**
-	 * 制定访问控制规则
-	 * 使用这个方法的是'accessControl'过滤器.
-	 * @return array 访问控制规则
-	 */
+ * 制定访问控制规则
+ * 使用这个方法的是'accessControl'过滤器.
+ * @return array 访问控制规则
+ */
 	public function accessRules()
 	{
 		return array(
 			array('allow',  // 用户所有用户执行的操作
-				'actions'=>array('index','view'),
-				'users'=>array('*'),
+            'actions'=>array('index','view'),
+            'users'=>array('*'),
 			),
 			array('allow', // 允许所有认证的用户执行的操作
-				'actions'=>array('create','update',$this->action->id),
-				'users'=>array('@'),
+            'actions'=>array('create','update',$this->action->id),
+            'users'=>array('@'),
 			),
 			array('allow', // 允许admin这个用户执行的操作
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+            'actions'=>array('admin','delete'),
+            'users'=>array('admin'),
 			),
 			array('deny',  // 其他操作拒绝所有用户访问
-				'users'=>array('*'),
+            'users'=>array('*'),
 			),
 		);
 	}
@@ -79,14 +79,19 @@ class CategoryController extends Controller
 		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['Category']))
-		{
-			$model->attributes=$_POST['Category'];
-			if($model->save()){
-                DwzHelper::success('sucess！');
-            }else{
-                DwzHelper::error($model);
+            {
+                /* 新记录则添加ID */
+                if($model->isNewRecord)
+                    $_POST['Category']['cid'] = Common::getMaxID();
+                
+                $model->attributes=$_POST['Category'];
+                //var_dump($model->attributes);exit;
+                if($model->save()){
+                    DwzHelper::success('sucess！');
+                }else{
+                    DwzHelper::error($model);
+                }
             }
-		}
 
 		$this->render('create',array(
 			'model'=>$model,
@@ -105,13 +110,13 @@ class CategoryController extends Controller
 		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['Category']))
-		{
-			$model->attributes=$_POST['Category'];
-			if($model->save())
-                DwzHelper::success('更新完成！','mArticle');//要自动刷新就把后面的mArticle改成你的navTablId(就是打开navTab的链接中的rel)不用刷新可直接调用$this->dwz();即可
-			else
-                DwzHelper::error($model);
-		}
+            {
+                $model->attributes=$_POST['Category'];
+                if($model->save())
+                    DwzHelper::success('更新完成！','mArticle');//要自动刷新就把后面的mArticle改成你的navTablId(就是打开navTab的链接中的rel)不用刷新可直接调用$this->dwz();即可
+                else
+                    DwzHelper::error($model);
+            }
 
 		$this->render('update',array(
 			'model'=>$model,
@@ -126,12 +131,12 @@ class CategoryController extends Controller
 	{
         $request = Yii::app()->request ;
 		if($request->getIsPostRequest())
-		{
-			// 删除操作只允许POST请求操作
-            if($this->loadModel()->delete()){
-                DwzHelper::success('deleteSuccess！');
+            {
+                // 删除操作只允许POST请求操作
+                if($this->loadModel()->delete()){
+                    DwzHelper::success('deleteSuccess！');
+                }
             }
-		}
 		else
 			throw new CHttpException(400,'错误的请求，请不要重复这一请求');
 	}
@@ -168,12 +173,12 @@ class CategoryController extends Controller
 	public function loadModel()
 	{
 		if($this->_model===null)
-		{
-			if(isset($_GET['id']))
-				$this->_model=Category::model()->findbyPk($_GET['id']);
-			if($this->_model===null)
-				throw new CHttpException(404,'请求的页面不存在');
-		}
+            {
+                if(isset($_GET['id']))
+                    $this->_model=Category::model()->findbyPk($_GET['id']);
+                if($this->_model===null)
+                    throw new CHttpException(404,'请求的页面不存在');
+            }
 		return $this->_model;
 	}
 
@@ -184,9 +189,9 @@ class CategoryController extends Controller
 	protected function performAjaxValidation($model)
 	{
 		if(isset($_POST['ajax']) && $_POST['ajax']==='category-form')
-		{
-			echo CActiveForm::validate($model);
-			Yii::app()->end();
-		}
+            {
+                echo CActiveForm::validate($model);
+                Yii::app()->end();
+            }
 	}
 }

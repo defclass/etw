@@ -13,7 +13,7 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'category_id'); ?>
-		<?php echo $form->textField($model,'category_id'); ?>
+		<?php echo $form->textField($model,'category_id',array('size'=>20,'maxlength'=>20)); ?>
 	</div>
 
 	<div class="row">
@@ -22,8 +22,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'author'); ?>
-		<?php echo $form->textField($model,'author',array('size'=>32,'maxlength'=>32)); ?>
+		<?php echo $form->label($model,'author_id'); ?>
+		<?php echo $form->textField($model,'author_id',array('size'=>16,'maxlength'=>16)); ?>
 	</div>
 
 	<div class="row">
@@ -53,7 +53,7 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'status'); ?>
-		<?php echo $form->textField($model,'status',array('size'=>5,'maxlength'=>5)); ?>
+		<?php echo $form->textField($model,'status'); ?>
 	</div>
 
 	<div class="row">

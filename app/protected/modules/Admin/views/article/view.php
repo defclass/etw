@@ -16,7 +16,7 @@ $this->breadcrumbs=array(
 				'id',
 		'category_id',
 		'headline',
-		'author',
+		'author_id',
 		'date',
 		'isstatic',
 		'content',

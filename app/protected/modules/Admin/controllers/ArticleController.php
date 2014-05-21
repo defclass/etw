@@ -80,7 +80,12 @@ class ArticleController extends Controller
 
 		if(isset($_POST['Article']))
 		{
-			$model->attributes=$_POST['Article'];
+            /* 新记录则添加ID */
+            if($model->isNewRecord){
+                $_POST['Article']['id'] = Common::getMaxID();
+                $_POST['Article']['author_id'] = Yii::app()->user->aid;
+            }
+            $model->attributes=$_POST['Article'];
 			if($model->save()){
                 DwzHelper::success('sucess！');
             }else{

@@ -1,13 +1,13 @@
 <?php
 
 /**
- * This is the model class for table "br_product".
+ * This is the model class for table "{{product}}".
  *
- * The followings are the available columns in table 'br_product':
+ * The followings are the available columns in table '{{product}}':
  * @property string $pid
- * @property string $classify
- * @property string $brand
- * @property string $manufacturer
+ * @property string $cid
+ * @property string $bid
+ * @property string $mid
  * @property string $model
  * @property string $package
  * @property string $RoHS
@@ -16,6 +16,11 @@
  * @property string $direction
  * @property string $create_time
  * @property integer $status
+ *
+ * The followings are the available model relations:
+ * @property Classify $c
+ * @property Brand $b
+ * @property Manufacturer $m
  */
 class Product extends CActiveRecord
 {
@@ -24,7 +29,7 @@ class Product extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'br_product';
+		return '{{product}}';
 	}
 
 	/**
@@ -37,12 +42,12 @@ class Product extends CActiveRecord
 		return array(
 			array('direction', 'required'),
 			array('quantity, status', 'numerical', 'integerOnly'=>true),
-			array('pid, classify, brand, manufacturer', 'length', 'max'=>16),
+			array('pid, cid, bid, mid', 'length', 'max'=>16),
 			array('model, package, RoHS, datecode, direction', 'length', 'max'=>64),
 			array('create_time', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('pid, classify, brand, manufacturer, model, package, RoHS, datecode, quantity, direction, create_time, status', 'safe', 'on'=>'search'),
+			array('pid, cid, bid, mid, model, package, RoHS, datecode, quantity, direction, create_time, status', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -54,6 +59,9 @@ class Product extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'c' => array(self::BELONGS_TO, 'Classify', 'cid'),
+			'b' => array(self::BELONGS_TO, 'Brand', 'bid'),
+			'm' => array(self::BELONGS_TO, 'Manufacturer', 'mid'),
 		);
 	}
 
@@ -64,9 +72,9 @@ class Product extends CActiveRecord
 	{
 		return array(
 			'pid' => '产品ID',
-			'classify' => '产品分类',
-			'brand' => '产品品牌',
-			'manufacturer' => '厂商',
+			'cid' => '产品分类',
+			'bid' => '产品品牌',
+			'mid' => '厂商',
 			'model' => '型号',
 			'package' => '封装',
 			'RoHS' => 'RoHS',
@@ -97,9 +105,9 @@ class Product extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('pid',$this->pid,true);
-		$criteria->compare('classify',$this->classify,true);
-		$criteria->compare('brand',$this->brand,true);
-		$criteria->compare('manufacturer',$this->manufacturer,true);
+		$criteria->compare('cid',$this->cid,true);
+		$criteria->compare('bid',$this->bid,true);
+		$criteria->compare('mid',$this->mid,true);
 		$criteria->compare('model',$this->model,true);
 		$criteria->compare('package',$this->package,true);
 		$criteria->compare('RoHS',$this->RoHS,true);

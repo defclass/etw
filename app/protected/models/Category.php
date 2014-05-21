@@ -27,7 +27,7 @@ class Category extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('cid', 'required'),
+			/* array('cid', 'required'), */
 			array('cid, fid', 'numerical', 'integerOnly'=>true),
 			array('name', 'length', 'max'=>30),
 			array('issingle', 'length', 'max'=>16),
@@ -54,9 +54,9 @@ class Category extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'cid' => 'Cid',
-			'name' => 'Name',
-			'fid' => 'Fid',
+			'cid' => '文章分类ID',
+			'name' => '分类名',
+			'fid' => '上线分类ID',
 			'issingle' => '是否单页显示',
 		);
 	}

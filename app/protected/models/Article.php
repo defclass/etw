@@ -1,20 +1,24 @@
 <?php
 
 /**
- * This is the model class for table "br_article".
+ * This is the model class for table "{{article}}".
  *
- * The followings are the available columns in table 'br_article':
+ * The followings are the available columns in table '{{article}}':
  * @property string $id
- * @property integer $category_id
+ * @property string $category_id
  * @property string $headline
- * @property string $author
+ * @property string $author_id
  * @property string $date
  * @property integer $isstatic
  * @property string $content
  * @property string $clicount
  * @property string $keyword
- * @property string $status
+ * @property integer $status
  * @property integer $order
+ *
+ * The followings are the available model relations:
+ * @property Category $category
+ * @property Admin $author
  */
 class Article extends CActiveRecord
 {
@@ -23,7 +27,7 @@ class Article extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'br_article';
+		return '{{article}}';
 	}
 
 	/**
@@ -35,17 +39,16 @@ class Article extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('id', 'required'),
-			array('category_id, isstatic, order', 'numerical', 'integerOnly'=>true),
-			array('id', 'length', 'max'=>16),
+			array('isstatic, status, order', 'numerical', 'integerOnly'=>true),
+            array('id, author_id', 'length', 'max'=>16),
+			array('category_id', 'length', 'max'=>20),
 			array('headline', 'length', 'max'=>128),
-			array('author', 'length', 'max'=>32),
 			array('date, clicount', 'length', 'max'=>10),
 			array('keyword', 'length', 'max'=>50),
-			array('status', 'length', 'max'=>5),
 			array('content', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, category_id, headline, author, date, isstatic, content, clicount, keyword, status, order', 'safe', 'on'=>'search'),
+			array('id, category_id, headline, author_id, date, isstatic, content, clicount, keyword, status, order', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -57,6 +60,8 @@ class Article extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'category' => array(self::BELONGS_TO, 'Category', 'category_id'),
+            'author' => array(self::BELONGS_TO, 'Admin', 'author_id'),
 		);
 	}
 
@@ -69,13 +74,13 @@ class Article extends CActiveRecord
 			'id' => 'ID',
 			'category_id' => '文章分类ID',
 			'headline' => '标题',
-			'author' => 'Author',
+			'author_id' => '作者',
 			'date' => '日期',
 			'isstatic' => '是否伪静态',
 			'content' => '正文',
 			'clicount' => '点击数',
 			'keyword' => '文章关键词',
-			'status' => '文章状态',
+			'status' => '是否公开',
 			'order' => '排序',
 		);
 	}
@@ -99,15 +104,15 @@ class Article extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id,true);
-		$criteria->compare('category_id',$this->category_id);
+        $criteria->compare('category_id',$this->category_id,true);
 		$criteria->compare('headline',$this->headline,true);
-		$criteria->compare('author',$this->author,true);
+        $criteria->compare('author_id',$this->author_id,true);
 		$criteria->compare('date',$this->date,true);
 		$criteria->compare('isstatic',$this->isstatic);
 		$criteria->compare('content',$this->content,true);
 		$criteria->compare('clicount',$this->clicount,true);
 		$criteria->compare('keyword',$this->keyword,true);
-		$criteria->compare('status',$this->status,true);
+		$criteria->compare('status',$this->status);
 		$criteria->compare('order',$this->order);
 
 		return new CActiveDataProvider($this, array(
