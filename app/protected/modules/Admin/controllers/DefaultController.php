@@ -4,7 +4,7 @@ class DefaultController extends Controller
 {
 	public function actionIndex()
 	{
-		$this->layout='dwz';
+        	$this->layout='dwz';
 		$this->render('index');
 	}
 	//以下两个action用于测试，可删除

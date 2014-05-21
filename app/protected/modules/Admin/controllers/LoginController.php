@@ -46,9 +46,9 @@ class LoginController extends Controller
         if(isset($_POST['Admin'])) {
             $model->attributes = $_POST['Admin'];
             // validate user input and redirect to the previous page if valid
-            if($model->validate() && $model->login())
+            if($model->validate() && $model->login()){
                 $this->redirect(Yii::app()->user->returnUrl);
-                
+            }
         }
         // display the login form
         $this->render('login', array(
@@ -82,7 +82,6 @@ class LoginController extends Controller
                          $admin_rlt->fid = $cookie['puk'];
                          $admin_rlt->save();
                      }
-
                      /* 发送邮件 */
                     $rt = $this->Mail($model);
                     if($rt)

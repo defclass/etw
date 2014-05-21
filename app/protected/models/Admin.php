@@ -1,18 +1,19 @@
 <?php
 
 /**
- * This is the model class for table "crm_admin".
+ * This is the model class for table "br_admin".
  *
- * The followings are the available columns in table 'crm_admin':
+ * The followings are the available columns in table 'br_admin':
  * @property string $aid
  * @property string $login_name
  * @property string $login_passwd
+ * @property string $salt
  * @property string $email
  * @property integer $sex
  * @property string $admin_tel
  * @property string $real_name
  * @property integer $admin_status
- * @property integer $admin_group
+ * @property string $admin_group
  * @property string $reg_ip
  * @property string $reg_date
  * @property string $last_ip
@@ -24,13 +25,12 @@ class Admin extends CActiveRecord
     private $_lookup;
     private $_identity;
     public $orig_pass;
-    
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return '{{admin}}';
+		return 'br_admin';
 	}
 
 	/**
@@ -42,7 +42,7 @@ class Admin extends CActiveRecord
 		// will receive user inputs.
 		return array(
             /* 注册验证 */
-			array('login_name,  email', 'required','on'=>'register',),
+            array('login_name,  email', 'required','on'=>'register',),
             array(
                 'login_name,email',
                 'unique',
@@ -53,17 +53,18 @@ class Admin extends CActiveRecord
             /* 登陆验证 */
 			array('login_name, login_passwd', 'required','on'=>'login',),
 
-            /* 一般验证 */
-			array('sex, admin_status, admin_group', 'numerical', 'integerOnly'=>true),
-			array('admin_tel', 'length', 'max'=>12),
-			array('login_passwd','length','max'=>40),
-			array('login_name', 'length', 'max'=>32),
-            array('email','email'),
-            array('real_name','length','max'=>32),
-
+			array('sex, admin_status', 'numerical', 'integerOnly'=>true),
+			array('aid', 'length', 'max'=>16),
+			array('login_name, login_passwd, email, real_name', 'length', 'max'=>128),
+			array('salt', 'length', 'max'=>4),
+			array('admin_tel', 'length', 'max'=>48),
+			array('admin_group', 'length', 'max'=>1),
+			array('reg_ip, last_ip', 'length', 'max'=>15),
+			array('reg_date, last_visit', 'length', 'max'=>10),
+			array('last_location', 'length', 'max'=>60),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('aid, login_name, login_passwd, email, sex, admin_tel, real_name, admin_status, admin_group, reg_ip, reg_date, last_ip, last_visit, last_location', 'safe', 'on'=>'search'),
+			array('aid, login_name, login_passwd, salt, email, sex, admin_tel, real_name, admin_status, admin_group, reg_ip, reg_date, last_ip, last_visit, last_location', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -75,15 +76,6 @@ class Admin extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'adminGroup' => array(self::BELONGS_TO, 'AdminGroup', 'admin_group'),
-			'adminBanks' => array(self::HAS_MANY, 'AdminBank', 'aid'),
-			'adminContain' => array(self::HAS_ONE, 'AdminContain', 'aid'),
-			'adminFund' => array(self::HAS_ONE, 'AdminFund', 'aid'),
-			'adminRelation' => array(self::HAS_ONE, 'AdminRelation', 'aid'),
-			'adminRelations' => array(self::HAS_MANY, 'AdminRelation', 'fid'),
-			'enchashmentRecords' => array(self::HAS_MANY, 'EnchashmentRecord', 'aid'),
-			'orders' => array(self::HAS_MANY, 'Order', 'aid'),
-			'popularizeDetails' => array(self::HAS_MANY, 'PopularizeDetail', 'aid'),
 		);
 	}
 
@@ -93,15 +85,16 @@ class Admin extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'aid' => '用户ID',
+			'aid' => '后台用户ID',
 			'login_name' => '登录名',
 			'login_passwd' => '密码',
-            'email' => 'Email',
-			'sex' => '性别',
+			'salt' => 'Salt',
+			'email' => 'Email',
+			'sex' => '用户性别0女1男',
 			'admin_tel' => '手机',
-			'real_name' => '姓名',
-			'admin_status' => '状态',
-			'admin_group' => '用户组',
+			'real_name' => '后台用户姓名',
+			'admin_status' => '状态0冻结1可用',
+			'admin_group' => '后台用户等级',
 			'reg_ip' => '创建时的IP',
 			'reg_date' => '创建时间',
 			'last_ip' => '最后IP',
@@ -131,12 +124,13 @@ class Admin extends CActiveRecord
 		$criteria->compare('aid',$this->aid,true);
 		$criteria->compare('login_name',$this->login_name,true);
 		$criteria->compare('login_passwd',$this->login_passwd,true);
+		$criteria->compare('salt',$this->salt,true);
 		$criteria->compare('email',$this->email,true);
 		$criteria->compare('sex',$this->sex);
 		$criteria->compare('admin_tel',$this->admin_tel,true);
 		$criteria->compare('real_name',$this->real_name,true);
 		$criteria->compare('admin_status',$this->admin_status);
-		$criteria->compare('admin_group',$this->admin_group);
+		$criteria->compare('admin_group',$this->admin_group,true);
 		$criteria->compare('reg_ip',$this->reg_ip,true);
 		$criteria->compare('reg_date',$this->reg_date,true);
 		$criteria->compare('last_ip',$this->last_ip,true);
@@ -147,7 +141,6 @@ class Admin extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
-
     /** 
      * @todo 验证密码是否正确
      * @param password 
@@ -195,10 +188,6 @@ class Admin extends CActiveRecord
          * 要先产生aid再能执行下面的操作
          */
         if($this->init_admin()){
-            /** 
-             * 初始化银行卡相关信息
-             */
-            $this->init_fund();
             return true;
         }else
             return false;
@@ -228,20 +217,6 @@ class Admin extends CActiveRecord
         return $result;
     }
 
-    /** 
-     * @todo 在注册的时候初始化银行账号
-     * 
-     * @return bool
-     */
-    private function init_fund(){
-        $fund = new AdminFund($this->aid);
-        if(!$fund->save()){
-            Yii::log($model->aid."初始化银行账号失败",'error','error.login');
-            return false;
-        }else{
-            return true;
-        }
-    }
 
 	/**
 	 * Returns the static model of the specified AR class.

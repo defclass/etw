@@ -24,7 +24,7 @@ class AdminIdentity extends UserIdentity
         $record=Admin::model()->findByAttributes(array('login_name'=>$this->username));
         if($record===null){
             $this->errorCode=self::ERROR_USERNAME_INVALID;
-        }elseif($record->validatePassword($this->password)){
+        }elseif(!$record->validatePassword($this->password)){
             $this->errorCode=self::ERROR_PASSWORD_INVALID;
         }else
             {
