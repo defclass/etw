@@ -1,10 +1,10 @@
 GRTAGS
 GTAGS
 GPATH
-testdrive/protected/config
-testdrive/assets
-testdrive/protected/runtime
-testdrive/assets
+app/protected/config
+app/assets
+app/protected/runtime
+app/assets
 demos/blog/protected/config/
 demos/blog/protected/runtime/
 demos/blog/assets
