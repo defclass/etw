@@ -3,9 +3,7 @@
 /* @var $model Article */
 /* @var $form CActiveForm */
 ?>
-
 <div class="pageContent">
-
 <?php $form=$this->beginWidget('ext.dwz.DwzActiveForm', array(
 	'id'=>'article-form',
 	'enableAjaxValidation'=>false,
@@ -37,7 +35,7 @@
 
 	<div class="unit">
 		<?php echo $form->labelEx($model,'content'); ?>
-		<?php echo $form->textArea($model,'content',array('rows'=>6, 'cols'=>50)); ?>
+          <?php echo $form->textArea($model,'content',array('rows'=>20, 'cols'=>100,'class'=>'editor','upImgUrl'=>"upload.php","tools"=>"mfull",'upImgExt'=>"jpg,jpeg,gif,png")); ?>
 		<?php echo $form->error($model,'content'); ?>
 	</div>
 

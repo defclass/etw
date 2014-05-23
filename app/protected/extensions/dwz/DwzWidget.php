@@ -47,7 +47,7 @@ class DwzWidget extends CWidget
      * js名称，默认是dwz.min.js包含所有dwz所用的脚本，如果用数组指定则会引用所有数组指定的js
      * @var string
      */
-    public $scriptFile = 'dwz.min.js';
+    public $scriptFile = array('dwz.min.js');
 
     /**
      * 核心css文件，默认core是主题目录下的css/core.css
@@ -232,6 +232,8 @@ JS_INIT;
                 $this->registerScriptFile($scriptFile);
             }
         }
+        $cs->registerScriptFile($this->dwzBaseUrl."/xheditor/xheditor-1.2.1.min.js");
+        $cs->registerScriptFile($this->dwzBaseUrl."/xheditor/xheditor_lang/zh-cn.js");
 
         $cs->registerScriptFile($this->dwzScriptUrl . '/dwz.regional.zh.js');
         //  for custom purpose
