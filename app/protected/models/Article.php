@@ -22,6 +22,12 @@
  */
 class Article extends CActiveRecord
 {
+    /* 文章分类中的字段 */
+    public $name;
+
+    /* admin表中的字段 */
+    public $login_name;
+    
 	/**
 	 * @return string the associated database table name
 	 */
@@ -43,6 +49,8 @@ class Article extends CActiveRecord
             array('id, author_id', 'length', 'max'=>16),
 			array('category_id', 'length', 'max'=>20),
 			array('headline', 'length', 'max'=>128),
+			array('name', 'length', 'max'=>128),
+			array('login_name', 'length', 'max'=>128),
 			array('date, clicount', 'length', 'max'=>10),
 			array('keyword', 'length', 'max'=>50),
 			array('content', 'safe'),
@@ -64,7 +72,7 @@ class Article extends CActiveRecord
             'author' => array(self::BELONGS_TO, 'Admin', 'author_id'),
 		);
 	}
-
+    
 	/**
 	 * @return array customized attribute labels (name=>label)
 	 */
@@ -99,15 +107,22 @@ class Article extends CActiveRecord
 	 */
 	public function search()
 	{
+
 		// @todo Please modify the following code to remove attributes that should not be searched.
-
 		$criteria=new CDbCriteria;
-
+        $criteria->with=array('category','author');
+        $criteria->compare('category.name',$this->name,true);
+        $criteria->compare('author.login_name',$this->login_name,true);
+        if(!empty($this->date)){
+            $start_time = strtotime($this->date);
+            $end_time = strtotime("+1 d", $start_time);
+            $criteria->compare('date',">=$start_time",true);
+            $criteria->compare('date',"<=$end_time",true);
+        }
 		$criteria->compare('id',$this->id,true);
         $criteria->compare('category_id',$this->category_id,true);
 		$criteria->compare('headline',$this->headline,true);
         $criteria->compare('author_id',$this->author_id,true);
-		$criteria->compare('date',$this->date,true);
 		$criteria->compare('isstatic',$this->isstatic);
 		$criteria->compare('content',$this->content,true);
 		$criteria->compare('clicount',$this->clicount,true);

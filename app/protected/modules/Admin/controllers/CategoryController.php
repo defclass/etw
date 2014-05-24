@@ -159,13 +159,34 @@ class CategoryController extends Controller
 	{
 		$model=new Category('search');
 		$model->unsetAttributes();  // 清除默认值
-		if(isset($_GET['Category']))
+		if(isset($_GET['Category'])){
 			$model->attributes=$_GET['Category'];
-
+        }
 		$this->render('admin',array(
 			'model'=>$model,
+            'controller'=>$this,
 		));
 	}
+
+    /** 
+     * @todo 获取分类数组
+     * 
+     * @return 
+     */
+    public function get_category(){
+        $command = Yii::app()->db->createCommand();
+        /* 取出所有属于该用户的所有customer记录 */
+        $datas = $command->select('cid,name')
+                         ->from('{{category}}')
+                         ->queryAll();
+        $container = array(0=>'Top category');
+        foreach($datas as $data){
+            $key = $data['cid'];
+            $value = $data['name'];
+            $container[$key] = $value;
+        }
+        return $container;
+    }
 
 	/**
 	 * 根据GET变量返回Articles表的主键记录,如果没有找到则抛出错误
@@ -181,6 +202,7 @@ class CategoryController extends Controller
             }
 		return $this->_model;
 	}
+
 
 	/**
 	 * 执行AJAX验证

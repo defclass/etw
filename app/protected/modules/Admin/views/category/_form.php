@@ -27,13 +27,13 @@
 
     <div class="unit">
       <?php echo $form->labelEx($model,'fid'); ?>
-      <?php echo $form->textField($model,'fid'); ?>
+      <?php echo $form->dropDownList($model,'fid',$this->get_category()); ?>
       <?php echo $form->error($model,'fid'); ?>
     </div>
 
     <div class="unit">
       <?php echo $form->labelEx($model,'issingle'); ?>
-      <?php echo $form->textField($model,'issingle',array('size'=>16,'maxlength'=>16)); ?>
+      <?php echo $form->radioButtonList($model,'issingle',Lookup::items('bool'),array('separator'=>" ",'style'=>'margin-left:1em;top:1em;piding:auto;align','labelOptions'=>array('style'=>'float:none;'))); ?>
       <?php echo $form->error($model,'issingle'); ?>
     </div>
 

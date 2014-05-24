@@ -16,7 +16,7 @@ class Category extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'br_category';
+		return '{{category}}';
 	}
 
 	/**
@@ -88,6 +88,28 @@ class Category extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+    
+    /** 
+     * @todo 获取分类名
+     * 
+     * @return 
+     */
+    public function get_fid_name($fid){
+        if($fid == 0)
+            return "Already top category";
+        $command = Yii::app()->db->createCommand();
+        /* 取出所有属于该用户的所有customer记录 */
+        $datas = $command->select('cid,name')
+                         ->from('{{category}}')
+                         ->queryAll();
+        $container = array();
+        foreach($datas as $data){
+            $key = $data['cid'];
+            $value = $data['name'];
+            $container[$key] = $value;
+        }
+        return $container[$fid];
+    }
 
 	/**
 	 * Returns the static model of the specified AR class.

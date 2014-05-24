@@ -13,8 +13,17 @@
 		'columns'=>array(
 			/* 'cid', */
 		'name',
-		'fid',
-		'issingle',
+        array(
+          'name' => 'fid',
+          'value' => 'Category::model()->get_fid_name($data->fid)',
+         ),
+
+        array(
+          'name' => 'issingle',
+          'value' => 'Lookup::item("bool",$data->issingle)',
+         ),
+
+        
 			array(
 				'class'=>'ext.dwz.DwzButtonColumn',
 			),

@@ -83,6 +83,7 @@ class ArticleController extends Controller
             /* 新记录则添加ID */
             if($model->isNewRecord){
                 $_POST['Article']['id'] = Common::getMaxID();
+                $_POST['Article']['date'] = strtotime($_POST['Article']['date']);
                 $_POST['Article']['author_id'] = Yii::app()->user->aid;
             }
             $model->attributes=$_POST['Article'];
@@ -92,9 +93,11 @@ class ArticleController extends Controller
                 DwzHelper::error($model);
             }
 		}
-
+        $category = $this->get_category();
+        $model->date = time();
 		$this->render('create',array(
 			'model'=>$model,
+            'category'=>$category,
 		));
 	}
 
@@ -108,18 +111,22 @@ class ArticleController extends Controller
 
 		// 如果需要AJAX验证请取消下面这一行的注释
 		// $this->performAjaxValidation($model);
-
+        
 		if(isset($_POST['Article']))
 		{
-			$model->attributes=$_POST['Article'];
+            $data = $_POST['Article'];
+            $data['date'] = strtotime($data['date']);
+			$model->attributes=$data;
 			if($model->save())
                 DwzHelper::success('更新完成！','mArticle');//要自动刷新就把后面的mArticle改成你的navTablId(就是打开navTab的链接中的rel)不用刷新可直接调用$this->dwz();即可
 			else
                 DwzHelper::error($model);
 		}
-
+        $category = $this->get_category();
+        
 		$this->render('update',array(
 			'model'=>$model,
+            'category'=>$category,
 		));
 	}
 
@@ -159,13 +166,36 @@ class ArticleController extends Controller
 	{
 		$model=new Article('search');
 		$model->unsetAttributes();  // 清除默认值
-		if(isset($_GET['Article']))
+		if(isset($_GET['Article'])){
 			$model->attributes=$_GET['Article'];
+            $model->search();
+        }
 
 		$this->render('admin',array(
 			'model'=>$model,
 		));
 	}
+
+    /** 
+     * @todo 获取文章分类id=>real_name组成的数组
+     * 
+     * @return 
+     */
+    private function get_category(){
+       $command = Yii::app()->db->createCommand();
+       /* 取出所有属于该用户的所有customer记录 */
+       $datas = $command->select('cid,name')
+                       ->from('{{category}}')
+                       ->queryAll();
+       $container = array();
+       foreach($datas as $data){
+           $key = $data['cid'];
+           $value = $data['name'];
+           $container[$key] = $value;
+       }
+
+       return $container;
+    }
 
 	/**
 	 * 根据GET变量返回Articles表的主键记录,如果没有找到则抛出错误
