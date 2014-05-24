@@ -15,8 +15,8 @@ $this->breadcrumbs=array(
 			'attributes'=>array(
 				'aid',
 		'login_name',
-		'login_passwd',
-		'salt',
+		/* 'login_passwd', */
+		/* 'salt', */
 		'email',
 		'sex',
 		'admin_tel',

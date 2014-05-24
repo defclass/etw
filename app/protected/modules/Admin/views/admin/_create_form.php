@@ -62,26 +62,6 @@
       <?php echo $form->radioButtonList($model,'admin_status',Lookup::items('admin_status'),array('separator'=>" ",'style'=>'margin-left:1em;top:1em;piding:auto;align','labelOptions'=>array('style'=>'float:none;'))); ?>
       <?php echo $form->error($model,'admin_status'); ?>
     </div>
-
-    <div class="unit">
-      <?php echo $form->labelEx($model,'admin_group'); ?>
-      <?php echo $form->dropDownList($model,'admin_group',Lookup::items('admin_group')); ?>
-      <?php echo $form->error($model,'admin_group'); ?>
-    </div>
-
-    <div class="unit">
-      <?php echo $form->labelEx($model,'reg_date'); ?>
-       <?php echo $form->textField($model,'reg_date',array('size'=>10,'maxlength'=>10,'readonly'=>'true','value'=>date("Y-m-d", $model->reg_date))); ?>
-      
-      <?php echo $form->error($model,'reg_date'); ?>
-    </div>
-
-    <div class="unit">
-      <?php echo $form->labelEx($model,'last_visit'); ?>
-       <?php echo $form->textField($model,'last_visit',array('size'=>10,'maxlength'=>10,'readonly'=>'true','value'=>date("Y-m-d", $model->last_visit))); ?>
-      <?php echo $form->error($model,'last_visit'); ?>
-    </div>
-
   </div>
   <div class="formBar">
     <ul>

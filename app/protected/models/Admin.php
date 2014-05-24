@@ -42,7 +42,7 @@ class Admin extends CActiveRecord
 		// will receive user inputs.
 		return array(
             /* 注册验证 */
-            array('login_name,  email', 'required','on'=>'register',),
+            array('login_name,  email ,login_passwd, sex, admin_tel, real_name', 'required','on'=>'register',),
             array(
                 'login_name,email',
                 'unique',
@@ -53,10 +53,10 @@ class Admin extends CActiveRecord
             /* 登陆验证 */
 			array('login_name, login_passwd', 'required','on'=>'login',),
 
+            array('email','email'),
 			array('sex, admin_status', 'numerical', 'integerOnly'=>true),
 			array('aid', 'length', 'max'=>16),
 			array('login_name, login_passwd, email, real_name', 'length', 'max'=>128),
-			array('salt', 'length', 'max'=>4),
 			array('admin_tel', 'length', 'max'=>48),
 			array('admin_group', 'length', 'max'=>1),
 			array('reg_ip, last_ip', 'length', 'max'=>15),
@@ -85,16 +85,16 @@ class Admin extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'aid' => '后台用户ID',
+			'aid' => '管理员ID',
 			'login_name' => '登录名',
 			'login_passwd' => '密码',
-			'salt' => 'Salt',
+			'salt' => '加盐值',
 			'email' => 'Email',
-			'sex' => '用户性别0女1男',
+			'sex' => '性别',
 			'admin_tel' => '手机',
-			'real_name' => '后台用户姓名',
-			'admin_status' => '状态0冻结1可用',
-			'admin_group' => '后台用户等级',
+			'real_name' => '真实姓名',
+			'admin_status' => '用户状态',
+			'admin_group' => '用户等级',
 			'reg_ip' => '创建时的IP',
 			'reg_date' => '创建时间',
 			'last_ip' => '最后IP',

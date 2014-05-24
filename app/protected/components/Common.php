@@ -113,5 +113,16 @@ class Common {
         }
         return $return;
     }
+
+    /** 
+     * @todo 哈希密码
+     * @param password 
+     * @param salt 
+     * 
+     * @return 返回40们的字符串
+     */
+    public  static function hashPassword($password, $salt){
+        return sha1($password . $salt);
+    }
 }
     

@@ -73,13 +73,24 @@ class AdminController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Admin;
+		$model=new Admin('register');
 
 		// 如果需要AJAX验证请取消下面这一行的注释
 		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['Admin']))
 		{
+            if(strlen(trim($_POST['Admin']['login_passwd']))<6){
+                $model->addError('login_passwd',"密码长度不小于6位");
+                DwzHelper::error($model);
+            }
+            $_POST['Admin']['salt'] = Common::randon_str(4);
+            $_POST['Admin']['login_passwd'] = Common::hashPassword(trim($_POST['Admin']['login_passwd']),$_POST['Admin']['salt']);
+            $_POST['Admin']['reg_date'] = time();
+            $_POST['Admin']['last_visit'] = time();
+            $_POST['Admin']['admin_group'] = 2;//默认为编辑
+            $_POST['Admin']['aid'] = Common::getMaxId();
+
 			$model->attributes=$_POST['Admin'];
 			if($model->save()){
                 DwzHelper::success('sucess！');
@@ -100,12 +111,19 @@ class AdminController extends Controller
 	public function actionUpdate()
 	{
 		$model=$this->loadModel();
-
+       
 		// 如果需要AJAX验证请取消下面这一行的注释
 		// $this->performAjaxValidation($model);
-
+        
 		if(isset($_POST['Admin']))
 		{
+            unset($_POST['reg_date']);
+            unset($_POST['last_visit']);
+            if($model->attributes['login_passwd'] !== $_POST['Admin']['login_passwd']){
+                $_POST['Admin']['salt'] = Common::randon_str(4);
+                $_POST['Admin']['login_passwd'] = Common::hashPassword($_POST['Admin']['login_passwd'],$_POST['Admin']['salt']);
+            }
+            
 			$model->attributes=$_POST['Admin'];
 			if($model->save())
                 DwzHelper::success('更新完成！','mArticle');//要自动刷新就把后面的mArticle改成你的navTablId(就是打开navTab的链接中的rel)不用刷新可直接调用$this->dwz();即可

@@ -1,2 +1,2 @@
 <div class="page">
-	<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+	<?php echo $this->renderPartial('_create_form', array('model'=>$model)); ?>

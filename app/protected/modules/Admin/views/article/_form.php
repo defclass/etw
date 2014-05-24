@@ -29,7 +29,7 @@
 
 	<div class="unit">
 		<?php echo $form->labelEx($model,'date'); ?>
-		<?php echo $form->textField($model,'date',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->textField($model,'date',array('class' => 'date','size'=>10,'maxlength'=>10,'value'=>date("Y-m-d", $model->date))); ?>
 		<?php echo $form->error($model,'date'); ?>
 	</div>
 
