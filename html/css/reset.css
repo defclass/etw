@@ -1,0 +1,144 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+a{
+    text-decoration: none;
+    outline: none;
+}
+em{font-style:normal;}
+.clear{
+    clear: both;
+}
+.font_blod{
+    font-weight: bold;
+}
+.font10{
+    font-size: 10px;
+}
+.font12{
+    font-size: 12px;
+}
+.font16{
+    font-size: 16px;
+}
+.font20{
+    font-size: 20px;
+}
+.font24{
+    font-size: 24px;
+}
+.font18{
+    font-size: 18px;
+}
+.f_left{
+    float: left;
+}
+.f_right{
+    float: right;
+}
+.c_white{
+    color: #fff;
+}
+.c_gray{
+    color: #ccc;
+}
+.d_gray{
+    color: #717171;
+}
+.e_gray{
+    color: #484848;
+}
+.f_color{
+    color: #1e88cf;
+    font-size: 12px;
+}
+.red{
+    color: red;
+}
+.c_blur{
+    color: #00648D;
+}
+.d_blue{ 
+    color: #15456f;
+}
+.orange{
+    color: orange;
+}
+.cyan{color: #2b96dc;}
+.a_underline:hover{
+    text-decoration: underline;
+}
+.none{ display: none;}
+.lh30{line-height: 30px;}
+.lh45{ line-height: 45px;}
+.w50{ width: 50px;}
+.w70{ width: 70px;}
+.w80{ width: 80px;}
+.w100{ width: 100px;}
+.w110{ width: 110px;}
+.w130{ width: 130px;}
+.w150{ width: 150px;}
+.w170{ width: 170px;}
+.w180{ width: 180px;}
+.w200{ width: 200px;}
+.w250{ width: 250px;}
+.w300{ width: 300px;}
+.w350{ width: 350px;}
+.mt10{ margin-top: 10px;}
+.mt20{ margin-top: 20px;}
+.mtb{ margin: 20px 0;}
+.ml10{margin-left: 10px;}
+.mr10{margin-right: 10px;}
+.mlr10{ margin:0 10px;}
+.ml20{margin-left: 20px;}
+.pl30{padding-left: 30px;}
+.text_align{ text-align: center;}
+.font_w{ font-weight: bold;}
+/*分页样式*/
+.paging{ width: 225px; margin: 0 auto;}
+.paging_cen a{width: 22px; height: 24px; line-height: 22px; background: #e8ecf0; color: #15456f; display:inline-block; border-radius: 3px; text-align: center; margin: 0 2px;}
+.paging_cen a:hover, a.paging_Confirm{ background: #15456f; color: #fff;}
