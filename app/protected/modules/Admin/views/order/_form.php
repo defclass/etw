@@ -26,7 +26,7 @@
 
 	<div class="unit">
 		<?php echo $form->labelEx($model,'company_name'); ?>
-		<?php echo $form->textField($model,'company_name'); ?>
+		<?php echo $form->textField($model,'company_name',array('size'=>60,'maxlength'=>256)); ?>
 		<?php echo $form->error($model,'company_name'); ?>
 	</div>
 

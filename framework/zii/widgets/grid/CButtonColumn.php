@@ -234,7 +234,7 @@ class CButtonColumn extends CGridColumn
 			$button=array(
 				'label'=>$this->{$id.'ButtonLabel'},
 				'url'=>$this->{$id.'ButtonUrl'},
-				'imageUrl'=>$this->{$id.'ButtonImageUrl'},
+				/*'imageUrl'=>$this->{$id.'ButtonImageUrl'},*/
 				'options'=>$this->{$id.'ButtonOptions'},
 			);
 			if(isset($this->buttons[$id]))

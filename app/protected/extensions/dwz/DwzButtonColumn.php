@@ -12,6 +12,9 @@ Yii::import('zii.widgets.grid.CButtonColumn');
 class DwzButtonColumn extends CButtonColumn
 {
 
+    public $header = '操作';
+
+    public $template='{update}  |  {delete}';
     /**
      * @var array
      */

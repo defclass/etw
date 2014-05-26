@@ -1,11 +1,11 @@
 <?php
 
 /**
- * This is the model class for table "br_order".
+ * This is the model class for table "{{order}}".
  *
- * The followings are the available columns in table 'br_order':
+ * The followings are the available columns in table '{{order}}':
  * @property string $oid
- * @property integer $company_name
+ * @property string $company_name
  * @property string $email
  * @property string $tel
  * @property string $inquiry_content
@@ -17,7 +17,7 @@ class Order extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'br_order';
+		return '{{order}}';
 	}
 
 	/**
@@ -28,10 +28,10 @@ class Order extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('company_name', 'numerical', 'integerOnly'=>true),
 			array('oid', 'length', 'max'=>16),
-			array('email', 'length', 'max'=>128),
-			array('tel', 'length', 'max'=>32),
+			array('company_name', 'length', 'max'=>256),
+			array('email', 'email',),
+			array('tel', 'numerical', 'integerOnly'=>true),
 			array('inquiry_content', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
@@ -83,7 +83,7 @@ class Order extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('oid',$this->oid,true);
-		$criteria->compare('company_name',$this->company_name);
+		$criteria->compare('company_name',$this->company_name,true);
 		$criteria->compare('email',$this->email,true);
 		$criteria->compare('tel',$this->tel,true);
 		$criteria->compare('inquiry_content',$this->inquiry_content,true);
