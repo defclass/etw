@@ -4,14 +4,14 @@
 	<?php echo CHtml::link(CHtml::encode($data->pid), array('view','id'=>$data->pid),array('target'=>'dialog')); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('classify')); ?>:</b>
-	<?php echo CHtml::encode($data->classify); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('cid')); ?>:</b>
+	<?php echo CHtml::encode($data->cid); ?>
 	<br />
-	<b><?php echo CHtml::encode($data->getAttributeLabel('brand')); ?>:</b>
-	<?php echo CHtml::encode($data->brand); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('bid')); ?>:</b>
+	<?php echo CHtml::encode($data->bid); ?>
 	<br />
-	<b><?php echo CHtml::encode($data->getAttributeLabel('manufacturer')); ?>:</b>
-	<?php echo CHtml::encode($data->manufacturer); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('mid')); ?>:</b>
+	<?php echo CHtml::encode($data->mid); ?>
 	<br />
 	<b><?php echo CHtml::encode($data->getAttributeLabel('model')); ?>:</b>
 	<?php echo CHtml::encode($data->model); ?>

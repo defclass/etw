@@ -15,7 +15,6 @@ $this->breadcrumbs=array(
 			'attributes'=>array(
 				'cid',
 		'classify_name',
-		'create_time',
 			),
 		)); ?>
 	</div>

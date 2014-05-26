@@ -80,7 +80,9 @@ class ClassifyController extends Controller
 
 		if(isset($_POST['Classify']))
 		{
-			$model->attributes=$_POST['Classify'];
+            $data = $_POST['Classify'];
+            $data['cid'] = Common::getMaxId();
+			$model->attributes=$data;
 			if($model->save()){
                 DwzHelper::success('sucess！');
             }else{

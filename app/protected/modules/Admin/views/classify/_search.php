@@ -16,11 +16,6 @@
 		<?php echo $form->textField($model,'classify_name',array('size'=>60,'maxlength'=>256)); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->label($model,'create_time'); ?>
-		<?php echo $form->textField($model,'create_time',array('size'=>10,'maxlength'=>10)); ?>
-	</div>
-
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('搜索'); ?>
 	</div>

@@ -14,7 +14,7 @@ class Manufacturer extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'br_manufacturer';
+		return '{{manufacturer}}';
 	}
 
 	/**
@@ -25,7 +25,8 @@ class Manufacturer extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('mid', 'length', 'max'=>16),
+            array('mid,manufacturer_name','required'),
+			array('mid', 'numerical', 'max'=>16),
 			array('manufacturer_name', 'length', 'max'=>256),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
@@ -50,8 +51,8 @@ class Manufacturer extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'mid' => '分类ID',
-			'manufacturer_name' => '分类名',
+			'mid' => '供应商ID',
+			'manufacturer_name' => '供应商名',
 		);
 	}
 
@@ -81,6 +82,27 @@ class Manufacturer extends CActiveRecord
 		));
 	}
 
+
+    /** 
+     * @todo 获取所有供应商
+     * 
+     * @return array id=>name
+     */
+    public function  get_manufacturer(){
+        $command = Yii::app()->db->createCommand();
+        $data = $command->select('mid,manufacturer_name')
+                        ->from('{{manufacturer}}')
+                        ->queryAll();
+        $container = array(0=>'请选择厂商');
+        foreach($data as $row){
+           $key = $row['mid'];
+           $value = $row['manufacturer_name'];
+           $container[$key] = $value;
+       }
+       return $container;
+    }
+
+    
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!

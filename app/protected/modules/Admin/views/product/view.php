@@ -14,9 +14,9 @@ $this->breadcrumbs=array(
 			//'cssFile'=>'/css/detailview/styles.css',
 			'attributes'=>array(
 				'pid',
-		'classify',
-		'brand',
-		'manufacturer',
+		'cid',
+		'bid',
+		'mid',
 		'model',
 		'package',
 		'RoHS',

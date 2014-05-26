@@ -24,6 +24,11 @@
  */
 class Product extends CActiveRecord
 {
+    public $classify;
+
+    public $brand;
+
+    public $manufacturer;
 	/**
 	 * @return string the associated database table name
 	 */
@@ -40,8 +45,8 @@ class Product extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('direction', 'required'),
 			array('quantity, status', 'numerical', 'integerOnly'=>true),
+            array('classify, brand,manufacturer', 'numerical', 'integerOnly'=>true),
 			array('pid, cid, bid, mid', 'length', 'max'=>16),
 			array('model, package, RoHS, datecode, direction', 'length', 'max'=>64),
 			array('create_time', 'length', 'max'=>10),
@@ -75,6 +80,9 @@ class Product extends CActiveRecord
 			'cid' => '产品分类',
 			'bid' => '产品品牌',
 			'mid' => '厂商',
+            'classify'=>'产品分类',
+            'brand' =>'产品品牌',
+            'manufacturer' => '供应商',
 			'model' => '型号',
 			'package' => '封装',
 			'RoHS' => 'RoHS',
@@ -82,7 +90,7 @@ class Product extends CActiveRecord
 			'quantity' => '数量',
 			'direction' => '注释',
 			'create_time' => '创建时间',
-			'status' => '产品状态0显示1不显示',
+			'status' => '显示状态',
 		);
 	}
 
@@ -103,11 +111,17 @@ class Product extends CActiveRecord
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
 		$criteria=new CDbCriteria;
-
+        
+        $criteria->with=array('c','b','m');
 		$criteria->compare('pid',$this->pid,true);
 		$criteria->compare('cid',$this->cid,true);
 		$criteria->compare('bid',$this->bid,true);
 		$criteria->compare('mid',$this->mid,true);
+
+        $criteria->compare('c.classify_name',$this->classify,true);
+		$criteria->compare('b.brand_name',$this->brand,true);
+		$criteria->compare('m.manufacturer_name',$this->manufacturer,true);
+        
 		$criteria->compare('model',$this->model,true);
 		$criteria->compare('package',$this->package,true);
 		$criteria->compare('RoHS',$this->RoHS,true);

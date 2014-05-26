@@ -1,12 +1,14 @@
 <?php
 
 /**
- * This is the model class for table "br_classify".
+ * This is the model class for table "{{classify}}".
  *
- * The followings are the available columns in table 'br_classify':
+ * The followings are the available columns in table '{{classify}}':
  * @property string $cid
  * @property string $classify_name
- * @property string $create_time
+ *
+ * The followings are the available model relations:
+ * @property Product[] $products
  */
 class Classify extends CActiveRecord
 {
@@ -15,7 +17,7 @@ class Classify extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'br_classify';
+		return '{{classify}}';
 	}
 
 	/**
@@ -26,12 +28,12 @@ class Classify extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('cid', 'length', 'max'=>16),
+			array('cid, classify_name', 'required'),
+			array('cid', 'numerical', 'max'=>16),
 			array('classify_name', 'length', 'max'=>256),
-			array('create_time', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('cid, classify_name, create_time', 'safe', 'on'=>'search'),
+			array('cid, classify_name', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -43,6 +45,7 @@ class Classify extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'products' => array(self::HAS_MANY, 'Product', 'cid'),
 		);
 	}
 
@@ -54,7 +57,6 @@ class Classify extends CActiveRecord
 		return array(
 			'cid' => '分类ID',
 			'classify_name' => '分类名',
-			'create_time' => '创建时间',
 		);
 	}
 
@@ -78,12 +80,31 @@ class Classify extends CActiveRecord
 
 		$criteria->compare('cid',$this->cid,true);
 		$criteria->compare('classify_name',$this->classify_name,true);
-		$criteria->compare('create_time',$this->create_time,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
+
+    /** 
+     * @todo 获取所有产品分类
+     * 
+     * @return array id=>name
+     */
+    public function  get_classify(){
+        $command = Yii::app()->db->createCommand();
+        $data = $command->select('cid,classify_name')
+                        ->from('{{classify}}')
+                        ->queryAll();
+        $container = array(0=>'请选择产品分类');
+        foreach($data as $row){
+           $key = $row['cid'];
+           $value = $row['classify_name'];
+           $container[$key] = $value;
+       }
+       return $container;
+    }
+
 
 	/**
 	 * Returns the static model of the specified AR class.

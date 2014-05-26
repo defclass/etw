@@ -19,50 +19,44 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="unit">
-		<?php echo $form->labelEx($model,'pid'); ?>
-		<?php echo $form->textField($model,'pid',array('size'=>16,'maxlength'=>16)); ?>
-		<?php echo $form->error($model,'pid'); ?>
+		<?php echo $form->labelEx($model,'cid'); ?>
+	  <?php echo $form->dropDownList($model,'cid',Classify::model()->get_classify()); ?>
+		<?php echo $form->error($model,'cid'); ?>
 	</div>
 
 	<div class="unit">
-		<?php echo $form->labelEx($model,'classify'); ?>
-		<?php echo $form->textField($model,'classify',array('size'=>16,'maxlength'=>16)); ?>
-		<?php echo $form->error($model,'classify'); ?>
+		<?php echo $form->labelEx($model,'bid'); ?>
+      <?php echo $form->dropDownList($model,'bid',Brand::model()->get_brands()); ?>
+		<?php echo $form->error($model,'bid'); ?>
 	</div>
 
 	<div class="unit">
-		<?php echo $form->labelEx($model,'brand'); ?>
-		<?php echo $form->textField($model,'brand',array('size'=>16,'maxlength'=>16)); ?>
-		<?php echo $form->error($model,'brand'); ?>
-	</div>
-
-	<div class="unit">
-		<?php echo $form->labelEx($model,'manufacturer'); ?>
-		<?php echo $form->textField($model,'manufacturer',array('size'=>16,'maxlength'=>16)); ?>
-		<?php echo $form->error($model,'manufacturer'); ?>
+		<?php echo $form->labelEx($model,'mid'); ?>
+	  <?php echo $form->dropDownList($model,'mid',Manufacturer::model()->get_manufacturer()); ?>
+		<?php echo $form->error($model,'mid'); ?>
 	</div>
 
 	<div class="unit">
 		<?php echo $form->labelEx($model,'model'); ?>
-		<?php echo $form->textField($model,'model',array('size'=>60,'maxlength'=>64)); ?>
+		<?php echo $form->textField($model,'model',array('size'=>16,'maxlength'=>32)); ?>
 		<?php echo $form->error($model,'model'); ?>
 	</div>
 
 	<div class="unit">
 		<?php echo $form->labelEx($model,'package'); ?>
-		<?php echo $form->textField($model,'package',array('size'=>60,'maxlength'=>64)); ?>
+		<?php echo $form->textField($model,'package',array('size'=>16,'maxlength'=>32)); ?>
 		<?php echo $form->error($model,'package'); ?>
 	</div>
 
 	<div class="unit">
 		<?php echo $form->labelEx($model,'RoHS'); ?>
-		<?php echo $form->textField($model,'RoHS',array('size'=>60,'maxlength'=>64)); ?>
+		<?php echo $form->textField($model,'RoHS',array('size'=>16,'maxlength'=>32)); ?>
 		<?php echo $form->error($model,'RoHS'); ?>
 	</div>
 
 	<div class="unit">
 		<?php echo $form->labelEx($model,'datecode'); ?>
-		<?php echo $form->textField($model,'datecode',array('size'=>60,'maxlength'=>64)); ?>
+		<?php echo $form->textField($model,'datecode',array('size'=>16,'maxlength'=>32)); ?>
 		<?php echo $form->error($model,'datecode'); ?>
 	</div>
 
@@ -74,19 +68,13 @@
 
 	<div class="unit">
 		<?php echo $form->labelEx($model,'direction'); ?>
-		<?php echo $form->textField($model,'direction',array('size'=>60,'maxlength'=>64)); ?>
+		<?php echo $form->textField($model,'direction',array('size'=>16,'maxlength'=>32)); ?>
 		<?php echo $form->error($model,'direction'); ?>
 	</div>
 
 	<div class="unit">
-		<?php echo $form->labelEx($model,'create_time'); ?>
-		<?php echo $form->textField($model,'create_time',array('size'=>10,'maxlength'=>10)); ?>
-		<?php echo $form->error($model,'create_time'); ?>
-	</div>
-
-	<div class="unit">
 		<?php echo $form->labelEx($model,'status'); ?>
-		<?php echo $form->textField($model,'status'); ?>
+      <?php echo $form->radioButtonList($model,'status',Lookup::Items('privacy'),array('separator'=>" ",'style'=>'margin-left:1em;top:1em;piding:auto;align','labelOptions'=>array('style'=>'float:none;'))); ?>
 		<?php echo $form->error($model,'status'); ?>
 	</div>
 

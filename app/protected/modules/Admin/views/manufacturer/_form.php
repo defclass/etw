@@ -18,15 +18,11 @@
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 	<?php echo $form->errorSummary($model); ?>
 
-	<div class="unit">
-		<?php echo $form->labelEx($model,'mid'); ?>
-		<?php echo $form->textField($model,'mid',array('size'=>16,'maxlength'=>16)); ?>
-		<?php echo $form->error($model,'mid'); ?>
-	</div>
+
 
 	<div class="unit">
 		<?php echo $form->labelEx($model,'manufacturer_name'); ?>
-		<?php echo $form->textField($model,'manufacturer_name',array('size'=>60,'maxlength'=>256)); ?>
+		<?php echo $form->textField($model,'manufacturer_name',array('size'=>16,'maxlength'=>64)); ?>
 		<?php echo $form->error($model,'manufacturer_name'); ?>
 	</div>
 

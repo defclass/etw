@@ -12,18 +12,18 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'classify'); ?>
-		<?php echo $form->textField($model,'classify',array('size'=>16,'maxlength'=>16)); ?>
+		<?php echo $form->label($model,'cid'); ?>
+		<?php echo $form->textField($model,'cid',array('size'=>16,'maxlength'=>16)); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'brand'); ?>
-		<?php echo $form->textField($model,'brand',array('size'=>16,'maxlength'=>16)); ?>
+		<?php echo $form->label($model,'bid'); ?>
+		<?php echo $form->textField($model,'bid',array('size'=>16,'maxlength'=>16)); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'manufacturer'); ?>
-		<?php echo $form->textField($model,'manufacturer',array('size'=>16,'maxlength'=>16)); ?>
+		<?php echo $form->label($model,'mid'); ?>
+		<?php echo $form->textField($model,'mid',array('size'=>16,'maxlength'=>16)); ?>
 	</div>
 
 	<div class="row">

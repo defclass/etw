@@ -16,7 +16,7 @@ class Brand extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'br_brand';
+		return '{{brand}}';
 	}
 
 	/**
@@ -27,9 +27,10 @@ class Brand extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('bid', 'length', 'max'=>16),
-			array('brand_name', 'length', 'max'=>256),
-			array('big_logo, small_logo', 'length', 'max'=>128),
+            array('bid, brand_name', 'required'),
+			array('bid', 'numerical', 'max'=>16),
+			array('brand_name', 'length', 'max'=>64),
+			array('big_logo, small_logo', 'length', 'max'=>64),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('bid, brand_name, big_logo, small_logo', 'safe', 'on'=>'search'),
@@ -55,8 +56,8 @@ class Brand extends CActiveRecord
 		return array(
 			'bid' => '品牌ID',
 			'brand_name' => '品牌名',
-			'big_logo' => '大logo图的路径',
-			'small_logo' => '小logo图的路径',
+			'big_logo' => '大logo图',
+			'small_logo' => '小logo图',
 		);
 	}
 
@@ -87,6 +88,26 @@ class Brand extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
+
+    /** 
+     * @todo 获取所有品牌
+     * 
+     * @return array id=>name
+     */
+    public function  get_brands(){
+        $command = Yii::app()->db->createCommand();
+        $data = $command->select('bid,brand_name')
+                        ->from('{{brand}}')
+                        ->queryAll();
+        $container = array(0=>'请选择品牌');
+        foreach($data as $row){
+           $key = $row['bid'];
+           $value = $row['brand_name'];
+           $container[$key] = $value;
+       }
+       return $container;
+    }
 
 	/**
 	 * Returns the static model of the specified AR class.

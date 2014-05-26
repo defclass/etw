@@ -80,7 +80,9 @@ class BrandController extends Controller
 
 		if(isset($_POST['Brand']))
 		{
-			$model->attributes=$_POST['Brand'];
+            $data = $_POST['Brand'];
+            $data['bid'] = Common::getMaxId();
+			$model->attributes=$data;
 			if($model->save()){
                 DwzHelper::success('sucess！');
             }else{

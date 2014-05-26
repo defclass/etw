@@ -19,21 +19,9 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="unit">
-		<?php echo $form->labelEx($model,'cid'); ?>
-		<?php echo $form->textField($model,'cid',array('size'=>16,'maxlength'=>16)); ?>
-		<?php echo $form->error($model,'cid'); ?>
-	</div>
-
-	<div class="unit">
 		<?php echo $form->labelEx($model,'classify_name'); ?>
-		<?php echo $form->textField($model,'classify_name',array('size'=>60,'maxlength'=>256)); ?>
+		<?php echo $form->textField($model,'classify_name',array('size'=>16,'maxlength'=>128)); ?>
 		<?php echo $form->error($model,'classify_name'); ?>
-	</div>
-
-	<div class="unit">
-		<?php echo $form->labelEx($model,'create_time'); ?>
-		<?php echo $form->textField($model,'create_time',array('size'=>10,'maxlength'=>10)); ?>
-		<?php echo $form->error($model,'create_time'); ?>
 	</div>
 
     </div>

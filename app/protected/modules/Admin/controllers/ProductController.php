@@ -80,7 +80,9 @@ class ProductController extends Controller
 
 		if(isset($_POST['Product']))
 		{
-			$model->attributes=$_POST['Product'];
+            $data = $_POST['Product'];
+            $data['pid'] = Common::getMaxId();
+			$model->attributes=$data;
 			if($model->save()){
                 DwzHelper::success('sucess！');
             }else{

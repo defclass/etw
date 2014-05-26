@@ -80,7 +80,9 @@ class ManufacturerController extends Controller
 
 		if(isset($_POST['Manufacturer']))
 		{
-			$model->attributes=$_POST['Manufacturer'];
+            $data = $_POST['Manufacturer'];
+            $data['mid'] = Common::getMaxId();
+			$model->attributes=$data;
 			if($model->save()){
                 DwzHelper::success('sucess！');
             }else{

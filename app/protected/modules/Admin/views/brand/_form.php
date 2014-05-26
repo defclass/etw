@@ -19,26 +19,20 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="unit">
-		<?php echo $form->labelEx($model,'bid'); ?>
-		<?php echo $form->textField($model,'bid',array('size'=>16,'maxlength'=>16)); ?>
-		<?php echo $form->error($model,'bid'); ?>
-	</div>
-
-	<div class="unit">
 		<?php echo $form->labelEx($model,'brand_name'); ?>
-		<?php echo $form->textField($model,'brand_name',array('size'=>60,'maxlength'=>256)); ?>
+		<?php echo $form->textField($model,'brand_name',array('size'=>16,'maxlength'=>64)); ?>
 		<?php echo $form->error($model,'brand_name'); ?>
 	</div>
 
 	<div class="unit">
-		<?php echo $form->labelEx($model,'big_logo'); ?>
-		<?php echo $form->textField($model,'big_logo',array('size'=>60,'maxlength'=>128)); ?>
+<?php echo $form->labelEx($model,'big_logo'); ?>：
+		<?php echo $form->fileField($model,'big_logo',array('size'=>16,'maxlength'=>64)); ?>
 		<?php echo $form->error($model,'big_logo'); ?>
 	</div>
 
 	<div class="unit">
-		<?php echo $form->labelEx($model,'small_logo'); ?>
-		<?php echo $form->textField($model,'small_logo',array('size'=>60,'maxlength'=>128)); ?>
+<?php echo $form->labelEx($model,'small_logo'); ?>：
+		<?php echo $form->fileField($model,'small_logo',array('size'=>16,'maxlength'=>64)); ?>
 		<?php echo $form->error($model,'small_logo'); ?>
 	</div>
 
