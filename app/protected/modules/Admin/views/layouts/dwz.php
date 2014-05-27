@@ -5,7 +5,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=7"/>
-    <title>简单实用国产jQuery UI框架 - DWZ富客户端框架(J-UI.com)</title>
+    <title>佰润后台</title>
     <?php $this->widget("ext.dwz.DwzWidget"); ?>
 </head>
 
@@ -15,14 +15,7 @@
         <div class="headerNav">
             <a class="logo" href="http://j-ui.com">标志</a>
             <ul class="nav">
-                <li id="switchEnvBox"><a href="javascript:">（<span>北京</span>）切换城市</a>
-                    <ul>
-                        <li><a href="sidebar_1.html">北京</a></li>
-                        <li><a href="sidebar_2.html">上海</a></li>
-
-                    </ul>
-                </li>
-                <li><a href="changepwd.html" target="dialog" width="600">设置</a></li>
+                <li><a href="<?php echo  $this->createUrl('/Admin/PersonSet/Index'); ?>" target="dialog" width="600">修改密码</a></li>
                 <li><a href="<?php echo  $this->createUrl('/Admin/login/logout'); ?>">退出</a></li>
             </ul>
             <ul class="themeList" id="themeList">
@@ -107,7 +100,7 @@
 
 </div>
 
-<div id="footer">Copyright &copy; 2010 <a href="demo_page2.html" target="dialog">DWZ团队</a> Tel：010-52897073</div>
+     <div id="footer">Copyright &copy; 2010 <a href="http://63eu.com" target="_blank">开发团队:铕科技工作室</a> </div>
 </body>
 </html>
 
