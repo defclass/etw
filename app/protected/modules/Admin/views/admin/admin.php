@@ -15,10 +15,7 @@
 		'email',
 		'sex',
 		'admin_tel',
-        array(
-          'name' => 'real_name',
-          'value' => ' () ',
-         ),
+        'real_name',
 
         array(
           'name' => 'reg_date',
