@@ -16,4 +16,5 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('inquiry_content')); ?>:</b>
 	<?php echo CHtml::encode($data->inquiry_content); ?>
 	<br />
+
 </div>

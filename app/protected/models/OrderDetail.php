@@ -20,7 +20,7 @@ class OrderDetail extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'br_order_detail';
+		return '{{order_detail}}';
 	}
 
 	/**
@@ -61,10 +61,10 @@ class OrderDetail extends CActiveRecord
 		return array(
 			'od_id' => '订单详情ID',
 			'oid' => '订单详情ID',
-			'model' => '型号',
-			'quantity' => '数量',
-			'manufacturer' => '厂商',
-			'price' => '价格',
+			'model' => '产品名',
+			'quantity' => '需求数量',
+			'manufacturer' => '期望厂商',
+			'price' => '期望价格',
 			'create_time' => '创建时间',
 			'status' => '产品状态0显示1不显示',
 		);

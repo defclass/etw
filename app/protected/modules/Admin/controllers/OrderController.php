@@ -63,9 +63,15 @@ class OrderController extends Controller
 	 */
 	public function actionView()
 	{
+        $model = $this->loadModel();
+
+        $order_model=new OrderDetail();
+        $records = $this->get_order_detail($order_model,$model->oid);
 		$this->render('view',array(
-			'model'=>$this->loadModel(),
+			'model'=>$model,
+            'records'=>$records,
 		));
+        
 	}
 
 	/**
@@ -189,4 +195,22 @@ class OrderController extends Controller
 			Yii::app()->end();
 		}
 	}
+
+    /** 
+     * @todo 
+     * @param model dataprovider需要的model
+     * @param oid 搜索需要的字段
+     * 
+     * @return 
+     */
+    protected function get_order_detail($model,$oid){
+		$criteria=new CDbCriteria;
+        $criteria->compare('oid',$oid,true);
+		return new CActiveDataProvider($model, array(
+			'criteria'=>$criteria,
+            'pagination' => array(
+                'pageSize' => 10000,
+            ), 
+		));
+    }
 }
