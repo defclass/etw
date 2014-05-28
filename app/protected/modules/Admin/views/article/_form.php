@@ -36,8 +36,10 @@
 	</div>
 
 	<div class="unit">
+      <?php $upImgUrl = Yii::app()->createUrl('/Admin/Article/Upload/'); ?>
+      
       <?php echo $form->labelEx($model,'content'); ?>
-      <?php echo $form->textArea($model,'content',array('rows'=>20, 'cols'=>100,'class'=>'editor','upImgUrl'=>"upload.php","tools"=>"mfull",'upImgExt'=>"jpg,jpeg,gif,png")); ?>
+      <?php echo $form->textArea($model,'content',array('rows'=>20, 'cols'=>100,'class'=>'editor','upImgUrl'=>$upImgUrl,"tools"=>"mfull",'upImgExt'=>"jpg,jpeg,gif,png")); ?>
       <?php echo $form->error($model,'content'); ?>
 	</div>
 

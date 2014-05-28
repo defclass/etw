@@ -10,7 +10,17 @@ class ArticleController extends Controller
 	 * @var CActiveRecord 当前载入的model实例
 	 */
 	private $_model;
+    
+    /** 
+     * @var 上传附件的扩展名
+     */
+    private $_img_extension = array('jpg','png','bmp','jepg');
 
+    /** 
+     * @var 上传附件的大小 
+     */
+
+    private $_img_size = 2097152;//2MB
 	/**
 	 * @return array action 过滤器
 	 */
@@ -224,4 +234,43 @@ class ArticleController extends Controller
 			Yii::app()->end();
 		}
 	}
+
+    /** 
+     * @todo 文章模块的图片上传功能
+     * 
+     * @return 
+     */public function actionUpload(){
+        $image = CUploadedFile::getInstanceByName('filedata');
+
+        if(!in_array($image->getExtensionName(),$this->_img_extension)){
+            $this->output_json('error','图片格式仅限jpg,png,bmp,jepg');
+        }
+        if( $image->getSize() > $this->_img_size) {
+            $this->output_json('error','图片大小不要超2M');
+        }
+        $str = date("/Y/m/d");
+        $dir='/assets/Uploads/artiles'.$str.'/';
+        $local_dir = Yii::getPathOfAlias('webroot').$dir;
+        if (!is_dir($local_dir)) {
+            mkdir($local_dir,0777,true);
+        }
+        $name = $local_dir.$image->name;
+        //文件名绝对路径
+        $status = $image->saveAs($name,true);
+        $this->output_json('success',$dir.$image->name);
+    }
+
+    protected function output_json($code,$msg){
+        if($code == 'success'){
+            $arr['err'] = '';
+            $arr['msg'] = $msg;
+        }
+
+        if($code == 'error') {
+            $arr['err'] = $msg;
+            $arr['msg'] ='';
+        }
+        echo json_encode($arr);
+        exit;
+    }
 }
