@@ -29,7 +29,7 @@ class Classify extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('cid, classify_name', 'required'),
-			array('cid', 'numerical', 'max'=>16),
+			array('cid', 'length', 'max'=>16),
 			array('classify_name', 'length', 'max'=>256),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.

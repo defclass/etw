@@ -26,7 +26,7 @@ class Manufacturer extends CActiveRecord
 		// will receive user inputs.
 		return array(
             array('mid,manufacturer_name','required'),
-			array('mid', 'numerical', 'max'=>16),
+			array('mid', 'length', 'max'=>16),
 			array('manufacturer_name', 'length', 'max'=>256),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.

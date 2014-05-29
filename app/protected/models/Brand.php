@@ -6,8 +6,7 @@
  * The followings are the available columns in table 'br_brand':
  * @property string $bid
  * @property string $brand_name
- * @property string $big_logo
- * @property string $small_logo
+ * @property string $logo
  */
 class Brand extends CActiveRecord
 {
@@ -27,13 +26,13 @@ class Brand extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-            array('bid, brand_name', 'required'),
-			array('bid', 'numerical', 'max'=>16),
+            array('bid, brand_name,logo', 'required'),
+			array('bid', 'length', 'max'=>16,'integerOnly'=>true),
 			array('brand_name', 'length', 'max'=>64),
-			array('big_logo, small_logo', 'length', 'max'=>64),
+			array('logo', 'length', 'max'=>64),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('bid, brand_name, big_logo, small_logo', 'safe', 'on'=>'search'),
+			array('bid, brand_name', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -56,8 +55,7 @@ class Brand extends CActiveRecord
 		return array(
 			'bid' => '品牌ID',
 			'brand_name' => '品牌名',
-			'big_logo' => '大logo图',
-			'small_logo' => '小logo图',
+            'logo' => 'logo图路径'
 		);
 	}
 
@@ -81,8 +79,7 @@ class Brand extends CActiveRecord
 
 		$criteria->compare('bid',$this->bid,true);
 		$criteria->compare('brand_name',$this->brand_name,true);
-		$criteria->compare('big_logo',$this->big_logo,true);
-		$criteria->compare('small_logo',$this->small_logo,true);
+		$criteria->compare('logo',$this->logo,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
