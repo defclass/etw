@@ -2,6 +2,8 @@
 
 class SiteController extends Controller
 {
+	public $layout='//layouts/main';
+    
 	/**
 	 * Declares class-based actions.
 	 */
@@ -29,6 +31,8 @@ class SiteController extends Controller
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
+        //$this->layout = "//layout/main";
+
 		$this->render('index');
 	}
 
