@@ -11,6 +11,18 @@ class BrandController extends Controller
 	 */
 	private $_model;
 
+    /** 
+     * @var 上传附件的扩展名
+     */
+    private $_img_extension = array('jpg','png','bmp','jepg');
+
+    /** 
+     * @var 上传附件的大小 
+     */
+
+    private $_img_size = 2097152;//2MB
+
+
 	/**
 	 * @return array action 过滤器
 	 */
@@ -108,9 +120,19 @@ class BrandController extends Controller
 
 		if(isset($_POST['Brand']))
 		{
-			$model->attributes=$_POST['Brand'];
+            $data = $_POST['Brand'];
+            list($status,$logo_path) = $this->Upload_logo($model,'Brand[logo]');
+            if(!$status){
+                $model->addError('logo','未知原因，上传图片失败');
+                DwzHelper::error($model);
+            }else{
+                /* 给logopath赋值 */
+                $data['logo'] = $logo_path;
+            }
+            
+			$model->attributes=$data;
 			if($model->save())
-                DwzHelper::success('更新完成！','mArticle');//要自动刷新就把后面的mArticle改成你的navTablId(就是打开navTab的链接中的rel)不用刷新可直接调用$this->dwz();即可
+                DwzHelper::success('更新完成！','Article');//要自动刷新就把后面的mArticle改成你的navTablId(就是打开navTab的链接中的rel)不用刷新可直接调用$this->dwz();即可
 			else
                 DwzHelper::error($model);
 		}
@@ -191,4 +213,37 @@ class BrandController extends Controller
 			Yii::app()->end();
 		}
 	}
+
+    /** 
+     * @todo 上传LOGO图的函数
+     * @param name input 中的name属性
+     * 
+     * @return bool
+     */
+    private function  Upload_logo($model,$name){
+        $image = CUploadedFile::getInstanceByName($name);
+        if($image == null){
+            $model->addError('logo','请上传LOGO图');
+            DwzHelper::error($model);
+
+        }
+        if(!in_array($image->getExtensionName(),$this->_img_extension)){
+            $model->addError('logo','图片格式仅限jpg,png,bmp,jepg');
+            DwzHelper::error($model);
+        }
+        if( $image->getSize() > $this->_img_size) {
+            $model->addError('logo','图片大小不要超2M');
+            DwzHelper::error($model);
+        }
+        $dir='/assets/Uploads/Logo/';
+        $local_dir = Yii::getPathOfAlias('webroot').$dir;
+        if (!is_dir($local_dir)) {
+            mkdir($local_dir,0777,true);
+        }
+        $name = $local_dir.$image->name;
+        //文件名绝对路径
+        $status = $image->saveAs($name,true);
+
+        return array($status, $dir.$image->name);
+    }
 }

@@ -15,8 +15,7 @@ $this->breadcrumbs=array(
 			'attributes'=>array(
 				'bid',
 		'brand_name',
-		'big_logo',
-		'small_logo',
+		'logo',
 			),
 		)); ?>
 	</div>

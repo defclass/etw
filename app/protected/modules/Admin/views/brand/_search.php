@@ -17,14 +17,10 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'big_logo'); ?>
-		<?php echo $form->textField($model,'big_logo',array('size'=>60,'maxlength'=>128)); ?>
+		<?php echo $form->label($model,'logo'); ?>
+		<?php echo $form->textField($model,'logo',array('size'=>60,'maxlength'=>128)); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->label($model,'small_logo'); ?>
-		<?php echo $form->textField($model,'small_logo',array('size'=>60,'maxlength'=>128)); ?>
-	</div>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('搜索'); ?>

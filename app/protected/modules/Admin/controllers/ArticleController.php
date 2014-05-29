@@ -249,7 +249,7 @@ class ArticleController extends Controller
             $this->output_json('error','图片大小不要超2M');
         }
         $str = date("/Y/m/d");
-        $dir='/assets/Uploads/artiles'.$str.'/';
+        $dir='/assets/Uploads/Artiles'.$str.'/';
         $local_dir = Yii::getPathOfAlias('webroot').$dir;
         if (!is_dir($local_dir)) {
             mkdir($local_dir,0777,true);

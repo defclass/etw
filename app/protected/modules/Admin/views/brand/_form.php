@@ -12,6 +12,7 @@
 	'htmlOptions'=>array(
 	    'class'=>'pageForm required-validate',
 	    'onsubmit'=>'return iframeCallback(this,dialogAjaxDone)',
+        'enctype'=>"multipart/form-data",
 	)
 )); ?>
     <div class="pageFormContent" layoutH="58">
@@ -25,15 +26,9 @@
 	</div>
 
 	<div class="unit">
-<?php echo $form->labelEx($model,'big_logo'); ?>：
-		<?php echo $form->fileField($model,'big_logo',array('size'=>16,'maxlength'=>64)); ?>
-		<?php echo $form->error($model,'big_logo'); ?>
-	</div>
-
-	<div class="unit">
-<?php echo $form->labelEx($model,'small_logo'); ?>：
-		<?php echo $form->fileField($model,'small_logo',array('size'=>16,'maxlength'=>64)); ?>
-		<?php echo $form->error($model,'small_logo'); ?>
+<?php echo $form->labelEx($model,'logo'); ?>：
+		<?php echo $form->fileField($model,'logo',array('size'=>16,'maxlength'=>64)); ?>
+		<?php echo $form->error($model,'logo'); ?>
 	</div>
 
     </div>

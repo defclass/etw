@@ -13,8 +13,7 @@
 		'columns'=>array(
 			'bid',
 		'brand_name',
-		'big_logo',
-		'small_logo',
+		'logo',
 			array(
 				'class'=>'ext.dwz.DwzButtonColumn',
 			),

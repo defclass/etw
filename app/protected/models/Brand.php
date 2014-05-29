@@ -27,7 +27,7 @@ class Brand extends CActiveRecord
 		// will receive user inputs.
 		return array(
             array('bid, brand_name,logo', 'required'),
-			array('bid', 'length', 'max'=>16,'integerOnly'=>true),
+			array('bid', 'length', 'max'=>16),
 			array('brand_name', 'length', 'max'=>64),
 			array('logo', 'length', 'max'=>64),
 			// The following rule is used by search().
