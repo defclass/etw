@@ -85,6 +85,19 @@ class Classify extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+    
+    /** 
+     * @todo 返回所有分类
+     * 
+     * @return CActiveDataProvider
+     */
+    public function all_classify() {
+        $criteria = new CDbCriteria;
+        return new CActiveDataProvider($this, array(
+            'criteria' => $criteria,
+        ));
+    }
+
 
     /** 
      * @todo 获取所有产品分类

@@ -136,6 +136,20 @@ class Product extends CActiveRecord
 		));
 	}
 
+/** 
+ * @todo 没有带搜索的所有数据
+ * 
+ * @return CActiveDataProvider
+ */
+    public function all_product() {
+        $criteria = new CDbCriteria;
+        $criteria->with=array('c','b','m');
+        return new CActiveDataProvider($this, array(
+            'criteria' => $criteria,
+        ));
+    }
+
+
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
