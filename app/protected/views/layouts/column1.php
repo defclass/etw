@@ -4,11 +4,11 @@
     <ul>
         <li><a class="detail_line" href="index.html">首页</a></li>
         <li>
-            <a class="detail_line" href="javascript:;">产品中心</a>
+            <a class="detail_line" href="<?php echo $this->createUrl('/Product/index');?>">产品中心</a>
             <div>
-                <span><a href="javascript:;">- 分销品牌</a></span>
-                <span><a href="javascript:;">- 产品信息</a></span>
-                <span><a href="javascript:;">- 应用范围</a></span>
+                <span><a href="<?php echo $this->createUrl('/Product/brandList');?>">- 分销品牌</a></span>
+                <span><a href="<?php echo $this->createUrl('/Product/ProductDisplay'); ?>">- 产品展示</a></span>
+                <span><a href="<?php echo $this->createUrl('/Product/Application'); ?>">- 应用范围</a></span>
             </div>
         </li>
         <li>
@@ -50,7 +50,7 @@
             <a class="detail_line" href="javascript:;">联系我们</a>
         </li>
     </ul>
-    <div class="product_us"><a href="javascript:;"><img src="images/product_us_03.png"></a></div>
+    <div class="product_us"><a href="javascript:;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/product_us_03.png"></a></div>
 </div>
 	        <?php echo $content; ?>
-        <?php $this->endContent(); ?>
+<?php $this->endContent(); ?>

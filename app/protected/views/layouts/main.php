@@ -43,7 +43,7 @@
         <!-- header star-->
         <div class="header">
           <div class="logo f_left">
-            <a href="javascript:;"><img src="images/logo_03.png"></a>
+            <a href="javascript:;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/logo_03.png"></a>
           </div>
           <div class="header_text f_left">
             <h4 class="font20">佰润电子有限公司</h4>
@@ -68,17 +68,18 @@
           <div class="nav_inner">
             <ul>
               <li class="nav_li">
-                <a class="nav_width" href="javascript:;">网站首页</a>
+                <a class="nav_width" href="<?php echo $this->createUrl('/Site/Index');?>">网站首页</a>
               </li>
               <li class="nav_li">
-                <a class="nav_width" href="javascript:;">产品中心<b></b></a>
+                <a class="nav_width" href="<?php echo $this->createUrl('/Product/Index');?>">产品中心<b></b></a>
                 <div class="nav_main none">
                   <ul class="f_left">
-                    <li><a href="javascript:;">分销品牌</a></li>
-                    <li><a href="javascript:;">应用范围</a></li>
+                    <li><a href="<?php echo $this->createUrl('/Product/BrandList'); ?>">分销品牌</a></li>
+                    <li><a href="<?php echo $this->createUrl('/Product/ProductDisplay'); ?>">产品展示</a></li>
+                    <li><a href="<?php echo $this->createUrl('/Product/Application'); ?>">应用范围</a></li>
                   </ul>
                   <span class="f_right nav_main_img">
-                    <img src="images/nav_main_ing_13.png" />
+                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/nav_main_ing_13.png" />
                   </span>
                   <div class="clear"></div>
                 </div>
@@ -90,7 +91,7 @@
                     <li><a href="javascript:;">所有供应商</a></li>
                   </ul>
                   <span class="f_right nav_main_img">
-                    <img src="images/nav_main_ing_13.png" />
+                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/nav_main_ing_13.png" />
                   </span>
                   <div class="clear"></div>
                 </div>
@@ -102,7 +103,7 @@
                     <li><a href="javascript:;">最新技术</a></li>
                   </ul>
                   <span class="f_right nav_main_img">
-                    <img src="images/nav_main_ing_13.png" />
+                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/nav_main_ing_13.png" />
                   </span>
                   <div class="clear"></div>
                 </div>
@@ -121,7 +122,7 @@
                     <li><a href="javascript:;">帮助</a></li>
                   </ul>
                   <span class="f_right nav_main_img nav_main_img2">
-                    <img src="images/nav_main_ing_13.png" />
+                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/nav_main_ing_13.png" />
                   </span>
                   <div class="clear"></div>
                 </div>
@@ -137,7 +138,7 @@
                     <li><a href="javascript:;">最新职位</a></li>
                   </ul>
                   <span class="f_right nav_main_img nav_main_img2">
-                    <img src="images/nav_main_ing_13.png" />
+                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/nav_main_ing_13.png" />
                   </span>
                   <div class="clear"></div>
                 </div>
@@ -151,14 +152,14 @@
         <!-- main star -->
         <div class="main">
           <!-- detail star-->
-	        <?php echo $content; ?>
-          </div><!-- main end-->
-          <div class="clear"></div>
-        </div>
-        <!-- footer star-->
-        <div class="footer main_width">
-    <div class="footer_inner">
-        <ul class="footer_nav f_left">
+	      <?php echo $content; ?>
+        </div><!-- main end-->
+        <div class="clear"></div>
+      </div>
+      <!-- footer star-->
+      <div class="footer main_width">
+        <div class="footer_inner">
+          <ul class="footer_nav f_left">
             <li><a href="javascript:;">网站首页</a></li>
             <li><a href="javascript:;">产品中心</a></li>
             <li><a href="javascript:;">供应商信息</a></li>
@@ -167,23 +168,23 @@
             <li><a href="javascript:;">客服服务</a></li>
             <li><a href="javascript:;">了解我们</a></li>
             <li><a href="javascript:;">联系我们</a></li>
-        </ul>
-        <div class="share f_right">
+          </ul>
+          <div class="share f_right">
             <ul>
-                <li><a class="share1" href="javascript:;"></a></li>
-                <li><a class="share2" href="javascript:;"></a></li>
-                <li><a class="share3" href="javascript:;"></a></li>
-                <li><a class="share4" href="javascript:;"></a></li>
-                <li><a class="share5" href="javascript:;"></a></li>
-                <li><a class="share6" href="javascript:;"></a></li>
+              <li><a class="share1" href="javascript:;"></a></li>
+              <li><a class="share2" href="javascript:;"></a></li>
+              <li><a class="share3" href="javascript:;"></a></li>
+              <li><a class="share4" href="javascript:;"></a></li>
+              <li><a class="share5" href="javascript:;"></a></li>
+              <li><a class="share6" href="javascript:;"></a></li>
             </ul>
-        </div>
+          </div>
 
-        <div class="footer_text">
-          &copy;Copyright BARUM ELECTRONICS LIMITED 
-        </div>
-      </div><!-- footer end-->
-    </div>
+          <div class="footer_text">
+            &copy;Copyright BARUM ELECTRONICS LIMITED 
+          </div>
+        </div><!-- footer end-->
+      </div>
     </div>
   </body>
 </html>

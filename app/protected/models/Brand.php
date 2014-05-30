@@ -116,4 +116,16 @@ class Brand extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+    /** 
+     * @todo 获得所有品牌
+     * 
+     * @return CActiveDataProvider
+     */
+    public function all_brands(){
+        $criteria = new CDbCriteria;
+        return new CActiveDataProvider($this, array(
+            'criteria' => $criteria,
+        ));
+    }
 }

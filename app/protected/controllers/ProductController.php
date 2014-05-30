@@ -26,8 +26,6 @@ class ProductController extends Controller
 	 */
 	public function actionIndex()
 	{
-		// renders the view file 'protected/views/site/index.php'
-		// using the default layout 'protected/views/layouts/main.php'
         //$this->layout = "//layout/main";
         $product_model = new Product();
         $products = $product_model->all_product();
@@ -40,4 +38,37 @@ class ProductController extends Controller
              'classifies'=>$classifies->getData(),
         ));
 	}
+
+    /** 
+     * @todo 分销品牌列表页
+     * 
+     */
+    public function actionBrandList()
+	{
+        $brand_model = new Brand();
+        $brands = $brand_model->all_brands();
+        
+        $this->render('brandList',array(
+            'brands'=>$brands->getData(),
+        ));
+	}
+    /** 
+     * @todo 产品展示页面
+     */
+    public function actionProductDisplay(){
+        $product_model = new Product();
+        $products = $product_model->all_product();
+        $this->render('productDisplay',array(
+            'products'=>$products->getData(),
+            'pages'=>$products->getPagination(),
+        ));
+    }
+    /** 
+     * @todo 应用范围
+     */
+    public function actionApplication(){
+        $this->render('application');
+    }
+
+    
 }

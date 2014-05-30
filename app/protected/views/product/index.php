@@ -85,23 +85,11 @@
     <!--分页-->
     <div class="paging">
     
-    <?php $this->widget('LinkPager', array(
+    <?php $this->widget('CLinkPager', array(
       'pages' => $pages,
     )) ?>
     </div>
-      
-    <div class="paging">
-      <div class="paging_cen mtb">
-        <a href="javascript:;" class="paging_Confirm">&lt;</a>
-        <a href="javascript:;">1</a>
-        <a href="javascript:;">2</a>
-        <a href="javascript:;">3</a>
-        <a href="javascript:;">4</a>
-        ...
-        <a href="javascript:;">60</a>
-        <a href="javascript:;">&gt;</a>
-      </div>
-    </div>
+
     <!--分页 end-->
   </div>
 </div> 
