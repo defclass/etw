@@ -14,6 +14,7 @@
  * @property string $datecode
  * @property integer $quantity
  * @property string $direction
+ * @property string $image_url
  * @property string $create_time
  * @property integer $status
  *
@@ -49,10 +50,11 @@ class Product extends CActiveRecord
             array('classify, brand,manufacturer', 'numerical', 'integerOnly'=>true),
 			array('pid, cid, bid, mid', 'length', 'max'=>16),
 			array('model, package, RoHS, datecode, direction', 'length', 'max'=>64),
+            array('image_url', 'length', 'max'=>256),
 			array('create_time', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('pid, cid, bid, mid, model, package, RoHS, datecode, quantity, direction, create_time, status', 'safe', 'on'=>'search'),
+			array('pid, cid, bid, mid, model, package, RoHS, datecode, quantity, direction,image_url, create_time, status', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -89,6 +91,7 @@ class Product extends CActiveRecord
 			'datecode' => '批号',
 			'quantity' => '数量',
 			'direction' => '注释',
+            'image_url' => '产品图片地址',
 			'create_time' => '创建时间',
 			'status' => '显示状态',
 		);
@@ -128,6 +131,7 @@ class Product extends CActiveRecord
 		$criteria->compare('datecode',$this->datecode,true);
 		$criteria->compare('quantity',$this->quantity);
 		$criteria->compare('direction',$this->direction,true);
+        $criteria->compare('image_url',$this->image_url,true);
 		$criteria->compare('create_time',$this->create_time,true);
 		$criteria->compare('status',$this->status);
 

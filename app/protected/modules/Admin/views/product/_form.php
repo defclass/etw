@@ -12,6 +12,7 @@
 	'htmlOptions'=>array(
 	    'class'=>'pageForm required-validate',
 	    'onsubmit'=>'return iframeCallback(this,dialogAjaxDone)',
+        'enctype'=>"multipart/form-data",
 	)
 )); ?>
     <div class="pageFormContent" layoutH="58">
@@ -70,6 +71,12 @@
 		<?php echo $form->labelEx($model,'direction'); ?>
 		<?php echo $form->textField($model,'direction',array('size'=>16,'maxlength'=>32)); ?>
 		<?php echo $form->error($model,'direction'); ?>
+	</div>
+
+    <div class="unit">
+		<?php echo $form->labelEx($model,'image_url'); ?>
+		<?php echo $form->fileField($model,'image_url',array('size'=>16,'maxlength'=>256)); ?>
+		<?php echo $form->error($model,'image_url'); ?>
 	</div>
 
 	<div class="unit">

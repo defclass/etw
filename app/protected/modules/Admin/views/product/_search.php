@@ -56,6 +56,12 @@
 		<?php echo $form->textField($model,'direction',array('size'=>60,'maxlength'=>64)); ?>
 	</div>
 
+     <div class="unit">
+		<?php echo $form->labelEx($model,'image_url'); ?>
+		<?php echo $form->textField($model,'image_url',array('size'=>60,'maxlength'=>256)); ?>
+		<?php echo $form->error($model,'image_url'); ?>
+	</div>
+
 	<div class="row">
 		<?php echo $form->label($model,'create_time'); ?>
 		<?php echo $form->textField($model,'create_time',array('size'=>10,'maxlength'=>10)); ?>

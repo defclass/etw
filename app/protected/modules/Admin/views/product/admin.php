@@ -29,7 +29,8 @@
              'value' => '$data->m->manufacturer_name',
          ), 
 		'model',
-		'package',
+         'package',
+         'image_url',
 		/*
 		'RoHS',
 		'datecode',

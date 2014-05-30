@@ -23,6 +23,7 @@ $this->breadcrumbs=array(
 		'datecode',
 		'quantity',
 		'direction',
+                'image_url',
 		'create_time',
 		'status',
 			),

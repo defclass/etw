@@ -235,7 +235,7 @@ class BrandController extends Controller
             $model->addError('logo','图片大小不要超2M');
             DwzHelper::error($model);
         }
-        $dir='/assets/Uploads/Logo/';
+        $dir='/assets/Uploads/BrandLogos/';
         $local_dir = Yii::getPathOfAlias('webroot').$dir;
         if (!is_dir($local_dir)) {
             mkdir($local_dir,0777,true);
