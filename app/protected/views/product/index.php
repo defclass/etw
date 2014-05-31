@@ -67,7 +67,7 @@
           <tr class="">
             <td style="width:10px" class="icon">&nbsp;</td>
             <td><div style="width:150px;text-overflow:ellipsis;white-space:nowrap; overflow:hidden;">
-              <a href="#" title="B41866-S6107-M001"><u>
+              <a href="<?php echo Yii::app()->createUrl('/Product/ProductDetails/'); ?>/id/<?php echo $pro->pid; ?>" title="B41866-S6107-M001"><u>
               <?php echo $pro->model; ?>
             </u></a></div></td>
             <td align="center"><?php echo $pro->quantity; ?></td>
@@ -75,7 +75,7 @@
             <td align="center"><?php echo $pro->package; ?></td>
             <td align="center">
               <a href="#" target="_blank">
-                <img src="images/xunjiapng_03.png" alt="在线询价"></a>
+                <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/xunjiapng_03.png" alt="在线询价"></a>
             </td>
           </tr>
           <?php } ?>

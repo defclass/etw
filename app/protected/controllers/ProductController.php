@@ -2,6 +2,7 @@
 
 class ProductController extends Controller
 {
+    private $_model ;
 
     //public $defaultAction = 'Index';
     //public $layout = false;
@@ -13,16 +14,20 @@ class ProductController extends Controller
 		return array(
 			// page action renders "static" pages stored under 'protected/views/site/pages'
 			// They can be accessed via: index.php?r=site/page&view=FileName
-			/*'page'=>array(
-				'class'=>'CViewAction',
-			),
-            */
+            'captcha'=>array(
+                'class'=>'CCaptchaAction',
+                'backColor'=>0xFFFFFF,
+                'maxLength'=>'4',       // 最多生成几个字符
+                'minLength'=>'3',       // 最少生成几个字符
+                'height'=>'30',
+                'width'=>'60',
+                'testLimit'=>1,
+            ), 
 		);
 	}
 
 	/**
-	 * This is the default 'index' action that is invoked
-	 * when an action is not explicitly requested by users.
+	 * @默认页面
 	 */
 	public function actionIndex()
 	{
@@ -38,6 +43,49 @@ class ProductController extends Controller
              'classifies'=>$classifies->getData(),
         ));
 	}
+
+
+    /** 
+     * @todo 产品详情页
+     * 
+     * @return 
+     */
+    public function actionProductDetails(){
+        $product = $this->loadModel();
+        $order = new Order('ProductDetails');
+        $order_detail = new  OrderDetail('ProductDetails');
+        $code = new Captcha;
+
+        if(isset($_POST['Order'])){
+            $code->attributes  = $_POST['Captcha'];
+            if($this->createAction('captcha')->validate($code->code,false)){
+                $order->attributes = $_POST['Order'];
+                $order_detail->attributes = $_POST['OrderDetail'];
+                if($order->validate() && $order_detail->validate()){
+                    $order->oid = Common::getMaxId();
+                    if($order->save()){
+                        $order_detail->od_id = Common::getMaxId();
+                        $order_detail->oid = $order->oid;
+                        $order_detail->model = $product->model;
+                        $order_detail->manufacturer = $product->m->manufacturer_name;
+                        $order_detail->create_time = time();
+                        if($order_detail->save()){
+                            Yii::app()->user->setFlash('success','成功发送！');
+                        }
+                    }
+                }
+            }else{
+                $code->addError('code',"验证码不正确");
+            }
+        }
+        $this->render('productDetails',array(
+            'product'=>$product,
+            'order'=>$order,
+            'order_detail'=>$order_detail,
+            'code'=>$code,
+        ));
+        
+    }
 
     /** 
      * @todo 分销品牌列表页
@@ -70,5 +118,20 @@ class ProductController extends Controller
         $this->render('application');
     }
 
-    
+
+    /** 
+     * @todo 加载Model
+     * 
+     * @return 
+     */
+    public function loadModel()	{
+		if($this->_model===null)
+            {
+                if(isset($_GET['id']))
+                    $this->_model=Product::model()->findbyPk($_GET['id']);
+                if($this->_model===null)
+                    throw new CHttpException(404,'请求的页面不存在');
+            }
+		return $this->_model;
+	}
 }

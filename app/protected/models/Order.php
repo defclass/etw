@@ -29,10 +29,12 @@ class Order extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
+            array('contact_person,email','required','on'=>'ProductDetails'),
 			array('oid', 'length', 'max'=>16),
 			array('company_name', 'length', 'max'=>256),
+			array('contact_person', 'length', 'max'=>128),
 			array('email', 'email',),
-			array('tel', 'numerical', 'integerOnly'=>true),
+			array('tel', 'length', 'max'=>'32'),
 			array('inquiry_content', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
