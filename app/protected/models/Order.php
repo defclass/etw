@@ -6,6 +6,7 @@
  * The followings are the available columns in table '{{order}}':
  * @property string $oid
  * @property string $company_name
+ * @property string $contact_person
  * @property string $email
  * @property string $tel
  * @property string $inquiry_content
@@ -35,7 +36,7 @@ class Order extends CActiveRecord
 			array('inquiry_content', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('oid, company_name, email, tel, inquiry_content', 'safe', 'on'=>'search'),
+			array('oid, company_name,contact_person, email, tel, inquiry_content', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -58,6 +59,7 @@ class Order extends CActiveRecord
 		return array(
 			'oid' => '订单ID',
 			'company_name' => '公司名',
+            'contact_person' => '联系人',
 			'email' => 'email',
 			'tel' => '电话',
 			'inquiry_content' => '询价内容',
@@ -84,6 +86,7 @@ class Order extends CActiveRecord
 
 		$criteria->compare('oid',$this->oid,true);
 		$criteria->compare('company_name',$this->company_name,true);
+        $criteria->compare('contact_person',$this->contact_person,true);
 		$criteria->compare('email',$this->email,true);
 		$criteria->compare('tel',$this->tel,true);
 		$criteria->compare('inquiry_content',$this->inquiry_content,true);

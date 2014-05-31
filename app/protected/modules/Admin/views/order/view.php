@@ -15,6 +15,7 @@
       'attributes'=>array(
         'oid',
         'company_name',
+        'contact_person',
         'email',
         'tel',
         'inquiry_content',

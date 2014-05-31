@@ -7,6 +7,9 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('company_name')); ?>:</b>
 	<?php echo CHtml::encode($data->company_name); ?>
 	<br />
+    <b><?php echo CHtml::encode($data->getAttributeLabel('contact_person')); ?>:</b>
+	<?php echo CHtml::encode($data->contact_person); ?>
+	<br />
 	<b><?php echo CHtml::encode($data->getAttributeLabel('email')); ?>:</b>
 	<?php echo CHtml::encode($data->email); ?>
 	<br />
