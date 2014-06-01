@@ -11,18 +11,6 @@ class ProductController extends Controller
 	 */
 	private $_model;
 
-        /** 
-     * @var 上传附件的扩展名
-     */
-    private $_img_extension = array('jpg','png','bmp','jepg');
-
-    /** 
-     * @var 上传附件的大小 
-     */
-
-    private $_img_size = 2097152;//2MB
-
-
 	/**
 	 * @return array action 过滤器
 	 */
@@ -95,7 +83,14 @@ class ProductController extends Controller
             $data = $_POST['Product'];
             
             /* 处理上传结果 */
-            $rs = $this->Upload_product_image($model,"Product[image_url]");
+            $param=array(
+                'model'=>$model,
+                'db_field' => 'image_url',
+                'dir' => 'ProductImages',
+                'name' => 'Product[image_url]'
+            );
+            $upload_obj = new DwzUploadImage($param);
+            $rs = $upload_obj->upload();
 
             if($rs['status'] == 'ERROR'){
                 $model->addError('image_url',$rs['msg']);
@@ -137,7 +132,15 @@ class ProductController extends Controller
 		{
             $data = $_POST['Product'];
             /* 处理上传结果 */
-            $rs = $this->Upload_product_image($model,"Product[image_url]");
+           /* 处理上传结果 */
+            $param=array(
+                'model'=>$model,
+                'db_field' => 'image_url',
+                'dir' => 'ProductImages',
+                'name' => 'Product[image_url]'
+            );
+            $upload_obj = new DwzUploadImage($param);
+            $rs = $upload_obj->upload();
 
             if($rs['status'] == 'ERROR'){
                 $model->addError('image_url',$rs['msg']);
@@ -148,6 +151,7 @@ class ProductController extends Controller
             }elseif($rs['status'] == 'NO_UPLOAD'){
                 unset($data['image_url']);
             }
+            
             $model->attributes=$data;
 
 			if($model->save())
@@ -233,39 +237,4 @@ class ProductController extends Controller
 		}
 	}
 
-       /** 
-     * @todo 上传产品图的函数
-     * @param name input 中的name属性
-     * 
-     * @return bool
-     */
-    private function  Upload_product_image($model,$name){
-        $image = CUploadedFile::getInstanceByName($name);
-        
-        if($image == null){
-            return array('status'=>'NO_UPLOAD','msg'=>'');
-
-        }
-        if(!in_array($image->getExtensionName(),$this->_img_extension)){
-            $model->addError('image_url','图片格式仅限jpg,png,bmp,jepg');
-            DwzHelper::error($model);
-        }
-        if( $image->getSize() > $this->_img_size) {
-            $model->addError('image_url','图片大小不要超2M');
-            DwzHelper::error($model);
-        }
-        $dir='/assets/Uploads/ProductImages/';
-        $local_dir = Yii::getPathOfAlias('webroot').$dir;
-        if (!is_dir($local_dir)) {
-            mkdir($local_dir,0777,true);
-        }
-        $name = $local_dir.$image->name;
-        //文件名绝对路径
-        $rs = $image->saveAs($name,true);
-        if($rs){
-            return array('status'=>'SUCCESS', 'msg'=>$dir.$image->name);
-        }else{
-            return array('status'=>'ERROR','msg'=>'上传失败，未知错误' );
-        }
-    }
 }
