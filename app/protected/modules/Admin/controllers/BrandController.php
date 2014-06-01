@@ -100,7 +100,7 @@ class BrandController extends Controller
                 /* 给logopath赋值 */
                 $data['logo'] = $rs['msg'];
             }elseif($rs['status'] == 'NO_UPLOAD'){
-                unset($data['image_url']);
+                unset($data['logo']);
             }
 
             
@@ -150,7 +150,7 @@ class BrandController extends Controller
                 /* 给logopath赋值 */
                 $data['logo'] = $rs['msg'];
             }elseif($rs['status'] == 'NO_UPLOAD'){
-                unset($data['image_url']);
+                unset($data['logo']);
             }
 
 			$model->attributes=$data;
