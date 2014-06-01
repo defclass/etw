@@ -30,6 +30,11 @@ class Product extends CActiveRecord
     public $brand;
 
     public $manufacturer;
+
+    /* 搜索中存储按首字母搜索的字段 */
+
+    public $index_search;
+    
 	/**
 	 * @return string the associated database table name
 	 */
@@ -51,6 +56,7 @@ class Product extends CActiveRecord
 			array('pid, cid, bid, mid', 'length', 'max'=>16),
 			array('model, package, RoHS, datecode, direction', 'length', 'max'=>64),
             array('image_url', 'length', 'max'=>256),
+            array('index_search', 'length', 'max'=>1),
 			array('create_time', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
@@ -117,13 +123,18 @@ class Product extends CActiveRecord
         
         $criteria->with=array('c','b','m');
 		$criteria->compare('pid',$this->pid,true);
-		$criteria->compare('cid',$this->cid,true);
-		$criteria->compare('bid',$this->bid,true);
-		$criteria->compare('mid',$this->mid,true);
+		$criteria->compare('t.cid',$this->cid,true);
+		$criteria->compare('t.bid',$this->bid,true);
+		$criteria->compare('t.mid',$this->mid,true);
 
         $criteria->compare('c.classify_name',$this->classify,true);
 		$criteria->compare('b.brand_name',$this->brand,true);
 		$criteria->compare('m.manufacturer_name',$this->manufacturer,true);
+        
+        $criteria->addCondition('model LIKE :i and model REGEXP :j');
+        $criteria->params[':i'] = "%".$this->index_search."%";
+        $criteria->params[':j'] = "^".$this->index_search;
+
         
 		$criteria->compare('model',$this->model,true);
 		$criteria->compare('package',$this->package,true);

@@ -37,7 +37,7 @@
                                if(!empty($product->image_url)){
                                  echo $product->image_url;
                                }else{
-                                 echo $rpoduct->b->logo;
+                                 echo $product->b->logo;
                                }
                                ?>" style="max-width:175px;max-height:175px">
             </div>

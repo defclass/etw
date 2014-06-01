@@ -33,14 +33,45 @@ class ProductController extends Controller
 	{
         //$this->layout = "//layout/main";
         $product_model = new Product();
-        $products = $product_model->all_product();
+		$product_model->unsetAttributes();  // 清除默认值
+
+        $data = array();
+        if(isset($_GET['index']) && preg_match("/[0-9A-Za-z]/",$_GET['index'])){
+            $product_model->index_search = $_GET['index'];
+        }
+        
+        if(isset($_GET['classify']) && is_numeric($_GET['classify']) && $_GET['classify'] != 0 ){
+            $data['cid'] = $_GET['classify'];
+        }
+
+        if(isset($_GET['brand']) && is_numeric($_GET['brand']) ){
+            $data['bid'] = $_GET['brand'];
+        }
+
+        if(isset($_GET['keyword'])){
+            $data['model'] = $_GET['keyword'];
+        }
+
+        $product_model->attributes = $data;
+        $products = $product_model->search();
         $classify_model = new Classify();
+        /* 定义分类目录的跳转url */
+        $nav_href = '';
+
         $classifies = $classify_model->all_classify();
+        $nav_href = Yii::app()->createUrl('/Product/Index/').'/classify/';
+        
+//        if(isset($_GET['classify']) && $_GET['classify'] == 1401070747046472){
+        $brands = Brand::Model()->search();
+        $nav_href = Yii::app()->createUrl('/Product/Index/').'/classify/1401070747046472/brand/';
+
         
         $this->render('index',array(
              'products'=>$products->getData(),
              'pages'=>$products->getPagination(),
              'classifies'=>$classifies->getData(),
+             'brands'=>$brands,
+             'nav_href'=>$nav_href,
         ));
 	}
 

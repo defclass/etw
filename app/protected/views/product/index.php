@@ -12,12 +12,13 @@
             <div class="global_products">
               <p><strong>请选择产品分类：</strong></p>
               <div class="tabcate" style="width:550px;overflow:hidden;">
-                <?php foreach($classifies as $cl) { ?>
-                  <span style="float:left;width:150px;overflow:hidden;margin:5px 10px 5px 10px;">
-                  <a href="#"><?php echo $cl->classify_name; ?></a>
-                </span>
+                <?php 
+                if(isset($_GET['classify']) && $_GET['classify'] == Yii::app()->params['display_brand_classify_id'] )
+                  echo $this->renderPartial('_brand_index',array('brands'=>$brands->getData()));
+                else
+                  echo $this->renderPartial('_classify_index',array('classifies'=>$classifies));
+                ?>
                 
-                <?php } ?>
               </div>
               <a name="details"></a>
               <p><strong>搜索产品型号</strong></p>
@@ -27,8 +28,10 @@
                     <td align="right">关键字: </td>
                     <td style="line-height:25px">
                       <input name="keyword" type="text" class="inputbox" value="" size="40" maxlength="30">  &nbsp;
-                      <select name="categoryId" class="inputbox" style="width:80px">
+                      <select name="classify" class="inputbox" style="width:80px">
                         <option value="0" selected="selected">所有</option>
+
+
                         <?php foreach($classifies as $cl) { ?>
                         <option value="<?php echo $cl->cid; ?>"><?php echo $cl->classify_name; ?> </option>
                         <?php } ?>
@@ -40,8 +43,7 @@
                     <td align="right">快捷库存索引: </td>
                     <td>
                       <div class="StockIndex">&nbsp;
-                        <a href="/product/skey/A" title="A">
-                          A</a> <a href="/product/skey/B" title="B">B</a><a href="/product/skey/C" title="C">C</a><a href="/product/skey/D" title="D">D</a><a href="/product/skey/E" title="E">E</a><a href="/product/skey/F" title="F">F</a><a href="/product/skey/G" title="G">G</a><a href="/product/skey/H" title="H">H</a><a href="/product/skey/I" title="I">I</a><a href="/product/skey/J" title="J">J</a><a href="/product/skey/K" title="K">K</a><a href="/product/skey/L" title="L">L</a><a href="/product/skey/M" title="M">M</a><a href="/product/skey/N" title="N">N</a><a href="/product/skey/O" title="O">O</a><a href="/product/skey/P" title="P">P</a><a href="/product/skey/Q" title="Q">Q</a><a href="/product/skey/R" title="R">R</a><a href="/product/skey/S" title="S">S</a><a href="/product/skey/T" title="T">T</a><a href="/product/skey/U" title="U">U</a><a href="/product/skey/V" title="V">V</a><a href="/product/skey/W" title="W">W</a><a href="/product/skey/X" title="X">X</a><a href="/product/skey/Y" title="Y">Y</a><a href="/product/skey/Z" title="Z">Z</a><a href="/product/skey/0" title="0">0</a><a href="/product/skey/1" title="1">1</a><a href="/product/skey/2" title="2">2</a><a href="/product/skey/3" title="3">3</a><a href="/product/skey/4" title="4">4</a><a href="/product/skey/5" title="5">5</a><a href="/product/skey/6" title="6">6</a><a href="/product/skey/7" title="7">7</a><a href="/product/skey/8" title="8">8</a><a href="/product/skey/9" title="9">9</a>
+                        <a href="<?php echo Yii::app()->createUrl('/Product/Index');?>/index/A" title="A">A</a> <a href="<?php echo Yii::app()->createUrl('/Product/Index');?>/index/B" title="B">B</a><a href="<?php echo Yii::app()->createUrl('/Product/Index');?>/index/C" title="C">C</a><a href="<?php echo Yii::app()->createUrl('/Product/Index');?>/index/D" title="D">D</a><a href="<?php echo Yii::app()->createUrl('/Product/Index');?>/index/E" title="E">E</a><a href="<?php echo Yii::app()->createUrl('/Product/Index');?>/index/F" title="F">F</a><a href="<?php echo Yii::app()->createUrl('/Product/Index');?>/index/G" title="G">G</a><a href="<?php echo Yii::app()->createUrl('/Product/Index');?>/index/H" title="H">H</a><a href="<?php echo Yii::app()->createUrl('/Product/Index');?>/index/I" title="I">I</a><a href="<?php echo Yii::app()->createUrl('/Product/Index');?>/index/J" title="J">J</a><a href="<?php echo Yii::app()->createUrl('/Product/Index');?>/index/K" title="K">K</a><a href="<?php echo Yii::app()->createUrl('/Product/Index');?>/index/L" title="L">L</a><a href="<?php echo Yii::app()->createUrl('/Product/Index');?>/index/M" title="M">M</a><a href="<?php echo Yii::app()->createUrl('/Product/Index');?>/index/N" title="N">N</a><a href="<?php echo Yii::app()->createUrl('/Product/Index');?>/index/O" title="O">O</a><a href="<?php echo Yii::app()->createUrl('/Product/Index');?>/index/P" title="P">P</a><a href="<?php echo Yii::app()->createUrl('/Product/Index');?>/index/Q" title="Q">Q</a><a href="<?php echo Yii::app()->createUrl('/Product/Index');?>/index/R" title="R">R</a><a href="<?php echo Yii::app()->createUrl('/Product/Index');?>/index/S" title="S">S</a><a href="<?php echo Yii::app()->createUrl('/Product/Index');?>/index/T" title="T">T</a><a href="<?php echo Yii::app()->createUrl('/Product/Index');?>/index/U" title="U">U</a><a href="<?php echo Yii::app()->createUrl('/Product/Index');?>/index/V" title="V">V</a><a href="<?php echo Yii::app()->createUrl('/Product/Index');?>/index/W" title="W">W</a><a href="<?php echo Yii::app()->createUrl('/Product/Index');?>/index/X" title="X">X</a><a href="<?php echo Yii::app()->createUrl('/Product/Index');?>/index/Y" title="Y">Y</a><a href="<?php echo Yii::app()->createUrl('/Product/Index');?>/index/Z" title="Z">Z</a><a href="<?php echo Yii::app()->createUrl('/Product/Index');?>/index/0" title="0">0</a><a href="<?php echo Yii::app()->createUrl('/Product/Index');?>/index/1" title="1">1</a><a href="<?php echo Yii::app()->createUrl('/Product/Index');?>/index/2" title="2">2</a><a href="<?php echo Yii::app()->createUrl('/Product/Index');?>/index/3" title="3">3</a><a href="<?php echo Yii::app()->createUrl('/Product/Index');?>/index/4" title="4">4</a><a href="<?php echo Yii::app()->createUrl('/Product/Index');?>/index/5" title="5">5</a><a href="<?php echo Yii::app()->createUrl('/Product/Index');?>/index/6" title="6">6</a><a href="<?php echo Yii::app()->createUrl('/Product/Index');?>/index/7" title="7">7</a><a href="<?php echo Yii::app()->createUrl('/Product/Index');?>/index/8" title="8">8</a><a href="<?php echo Yii::app()->createUrl('/Product/Index');?>/index/9" title="9">9</a>
                       </div>
                     </td>
                   </tr>
