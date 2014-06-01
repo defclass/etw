@@ -12,6 +12,7 @@
 		'columns'=>array(
 			'mid',
 		'manufacturer_name',
+            'company_url',
 			array(
 				'class'=>'ext.dwz.DwzButtonColumn',
 			),

@@ -15,6 +15,8 @@ $this->breadcrumbs=array(
 			'attributes'=>array(
 				'mid',
 		'manufacturer_name',
+                'company_url',
+                'comment',
 			),
 		)); ?>
 	</div>

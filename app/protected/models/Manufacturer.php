@@ -1,11 +1,16 @@
 <?php
 
 /**
- * This is the model class for table "br_manufacturer".
+ * This is the model class for table ""{{manufacturer}}"".
  *
- * The followings are the available columns in table 'br_manufacturer':
+ * The followings are the available columns in table '"{{manufacturer}}"':
  * @property string $mid
  * @property string $manufacturer_name
+ * @property string $company_url
+ * @property string $comment
+ *
+ * The followings are the available model relations:
+ * @property Product[] $products
  */
 class Manufacturer extends CActiveRecord
 {
@@ -28,9 +33,11 @@ class Manufacturer extends CActiveRecord
             array('mid,manufacturer_name','required'),
 			array('mid', 'length', 'max'=>16),
 			array('manufacturer_name', 'length', 'max'=>256),
+            array('company_url', 'length', 'max'=>128),
+			array('comment', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('mid, manufacturer_name', 'safe', 'on'=>'search'),
+			array('mid, manufacturer_name, company_url, comment', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -42,6 +49,7 @@ class Manufacturer extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+            'products' => array(self::HAS_MANY, 'Product', 'mid'),
 		);
 	}
 
@@ -53,6 +61,8 @@ class Manufacturer extends CActiveRecord
 		return array(
 			'mid' => '供应商ID',
 			'manufacturer_name' => '供应商名',
+            'company_url' => '官网url',
+			'comment' => '一些说明',
 		);
 	}
 
@@ -76,6 +86,9 @@ class Manufacturer extends CActiveRecord
 
 		$criteria->compare('mid',$this->mid,true);
 		$criteria->compare('manufacturer_name',$this->manufacturer_name,true);
+
+        $criteria->compare('company_url',$this->company_url,true);
+		$criteria->compare('comment',$this->comment,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
