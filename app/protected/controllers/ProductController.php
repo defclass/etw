@@ -48,6 +48,11 @@ class ProductController extends Controller
             $data['bid'] = $_GET['brand'];
         }
 
+        if(isset($_GET['manufacturer']) && is_numeric($_GET['manufacturer']) ){
+            $data['mid'] = $_GET['manufacturer'];
+        }
+
+
         if(isset($_GET['keyword'])){
             $data['model'] = $_GET['keyword'];
         }

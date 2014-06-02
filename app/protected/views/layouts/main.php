@@ -85,10 +85,10 @@
                 </div>
               </li>
               <li class="nav_li">
-                <a class="nav_width" href="javascript:;">供应商信息<b></b></a>
+                <a class="nav_width" href="<?php echo $this->createUrl('/Manufacturer/Index/'); ?>">供应商信息<b></b></a>
                 <div class="nav_main none">
                   <ul class="f_left">
-                    <li><a href="javascript:;">所有供应商</a></li>
+                    <li><a href="<?php echo $this->createUrl('/Manufacturer/Index/'); ?>">所有供应商</a></li>
                   </ul>
                   <span class="f_right nav_main_img">
                     <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/nav_main_ing_13.png" />

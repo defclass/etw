@@ -26,10 +26,10 @@ class Brand extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-            array('bid, brand_name,logo', 'required'),
+            array('bid, brand_name', 'required'),
 			array('bid', 'length', 'max'=>16),
 			array('brand_name', 'length', 'max'=>64),
-			array('logo', 'length', 'max'=>64),
+			array('logo', 'length', 'max'=>128),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('bid, brand_name', 'safe', 'on'=>'search'),
