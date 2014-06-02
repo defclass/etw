@@ -94,7 +94,7 @@ class BrandController extends Controller
             $rs = $upload_obj->upload();
 
             if($rs['status'] == 'ERROR'){
-                $model->addError('image_url',$rs['msg']);
+                $model->addError('logo',$rs['msg']);
                 DwzHelper::error($model);
             }elseif($rs['status'] == 'SUCCESS' ){
                 /* 给logopath赋值 */
@@ -144,7 +144,7 @@ class BrandController extends Controller
             $rs = $upload_obj->upload();
 
             if($rs['status'] == 'ERROR'){
-                $model->addError('image_url',$rs['msg']);
+                $model->addError('logo',$rs['msg']);
                 DwzHelper::error($model);
             }elseif($rs['status'] == 'SUCCESS' ){
                 /* 给logopath赋值 */
