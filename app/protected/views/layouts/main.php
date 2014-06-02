@@ -97,10 +97,10 @@
                 </div>
               </li>
               <li class="nav_li">
-                <a class="nav_width" href="javascript:;">技术中心<b></b></a>
+                <a class="nav_width" href="<?php echo $this->createUrl('/Technology/Index/'); ?>">技术中心<b></b></a>
                 <div class="nav_main none">
                   <ul class="f_left">
-                    <li><a href="javascript:;">最新技术</a></li>
+                    <li><a href="<?php echo $this->createUrl('/Technology/Index/'); ?>">最新技术</a></li>
                   </ul>
                   <span class="f_right nav_main_img">
                     <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/nav_main_ing_13.png" />

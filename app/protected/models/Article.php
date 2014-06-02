@@ -122,7 +122,7 @@ class Article extends CActiveRecord
             $criteria->compare('date',"<=$end_time",true);
         }
 		$criteria->compare('id',$this->id,true);
-        $criteria->compare('category_id',$this->category_id,true);
+        $criteria->compare('t.category_id',$this->category_id,true);
 		$criteria->compare('headline',$this->headline,true);
         $criteria->compare('article_image',$this->article_image,true);
         $criteria->compare('author_id',$this->author_id,true);
@@ -131,7 +131,7 @@ class Article extends CActiveRecord
 		$criteria->compare('clicount',$this->clicount,true);
 		$criteria->compare('keyword',$this->keyword,true);
 		$criteria->compare('status',$this->status);
-		$criteria->compare('order',$this->order);
+
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
