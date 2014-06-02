@@ -143,7 +143,7 @@
                 </div>
               </li>
               <li class="nav_li nav_li2">
-                <a class="nav_width" href="<?php echo $this->createUrl('/Service/Index'); ?>">联系我们</a>
+                <a class="nav_width" href="<?php echo $this->createUrl('/ContactUs/Index'); ?>">联系我们</a>
               </li>
             </ul>
           </div>
