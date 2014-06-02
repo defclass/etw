@@ -108,18 +108,18 @@
                   <div class="clear"></div>
                 </div>
               </li>
+              <!-- <li class="nav_li">
+              <a class="nav_width" href="javascript:;">提价咨询</a>
+              </li> -->
               <li class="nav_li">
-                <a class="nav_width" href="javascript:;">提价咨询</a>
-              </li>
-              <li class="nav_li">
-                <a class="nav_width" href="javascript:;">客服服务<b></b></a>
+                <a class="nav_width" href="<?php echo $this->createUrl('/Service/Index'); ?>">客服服务<b></b></a>
                 <div class="nav_main nav_main2 none">
                   <ul class="f_left">
-                    <li><a href="javascript:;">质量控制</a></li>
-                    <li><a href="javascript:;">订单信息</a></li>
-                    <li><a href="javascript:;">订单跟踪</a></li>
-                    <li><a href="javascript:;">信息咨询</a></li>
-                    <li><a href="javascript:;">帮助</a></li>
+                    <li><a href="<?php echo $this->createUrl('/Service/Quality'); ?>">质量控制</a></li>
+                    <li><a href="<?php echo $this->createUrl('/Service/Order'); ?>">订单信息</a></li>
+                    <li><a href="<?php echo $this->createUrl('/Service/Track'); ?>">订单跟踪</a></li>
+                    <!-- <li><a href="<?php echo $this->createUrl('/Service/Index'); ?>">信息咨询</a></li>
+                    <li><a href="<?php echo $this->createUrl('/Service/Index'); ?>">帮助</a></li> -->
                   </ul>
                   <span class="f_right nav_main_img nav_main_img2">
                     <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/nav_main_ing_13.png" />
@@ -128,15 +128,14 @@
                 </div>
               </li>
               <li class="nav_li">
-                <a class="nav_width" href="javascript:;">了解我们<b></b></a>
+                <a class="nav_width" href="<?php echo $this->createUrl('/AboutUs/Index'); ?>">了解我们<b></b></a>
                 <div class="nav_main nav_main2 none">
                   <ul class="f_left">
-                    <li><a href="javascript:;">企业优势</a></li>
-                    <li><a href="javascript:;">企业文化</a></li>
-                    <li><a href="javascript:;">全球客户</a></li>
-                    <li><a href="javascript:;">企业事件</a></li>
-                    <li><a href="javascript:;">最新职位</a></li>
-                  </ul>
+                    <li><a href="<?php echo $this->createUrl('/AboutUs/Advantage'); ?>">企业优势</a></li>
+                    <li><a href="<?php echo $this->createUrl('/AboutUs/Culture'); ?>">企业文化</a></li>
+                    <li><a href="<?php echo $this->createUrl('/AboutUs/Customers'); ?>">全球客户</a></li>
+                    <li><a href="<?php echo $this->createUrl('/AboutUs/CompanyEvents'); ?>">企业事件</a></li>
+                       </ul>
                   <span class="f_right nav_main_img nav_main_img2">
                     <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/nav_main_ing_13.png" />
                   </span>
@@ -144,7 +143,7 @@
                 </div>
               </li>
               <li class="nav_li nav_li2">
-                <a class="nav_width" href="javascript:;">联系我们</a>
+                <a class="nav_width" href="<?php echo $this->createUrl('/Service/Index'); ?>">联系我们</a>
               </li>
             </ul>
           </div>
@@ -160,23 +159,23 @@
       <div class="footer main_width">
         <div class="footer_inner">
           <ul class="footer_nav f_left">
-            <li><a href="javascript:;">网站首页</a></li>
-            <li><a href="javascript:;">产品中心</a></li>
-            <li><a href="javascript:;">供应商信息</a></li>
-            <li><a href="javascript:;">技术中心</a></li>
-            <li><a href="javascript:;">提价咨询</a></li>
-            <li><a href="javascript:;">客服服务</a></li>
-            <li><a href="javascript:;">了解我们</a></li>
-            <li><a href="javascript:;">联系我们</a></li>
+            <li><a href="<?php echo $this->createUrl('/Service/Index'); ?>">网站首页</a></li>
+            <li><a href="<?php echo $this->createUrl('/Service/Index'); ?>">产品中心</a></li>
+            <li><a href="<?php echo $this->createUrl('/Service/Index'); ?>">供应商信息</a></li>
+            <li><a href="<?php echo $this->createUrl('/Service/Index'); ?>">技术中心</a></li>
+            <li><a href="<?php echo $this->createUrl('/Service/Index'); ?>">提价咨询</a></li>
+            <li><a href="<?php echo $this->createUrl('/Service/Index'); ?>">客服服务</a></li>
+            <li><a href="<?php echo $this->createUrl('/Service/Index'); ?>">了解我们</a></li>
+            <li><a href="<?php echo $this->createUrl('/Service/Index'); ?>">联系我们</a></li>
           </ul>
           <div class="share f_right">
             <ul>
-              <li><a class="share1" href="javascript:;"></a></li>
-              <li><a class="share2" href="javascript:;"></a></li>
-              <li><a class="share3" href="javascript:;"></a></li>
-              <li><a class="share4" href="javascript:;"></a></li>
-              <li><a class="share5" href="javascript:;"></a></li>
-              <li><a class="share6" href="javascript:;"></a></li>
+              <li><a class="share1" href="<?php echo $this->createUrl('/Service/Index'); ?>"></a></li>
+              <li><a class="share2" href="<?php echo $this->createUrl('/Service/Index'); ?>"></a></li>
+              <li><a class="share3" href="<?php echo $this->createUrl('/Service/Index'); ?>"></a></li>
+              <li><a class="share4" href="<?php echo $this->createUrl('/Service/Index'); ?>"></a></li>
+              <li><a class="share5" href="<?php echo $this->createUrl('/Service/Index'); ?>"></a></li>
+              <li><a class="share6" href="<?php echo $this->createUrl('/Service/Index'); ?>"></a></li>
             </ul>
           </div>
 

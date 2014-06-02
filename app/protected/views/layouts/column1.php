@@ -32,8 +32,9 @@
                 <span><a href="javascript:;">- 质量控制</a></span>
                 <span><a href="javascript:;">- 订单信息</a></span>
                 <span><a href="javascript:;">- 订单跟踪</a></span>
-                <span><a href="javascript:;">- 信息咨询</a></span>
+ <!--               <span><a href="javascript:;">- 信息咨询</a></span>
                 <span><a href="javascript:;">- 帮助</a></span>
+-->
             </div>
         </li>
         <li>
@@ -43,7 +44,7 @@
                 <span><a href="javascript:;">- 企业文化</a></span>
                 <span><a href="javascript:;">- 全球客户</a></span>
                 <span><a href="javascript:;">- 企业事件</a></span>
-                <span><a href="javascript:;">- 最新职位</a></span>
+<!-- <span><a href="javascript:;">- 最新职位</a></span> -->
             </div>
         </li>
         <li>
