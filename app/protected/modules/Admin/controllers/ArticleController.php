@@ -92,11 +92,32 @@ class ArticleController extends Controller
 		{
             /* 新记录则添加ID */
             if($model->isNewRecord){
-                $_POST['Article']['id'] = Common::getMaxID();
-                $_POST['Article']['date'] = strtotime($_POST['Article']['date']);
-                $_POST['Article']['author_id'] = Yii::app()->user->aid;
+                $data = $_POST['Article'];
+
+                /* 处理文章图片的上传结果 */
+                $param=array(
+                    'model'=>$model,
+                    'db_field' => 'article_image',
+                    'dir' => 'ArticleImages'.date("/Y/m/d"),
+                    'name' => 'Article[article_image]'
+                );
+                $upload_obj = new DwzUploadImage($param);
+                $rs = $upload_obj->upload();
+
+                if($rs['status'] == 'ERROR'){
+                    $model->addError('article_image',$rs['msg']);
+                    DwzHelper::error($model);
+                }elseif($rs['status'] == 'SUCCESS' ){
+                    /* 给article_imagepath赋值 */
+                    $data['article_image'] = $rs['msg'];
+                }elseif($rs['status'] == 'NO_UPLOAD'){
+                    unset($data['article_image']);
+                }
+                $data['id'] = Common::getMaxID();
+                $data['date'] = strtotime($data['date']);
+                $data['author_id'] = Yii::app()->user->aid;
             }
-            $model->attributes=$_POST['Article'];
+            $model->attributes=$data;
 			if($model->save()){
                 DwzHelper::success('sucess！');
             }else{
@@ -126,6 +147,27 @@ class ArticleController extends Controller
 		{
             $data = $_POST['Article'];
             $data['date'] = strtotime($data['date']);
+
+            /* 处理文章图片的上传结果 */
+            $param=array(
+                'model'=>$model,
+                'db_field' => 'article_image',
+                'dir' => 'ArticleImages'.date("/Y/m/d"),
+                'name' => 'Article[article_image]'
+            );
+            $upload_obj = new DwzUploadImage($param);
+            $rs = $upload_obj->upload();
+
+            if($rs['status'] == 'ERROR'){
+                $model->addError('article_image',$rs['msg']);
+                DwzHelper::error($model);
+            }elseif($rs['status'] == 'SUCCESS' ){
+                /* 给article_imagepath赋值 */
+                $data['article_image'] = $rs['msg'];
+            }elseif($rs['status'] == 'NO_UPLOAD'){
+                unset($data['article_image']);
+            }
+
 			$model->attributes=$data;
 			if($model->save())
                 DwzHelper::success('更新完成！','mArticle');//要自动刷新就把后面的mArticle改成你的navTablId(就是打开navTab的链接中的rel)不用刷新可直接调用$this->dwz();即可
@@ -239,7 +281,8 @@ class ArticleController extends Controller
      * @todo 文章模块的图片上传功能
      * 
      * @return 
-     */public function actionUpload(){
+     */
+    public function actionUpload(){
         $image = CUploadedFile::getInstanceByName('filedata');
 
         if(!in_array($image->getExtensionName(),$this->_img_extension)){
