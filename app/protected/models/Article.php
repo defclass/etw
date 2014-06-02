@@ -7,6 +7,7 @@
  * @property string $id
  * @property string $category_id
  * @property string $headline
+  * @property string $article_image
  * @property string $author_id
  * @property string $date
  * @property integer $isstatic
@@ -48,7 +49,7 @@ class Article extends CActiveRecord
 			array('isstatic, status, order', 'numerical', 'integerOnly'=>true),
             array('id, author_id', 'length', 'max'=>16),
 			array('category_id', 'length', 'max'=>20),
-			array('headline', 'length', 'max'=>128),
+			array('headline,article_image', 'length', 'max'=>128),
 			array('name', 'length', 'max'=>128),
 			array('login_name', 'length', 'max'=>128),
 			array('date, clicount', 'length', 'max'=>10),
@@ -83,6 +84,7 @@ class Article extends CActiveRecord
 			'category_id' => '文章分类ID',
 			'headline' => '标题',
 			'author_id' => '作者',
+            'article_image' => '文章所附图片',
 			'date' => '日期',
 			'isstatic' => '是否伪静态',
 			'content' => '正文',
@@ -122,6 +124,7 @@ class Article extends CActiveRecord
 		$criteria->compare('id',$this->id,true);
         $criteria->compare('category_id',$this->category_id,true);
 		$criteria->compare('headline',$this->headline,true);
+        $criteria->compare('article_image',$this->article_image,true);
         $criteria->compare('author_id',$this->author_id,true);
 		$criteria->compare('isstatic',$this->isstatic);
 		$criteria->compare('content',$this->content,true);

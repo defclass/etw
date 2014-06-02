@@ -10,6 +10,7 @@
 	'htmlOptions'=>array(
 	  'class'=>'pageForm required-validate',
 	  'onsubmit'=>'return iframeCallback(this,dialogAjaxDone)',
+      'enctype'=>"multipart/form-data",
 	)
   )); ?>
   <div class="pageFormContent" layoutH="58">
@@ -28,6 +29,13 @@
       <?php echo $form->textField($model,'headline',array('size'=>60,'maxlength'=>128)); ?>
       <?php echo $form->error($model,'headline'); ?>
 	</div>
+
+    <div class="unit">
+      <?php echo $form->labelEx($model,'article_image'); ?>
+      <?php echo $form->fileField($model,'article_image',array('size'=>60,'maxlength'=>128)); ?>
+      <?php echo $form->error($model,'article_image'); ?>
+	</div>
+
 
 	<div class="unit">
       <?php echo $form->labelEx($model,'date'); ?>

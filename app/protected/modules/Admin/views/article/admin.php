@@ -17,6 +17,7 @@
         'value' => '$data->category->name',
       ), 
 	  'headline',
+      'article_image',
       array(
         'name' => '作者',
         'filter' => CHtml::activeTextField($model, 'login_name'),
