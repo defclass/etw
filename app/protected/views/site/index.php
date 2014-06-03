@@ -45,10 +45,10 @@
       <div class="description">
     <h3><?php echo Yii::t('site','Welcome to Barum Electronics');?></h3>
         <p>    <?php echo Yii::t('site','Barum Electronics Co., LTD had been established， in line with the good faith principle, is supreme, the mutually beneficial reciprocal benefit management ');?>......</p>
-        <a href="javascript:;">more>></a>
+        <a href="<?php echo Yii::app()->createUrl('/AboutUs/Index');?>">more>></a>
       </div>
       <div class="doubt">
-        <a href="javascript:;">
+        <a href="<?php echo Yii::app()->createUrl('/ContactUs/Index');?>">
     <h4><?php echo Yii::t('site','Contact Us');?></h4>
           <p><?php echo Yii::t('site','Any question? Please consult our technical staff and customer service personnel!');?></p>
         </a>
