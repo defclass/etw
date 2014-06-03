@@ -8,7 +8,7 @@
       <div id="content">
         <h1><?php echo Yii::t('site','Contact Us');?></h1>
         <div style="width:290px; height:600px;" class="left-line">                                      
-          <p><?php echo Yii::t('site','Add: Rm. 1005, Block B,Zhonghangbeiyuan Building,Zhonghang Rd.,Futian District,Shenzhen,Guangdong, China ');?></p>
+          <p><?php echo Yii::t('site','Add: Rm. 1005, Block B,Zhonghangbeiyuan Building,Zhonghang Rd.,Futian District,Shenzhen,Guangdong,China');?></p>
           <div><?php echo Yii::t('site','Tel');?>: +86 755 82566559</div>
           <div><?php echo Yii::t('site','Fax');?>: +86 755 82566559</div>
           <div>Skype: eddie198212</div>

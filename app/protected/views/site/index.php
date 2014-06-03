@@ -60,7 +60,7 @@
     <!--product star-->
     <div class="product f_left">
       <div class="product_nav">
-        产品列表
+        <?php echo  Yii::t('site','Product List'); ?>
         <span><a class="a_underline" href="list_product.html">more>></a></span>
       </div>
       <div class="product_main">

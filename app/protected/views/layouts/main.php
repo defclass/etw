@@ -34,10 +34,17 @@
           <span class="f_left">Tel:+86 755 82566559</span>
           <div class="language f_right">
             <span class="language_sanjiao"></span>
-            <div class="l_china language_nav"><a href="javascript:;">china 简体中文</a></div>
+            <?php $langs = Yii::app()->params['lang_map']; ?>
+            <div class="<?php echo $langs[Yii::app()->language]['class'];?> language_nav"><a href="<?php echo $this->langurl(Yii::app()->language);?>"><?php echo $langs[Yii::app()->language]['label'];?></a></div>
             <div class="l_box none">
-              <div class="l_english"><a href="javascript:;">English</a></div>
-              <div class="l_french"><a href="javascript:;">French</a></div>
+              <?php foreach($langs as $key => $lang){ ?>
+               
+                <?php if($key !== Yii::app()->language){ ?>
+                  <div class="<?php echo $lang['class'];?>"><a href="<?php echo $this->langurl($key);?>"><?php echo $lang['label'];?></a></div>
+                <?php } ?>
+                
+              <?php } ?>
+              <!-- <div class="l_french"><a href="javascript:;">French</a></div>
               <div class="l_German"><a href="javascript:;">German</a></div>
               <div class="l_Italian"><a href="javascript:;">Italian</a></div>
               <div class="l_Russian"><a href="javascript:;">Russian</a></div>
@@ -50,7 +57,7 @@
               <div class="l_Arabic"><a href="javascript:;">Arabic</a></div>
               <div class="l_Hindi"><a href="javascript:;">Hindi</a></div>
               <div class="l_Turkish"><a href="javascript:;">Turkish</a></div>
-              <div class="l_Indonesian"><a href="javascript:;">Indonesian</a></div>
+              <div class="l_Indonesian"><a href="javascript:;">Indonesian</a></div> -->
             </div>
           </div>
         </div><!-- top end-->
@@ -71,7 +78,7 @@
                 <input class="btnSearch" type="button" value="Search">
               </p>
               <p>
-                热门搜索：<a href="javascript:;">IGBT Power Module......</a>
+                <?php echo Yii::t('main','Popular Searches'); ?>：<a href="javascript:;">IGBT Power Module......</a>
               </p>
             </form>
           </div>
