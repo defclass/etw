@@ -11,9 +11,23 @@
     <script type="text/jscript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.js"></script>
     <script type="text/jscript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/slideshow.js"></script>
     <script type="text/jscript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/common.js"></script>
+    <script type="text/javascript">
+     $(window).scroll(function(){
+       var sc=$(window).scrollTop();
+       var rwidth=$(window).width()
+       if(sc>0){
+         $("#goTopBtn").css("display","block");
+         $("#goTopBtn").css("left",(rwidth-77)+"px")
+       }else{
+         $("#goTopBtn").css("display","none");
+       }
+     })
+    </script>
   </head>
   <body>
     <div class="wrap">
+      <div id="goTopBtn"><a href="#"></a></div>
+      <div id="mail"><a title="发送邮件" href="javacsaript:;"></a></div>
       <div class="wrap_inner main_width">
         <!-- top star-->
         <div class="top">

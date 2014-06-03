@@ -1,17 +1,7 @@
 <?php
 /* @var $this SiteController */
 ?>
-<script type="text/javascript">
-    $(window).scroll(function(){
-    var sc=$(window).scrollTop();
-    var rwidth=$(window).width()
-        if(sc>0){
-            $("#goTopBtn").css("display","block");
-            $("#goTopBtn").css("left",(rwidth-100)+"px")
-        }else{
-            $("#goTopBtn").css("display","none");
-        }
-})
+
 </script>
   <!--banner star-->
   <div class="banner f_left">
