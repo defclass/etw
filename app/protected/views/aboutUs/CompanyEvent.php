@@ -26,7 +26,7 @@
 </div> 
 <div class="clear"></div>
 <div class="paging">
-  <?php $this->widget('CLinkPager', array(
+  <?php $this->widget('LinkPager', array(
     'pages' => $pages,
   )) ?>
 </div>

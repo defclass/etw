@@ -136,9 +136,9 @@
                 <a class="nav_width" href="<?php echo $this->createUrl('/Service/Index'); ?>"><?php echo Yii::t('main','Service'); ?><b></b></a>
                 <div class="nav_main nav_main2 none">
                   <ul class="f_left">
-                    <li><a href="<?php echo $this->createUrl('/Service/Quality'); ?>"><?php echo Yii::t('main','Service'); ?></a></li>
-                    <li><a href="<?php echo $this->createUrl('/Service/Order'); ?>"><?php echo Yii::t('main','Quality Control'); ?></a></li>
-                    <li><a href="<?php echo $this->createUrl('/Service/Track'); ?>"><?php echo Yii::t('main','Ordering Information'); ?></a></li>
+                    <li><a href="<?php echo $this->createUrl('/Service/Quality'); ?>"><?php echo Yii::t('main','Quality Control'); ?></a></li>
+                    <li><a href="<?php echo $this->createUrl('/Service/Order'); ?>"><?php echo Yii::t('main','Ordering Information'); ?></a></li>
+                    <li><a href="<?php echo $this->createUrl('/Service/Track'); ?>"><?php echo Yii::t('main','Order Tracking'); ?></a></li>
                     <!-- <li><a href="<?php echo $this->createUrl('/Service/Index'); ?>"><?php echo Yii::t('main','Order Tracking'); ?></a></li>
                     <li><a href="<?php echo $this->createUrl('/Service/Index'); ?>"><?php echo Yii::t('main','Help'); ?></a></li> -->
                   </ul>

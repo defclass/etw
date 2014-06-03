@@ -1,5 +1,5 @@
 <div class="detail_navigation">
-  <p><a href="javascript:;">首页</a> » <a href="javascript:;">产品中心</a> » 应用范围</p>
+     <p><a href="<?php echo Yii::app()->createUrl('/Site/Index/'); ?>"><?php echo Yii::t('main','Home'); ?></a> » <a href="<?php echo $this->createUrl('/Product/Index');?>"><?php echo Yii::t('main','Products'); ?></a> » <?php echo Yii::t('main','Applications'); ?></p>
 </div>
 <!--右侧内容不同区域-->
 <div class="list_detail">

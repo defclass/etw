@@ -1,5 +1,5 @@
 <div class="detail_navigation">
-  <p><a href="javascript:;">首页</a> » <a href="javascript:;">产品中心</a> » 产品展示</p>
+     <p><a href="<?php echo Yii::app()->createUrl('/Site/Index/'); ?>"><?php echo Yii::t('main','Home'); ?></a> » <a href="<?php echo $this->createUrl('/Manufacturer/Index/'); ?>"><?php echo Yii::t('main','Manufacturers'); ?></a> </p>
 </div>
 <!--右侧内容不同区域-->
 <div class="list_detail manufacturer">
@@ -21,7 +21,7 @@
     </tbody></table>
   <!--分页-->
   <div class="paging">
-    <?php $this->widget('CLinkPager', array(
+    <?php $this->widget('LinkPager', array(
       'pages' => $pages,
     )) ?>
   </div>

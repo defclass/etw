@@ -76,7 +76,7 @@ class LinkPager extends CLinkPager
         $buttons[]=$this->createTotalButton(($currentPage+1)."/{$pageCount}",self::CSS_TOTAL_PAGE,false,false);  
               
         // 条数统计  
-        $buttons[]=$this->createTotalButton("共{$this->getItemCount()}条",self::CSS_TOTAL_ROW,false,false);  
+        $buttons[]=$this->createTotalButton("Total {$this->getItemCount()} recorders.",self::CSS_TOTAL_ROW,false,false);  
           
         return $buttons;  
     }  
