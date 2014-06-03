@@ -27,7 +27,7 @@
   <body>
     <div class="wrap">
       <div id="goTopBtn"><a href="#"></a></div>
-      <div id="mail"><a title="发送邮件" href="javacsaript:;"></a></div>
+      <div id="mail"><a title="发送邮件" href="mailto:<?php echo Yii::app()->params['sales_email'];?>"></a></div>
       <div class="wrap_inner main_width">
         <!-- top star-->
         <div class="top">

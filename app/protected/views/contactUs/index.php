@@ -26,7 +26,7 @@
           <h4>销售部</h4>
           <p>
             Email: 
-            <a href="mailto:sales@jotrin.com">sales@jotrin.com</a><br>
+            <a href="mailto:<?php echo Yii::app()->params['sales_email']; ?>"><?php echo Yii::app()->params['sales_email']; ?></a><br>
             电话:  +86-755-83343342<br>
             
             <p>TradeManager: jotrin</p>
@@ -38,12 +38,12 @@
             <h4>技术支持</h4>
             <p>
               电话: +86-755-89515112<br>
-              Email: <a href="mailto:support@jotrin.com">support@jotrin.com</a>
+              Email: <a href="mailto:support@jotrin.com"><?php echo Yii::app()->params['sales_email']; ?></a>
             </p>
             <br>
             <h4>客户服务</h4>
             <p>
-              Email:  <a href="mailto:service@jotrin.com">service@jotrin.com</a>
+              Email:  <a href="mailto:service@jotrin.com"><?php echo Yii::app()->params['sales_email']; ?></a>
             </p>
 
         </div>
