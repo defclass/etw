@@ -43,14 +43,14 @@
     <!-- information star-->
     <div class="information f_right">
       <div class="description">
-        <h3>欢迎来到佰润电子有限公司</h3>
-        <p>    佰润电子有限公司成立以来,本着诚信原则,至上、互利互惠的经营理念,客户,香港基地,面对澳大利亚、台湾,积极发展国内,外的广阔的市场,获得广大客户的一致信赖和好评......</p>
+    <h3><?php echo Yii::t('site','Welcome to Barum Electronics');?></h3>
+        <p>    <?php echo Yii::t('site','Barum Electronics Co., LTD had been established， in line with the good faith principle, is supreme, the mutually beneficial reciprocal benefit management ');?>......</p>
         <a href="javascript:;">more>></a>
       </div>
       <div class="doubt">
         <a href="javascript:;">
-          <h4>联系我们</h4>
-          <p>有问题？请咨询我们技术人员和客服服务人员！</p>
+    <h4><?php echo Yii::t('site','Contact Us');?></h4>
+          <p><?php echo Yii::t('site','Any question? Please consult our technical staff and customer service personnel!');?></p>
         </a>
       </div>
     </div><!-- information end-->
@@ -113,18 +113,18 @@
     <div class="f_right brand">
       <div class="branding">
         <div class="branding_l f_left">
-          <h4>为什么选择佰润 ?</h4>
+    <h4><?php echo Yii::t('site','Why Barun?');?></h4>
           <ul>
-            <li>大量库存现货</li>
-            <li>提供一站式服务</li>
-            <li>快速报价，质量上乘</li>
-            <li>交货迅速</li>
+            <li><?php echo Yii::t('site','Large inventory spot');?></li>
+            <li><?php echo Yii::t('site','Provide one-stop service');?></li>
+            <li><?php echo Yii::t('site','Quick Quote, quality');?></li>
+            <li><?php echo Yii::t('site','Fast delivery');?></li>
           </ul>
         </div>
         <div class="branding_r f_right">
-          <span>诚信</span>
-          <span>专业</span>
-          <span>可靠</span>
+          <span><?php echo Yii::t('site','Honesty');?></span>
+          <span><?php echo Yii::t('site','Specialty');?></span>
+          <span><?php echo Yii::t('site','Reliable');?></span>
         </div>
         <div class="clear"></div>
       </div>
@@ -144,8 +144,8 @@
           <a href="javascript:;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/proxy_62.png"></a>
         </div>
         <div class="proxy_text">
-          <h5>品牌代理</h5>
-          <p>公司已建立全球500家以上元器件品牌供应的供货渠道, 经销美、欧、亚三地品牌元器件, 包括集成电路、二三极管、电阻电容、连接器、模块等。产品特点：正品原装, 紧缺货值, 品牌货广。<a href="javascript:;">更多>></a></p>
+          <h5><?php echo Yii::t('site','Brand agency');?></h5>
+          <p><?php echo Yii::t('site','More than 500 global components brands channels of supply and distributed components of the United States, Europe, Asia these brand manufacturers, including integrated circuits, two transistors, resistors and capacitors, connectors, modules, etc.'); ?>。<a href="<?php echo Yii::app()->createUrl('/Manufacturer/Index');?>">更多>></a></p>
         </div>
       </div>
     </div>

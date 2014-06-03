@@ -2,56 +2,54 @@
 <?php $this->beginContent('//layouts/main'); ?>
 <div class="detail_nav f_left">
     <ul>
-        <li><a class="detail_line" href="index.html">首页</a></li>
+        <li><a class="detail_line" href="<?php echo $this->createUrl('/Site');?>"><?php echo Yii::t('main','Home'); ?></a></li>
         <li>
-            <a class="detail_line" href="<?php echo $this->createUrl('/Product/index');?>">产品中心</a>
+            <a class="detail_line" href="<?php echo $this->createUrl('/Product/index');?>"><?php echo Yii::t('main','Products'); ?></a>
             <div>
-                <span><a href="<?php echo $this->createUrl('/Product/brandList');?>">- 分销品牌</a></span>
-                <span><a href="<?php echo $this->createUrl('/Product/ProductDisplay'); ?>">- 产品展示</a></span>
-                <span><a href="<?php echo $this->createUrl('/Product/Application'); ?>">- 应用范围</a></span>
+                <span><a href="<?php echo $this->createUrl('/Product/brandList');?>">- <?php echo Yii::t('main','Distribution Brands'); ?></a></span>
+                <span><a href="<?php echo $this->createUrl('/Product/ProductDisplay'); ?>">- <?php echo Yii::t('main','Products Show'); ?></a></span>
+                <span><a href="<?php echo $this->createUrl('/Product/Application'); ?>">- <?php echo Yii::t('main','Applications'); ?></a></span>
             </div>
         </li>
         <li>
-            <a class="detail_line" href="javascript:;">供应商信息</a>
+            <a class="detail_line" href="<?php echo $this->createUrl('/Manufacturer/Index/'); ?>"><?php echo Yii::t('main','Manufacturers'); ?></a>
             <div>
-                <span><a href="javascript:;">- 所有供应商</a></span>
+                <span><a href="<?php echo $this->createUrl('/Manufacturer/Index/'); ?>">- <?php echo Yii::t('main','All Manufacturers'); ?></a></span>
             </div>
         </li>
         <li>
-            <a class="detail_line" href="javascript:;">技术中心</a>
+            <a class="detail_line" href="<?php echo $this->createUrl('/Technology/Index/'); ?>"><?php echo Yii::t('main','Technology'); ?></a>
             <div>
-                <span><a href="javascript:;">- 最新技术</a></span>
+                <span><a href="<?php echo $this->createUrl('/Technology/Index/'); ?>">- <?php echo Yii::t('main','New Technologies'); ?></a></span>
             </div>
         </li>
+       
         <li>
-            <a class="detail_line" href="javascript:;">提价咨询</a>
-        </li>
-        <li>
-            <a class="detail_line" href="javascript:;">客服服务</a>
+            <a class="detail_line" href="<?php echo $this->createUrl('/Service/Index'); ?>"><?php echo Yii::t('main','Service'); ?></a>
             <div>
-                <span><a href="javascript:;">- 质量控制</a></span>
-                <span><a href="javascript:;">- 订单信息</a></span>
-                <span><a href="javascript:;">- 订单跟踪</a></span>
- <!--               <span><a href="javascript:;">- 信息咨询</a></span>
-                <span><a href="javascript:;">- 帮助</a></span>
+                <span><a href="<?php echo $this->createUrl('/Service/Quality'); ?>">- <?php echo Yii::t('main','Quality Control'); ?></a></span>
+                <span><a href="<?php echo $this->createUrl('/Service/Order'); ?>">- <?php echo Yii::t('main','Ordering Information'); ?></a></span>
+                <span><a href="<?php echo $this->createUrl('/Service/Track'); ?>">- <?php echo Yii::t('main','Order Tracking'); ?></a></span>
+ <!--               <span><a href="<?php echo $this->createUrl('/Service/Index'); ?>">- <?php echo Yii::t('main','Help'); ?></a></span>
+                <span><a href="javascript:;">- <?php echo Yii::t('main','Help'); ?></a></span>
 -->
             </div>
         </li>
         <li>
-            <a class="detail_line" href="javascript:;">了解我们</a>
+            <a class="detail_line" href="<?php echo $this->createUrl('/AboutUs/Index'); ?>"><?php echo Yii::t('main','About Us'); ?></a>
             <div>
-                <span><a href="javascript:;">- 企业优势</a></span>
-                <span><a href="javascript:;">- 企业文化</a></span>
-                <span><a href="javascript:;">- 全球客户</a></span>
-                <span><a href="javascript:;">- 企业事件</a></span>
+                <span><a href="<?php echo $this->createUrl('/AboutUs/Advantage'); ?>">- <?php echo Yii::t('main','Advantage'); ?></a></span>
+                <span><a href="<?php echo $this->createUrl('/AboutUs/Culture'); ?>">- <?php echo Yii::t('main','Culture'); ?></a></span>
+                <span><a href="<?php echo $this->createUrl('/AboutUs/Customers'); ?>">- <?php echo Yii::t('main','Customers'); ?></a></span>
+                <span><a href="<?php echo $this->createUrl('/AboutUs/CompanyEvents'); ?>">- <?php echo Yii::t('main','Company Events'); ?></a></span>
 <!-- <span><a href="javascript:;">- 最新职位</a></span> -->
             </div>
         </li>
         <li>
-            <a class="detail_line" href="javascript:;">联系我们</a>
+            <a class="detail_line" href="<?php echo $this->createUrl('/ContactUs/Index'); ?>"><?php echo Yii::t('main','Contact Us'); ?></a>
         </li>
     </ul>
-    <div class="product_us"><a href="javascript:;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/product_us_03.png"></a></div>
+    <div class="product_us"><a href="<?php echo $this->createUrl('/ContactUs/Index'); ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/product_us_03.png"></a></div>
 </div>
 	        <?php echo $content; ?>
 <?php $this->endContent(); ?>

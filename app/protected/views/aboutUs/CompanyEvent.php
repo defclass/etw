@@ -8,8 +8,8 @@
       <tbody>
         <tr class="dategories_nav">
           <th></th>
-          <th style="text-align:left;">标题</th>
-          <th style="text-align:right;width:80px">创建日期</th>
+          <th style="text-align:left;"><?php echo Yii::t('site','Headline');?></th>
+          <th style="width:80px"><?php echo Yii::t('site','Create Date');?></th>
         </tr>
         <?php foreach($article as $ar){ ?>
         <tr class="">
@@ -17,7 +17,7 @@
           <td>
             <a href="<?php echo Yii::app()->createUrl('/AboutUs/DisplayEvent').'/id/'.$ar->id; ?>" target="_blank" title="<?php echo $ar->headline;?>"><?php echo $ar->headline;?></a>
           </td>
-          <td width="120"><div align="right"><?php echo date("Y-m-d",$ar->date);?></div></td>
+          <td width="80"><div align="right"><?php echo date("Y-m-d",$ar->date);?></div></td>
         </tr>
         <?php } ?>
         

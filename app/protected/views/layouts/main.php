@@ -5,7 +5,7 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>佰润</title>
+    <title><?php echo Yii::t('main','Barum Electronics Co., LTD'); ?></title>
     <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/reset.css"/>
     <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/common.css"/>
     <script type="text/jscript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.js"></script>
@@ -57,10 +57,10 @@
         <!-- header star-->
         <div class="header">
           <div class="logo f_left">
-            <a href="javascript:;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/logo_03.png"></a>
+            <a href="<?php echo Yii::app()->createUrl('/Site/Index/'); ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/logo_03.png"></a>
           </div>
           <div class="header_text f_left">
-            <h4 class="font20">佰润电子有限公司</h4>
+            <h4 class="font20"><?php echo Yii::t('main','Barum Electronics Co., LTD'); ?></h4>
             <span class="font16">A Professional Electronics Components Distributor</span>
             <p>Main products: Integrated Circuits (ICs), Capacitors, Resistors, RF transistor,Transistor diodes,Mosfet, IGBT Modul, Connectors!!</p>
           </div>
@@ -82,15 +82,15 @@
           <div class="nav_inner">
             <ul>
               <li class="nav_li">
-                <a class="nav_width" href="<?php echo $this->createUrl('/Site/Index');?>">网站首页</a>
+                                  <a class="nav_width" href="<?php echo $this->createUrl('/Site/Index');?>"><?php echo Yii::t('main','Home'); ?></a>
               </li>
               <li class="nav_li">
-                <a class="nav_width" href="<?php echo $this->createUrl('/Product/Index');?>">产品中心<b></b></a>
+                <a class="nav_width" href="<?php echo $this->createUrl('/Product/Index');?>"><?php echo Yii::t('main','Products'); ?><b></b></a>
                 <div class="nav_main none">
                   <ul class="f_left">
-                    <li><a href="<?php echo $this->createUrl('/Product/BrandList'); ?>">分销品牌</a></li>
-                    <li><a href="<?php echo $this->createUrl('/Product/ProductDisplay'); ?>">产品展示</a></li>
-                    <li><a href="<?php echo $this->createUrl('/Product/Application'); ?>">应用范围</a></li>
+                    <li><a href="<?php echo $this->createUrl('/Product/BrandList'); ?>"><?php echo Yii::t('main','Distribution Brands'); ?></a></li>
+                    <li><a href="<?php echo $this->createUrl('/Product/ProductDisplay'); ?>"><?php echo Yii::t('main','Products Show'); ?></a></li>
+                    <li><a href="<?php echo $this->createUrl('/Product/Application'); ?>"><?php echo Yii::t('main','Applications'); ?></a></li>
                   </ul>
                   <span class="f_right nav_main_img">
                     <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/nav_main_ing_13.png" />
@@ -99,10 +99,10 @@
                 </div>
               </li>
               <li class="nav_li">
-                <a class="nav_width" href="<?php echo $this->createUrl('/Manufacturer/Index/'); ?>">供应商信息<b></b></a>
+                <a class="nav_width" href="<?php echo $this->createUrl('/Manufacturer/Index/'); ?>"><?php echo Yii::t('main','Manufacturers'); ?><b></b></a>
                 <div class="nav_main none">
                   <ul class="f_left">
-                    <li><a href="<?php echo $this->createUrl('/Manufacturer/Index/'); ?>">所有供应商</a></li>
+                    <li><a href="<?php echo $this->createUrl('/Manufacturer/Index/'); ?>"><?php echo Yii::t('main','All Manufacturers'); ?></a></li>
                   </ul>
                   <span class="f_right nav_main_img">
                     <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/nav_main_ing_13.png" />
@@ -111,10 +111,10 @@
                 </div>
               </li>
               <li class="nav_li">
-                <a class="nav_width" href="<?php echo $this->createUrl('/Technology/Index/'); ?>">技术中心<b></b></a>
+                <a class="nav_width" href="<?php echo $this->createUrl('/Technology/Index/'); ?>"><?php echo Yii::t('main','Technology'); ?><b></b></a>
                 <div class="nav_main none">
                   <ul class="f_left">
-                    <li><a href="<?php echo $this->createUrl('/Technology/Index/'); ?>">最新技术</a></li>
+                    <li><a href="<?php echo $this->createUrl('/Technology/Index/'); ?>"><?php echo Yii::t('main','New Technologies'); ?></a></li>
                   </ul>
                   <span class="f_right nav_main_img">
                     <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/nav_main_ing_13.png" />
@@ -126,14 +126,14 @@
               <a class="nav_width" href="javascript:;">提价咨询</a>
               </li> -->
               <li class="nav_li">
-                <a class="nav_width" href="<?php echo $this->createUrl('/Service/Index'); ?>">客服服务<b></b></a>
+                <a class="nav_width" href="<?php echo $this->createUrl('/Service/Index'); ?>"><?php echo Yii::t('main','Service'); ?><b></b></a>
                 <div class="nav_main nav_main2 none">
                   <ul class="f_left">
-                    <li><a href="<?php echo $this->createUrl('/Service/Quality'); ?>">质量控制</a></li>
-                    <li><a href="<?php echo $this->createUrl('/Service/Order'); ?>">订单信息</a></li>
-                    <li><a href="<?php echo $this->createUrl('/Service/Track'); ?>">订单跟踪</a></li>
-                    <!-- <li><a href="<?php echo $this->createUrl('/Service/Index'); ?>">信息咨询</a></li>
-                    <li><a href="<?php echo $this->createUrl('/Service/Index'); ?>">帮助</a></li> -->
+                    <li><a href="<?php echo $this->createUrl('/Service/Quality'); ?>"><?php echo Yii::t('main','Service'); ?></a></li>
+                    <li><a href="<?php echo $this->createUrl('/Service/Order'); ?>"><?php echo Yii::t('main','Quality Control'); ?></a></li>
+                    <li><a href="<?php echo $this->createUrl('/Service/Track'); ?>"><?php echo Yii::t('main','Ordering Information'); ?></a></li>
+                    <!-- <li><a href="<?php echo $this->createUrl('/Service/Index'); ?>"><?php echo Yii::t('main','Order Tracking'); ?></a></li>
+                    <li><a href="<?php echo $this->createUrl('/Service/Index'); ?>"><?php echo Yii::t('main','Help'); ?></a></li> -->
                   </ul>
                   <span class="f_right nav_main_img nav_main_img2">
                     <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/nav_main_ing_13.png" />
@@ -142,13 +142,13 @@
                 </div>
               </li>
               <li class="nav_li">
-                <a class="nav_width" href="<?php echo $this->createUrl('/AboutUs/Index'); ?>">了解我们<b></b></a>
+                <a class="nav_width" href="<?php echo $this->createUrl('/AboutUs/Index'); ?>"><?php echo Yii::t('main','About Us'); ?><b></b></a>
                 <div class="nav_main nav_main2 none">
                   <ul class="f_left">
-                    <li><a href="<?php echo $this->createUrl('/AboutUs/Advantage'); ?>">企业优势</a></li>
-                    <li><a href="<?php echo $this->createUrl('/AboutUs/Culture'); ?>">企业文化</a></li>
-                    <li><a href="<?php echo $this->createUrl('/AboutUs/Customers'); ?>">全球客户</a></li>
-                    <li><a href="<?php echo $this->createUrl('/AboutUs/CompanyEvents'); ?>">企业事件</a></li>
+                    <li><a href="<?php echo $this->createUrl('/AboutUs/Advantage'); ?>"><?php echo Yii::t('main','Advantage'); ?></a></li>
+                    <li><a href="<?php echo $this->createUrl('/AboutUs/Culture'); ?>"><?php echo Yii::t('main','Culture'); ?></a></li>
+                    <li><a href="<?php echo $this->createUrl('/AboutUs/Customers'); ?>"><?php echo Yii::t('main','Customers'); ?></a></li>
+                    <li><a href="<?php echo $this->createUrl('/AboutUs/CompanyEvents'); ?>"><?php echo Yii::t('main','Company Events'); ?></a></li>
                        </ul>
                   <span class="f_right nav_main_img nav_main_img2">
                     <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/nav_main_ing_13.png" />
@@ -157,7 +157,7 @@
                 </div>
               </li>
               <li class="nav_li nav_li2">
-                <a class="nav_width" href="<?php echo $this->createUrl('/ContactUs/Index'); ?>">联系我们</a>
+                <a class="nav_width" href="<?php echo $this->createUrl('/ContactUs/Index'); ?>"><?php echo Yii::t('main','Contact Us'); ?></a>
               </li>
             </ul>
           </div>
@@ -173,14 +173,13 @@
       <div class="footer main_width">
         <div class="footer_inner">
           <ul class="footer_nav f_left">
-            <li><a href="<?php echo $this->createUrl('/Service/Index'); ?>">网站首页</a></li>
-            <li><a href="<?php echo $this->createUrl('/Service/Index'); ?>">产品中心</a></li>
-            <li><a href="<?php echo $this->createUrl('/Service/Index'); ?>">供应商信息</a></li>
-            <li><a href="<?php echo $this->createUrl('/Service/Index'); ?>">技术中心</a></li>
-            <li><a href="<?php echo $this->createUrl('/Service/Index'); ?>">提价咨询</a></li>
-            <li><a href="<?php echo $this->createUrl('/Service/Index'); ?>">客服服务</a></li>
-            <li><a href="<?php echo $this->createUrl('/Service/Index'); ?>">了解我们</a></li>
-            <li><a href="<?php echo $this->createUrl('/Service/Index'); ?>">联系我们</a></li>
+            <li><a href="<?php echo $this->createUrl('/Site'); ?>"><?php echo Yii::t('main','Home'); ?></a></li>
+            <li><a href="<?php echo $this->createUrl('/Product'); ?>"><?php echo Yii::t('main','Products'); ?></a></li>
+            <li><a href="<?php echo $this->createUrl('/Manufacturer/Index/'); ?>"><?php echo Yii::t('main','Manufacturers'); ?></a></li>
+            <li><a href="<?php echo $this->createUrl('/Technology/Index/'); ?>"><?php echo Yii::t('main','Technology'); ?></a></li>
+            <li><a href="<?php echo $this->createUrl('/Service/Index'); ?>"><?php echo Yii::t('main','Service'); ?></a></li>
+            <li><a href="<?php echo $this->createUrl('/AboutUs/Index'); ?>"><?php echo Yii::t('main','About Us'); ?></a></li>
+            <li><a href="<?php echo $this->createUrl('/ContactUs/Index'); ?>"><?php echo Yii::t('main','Contact Us'); ?></a></li>
           </ul>
           <div class="share f_right">
             <ul>
