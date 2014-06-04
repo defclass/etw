@@ -1,6 +1,7 @@
 <div class="detail_main f_left">
   <div class="detail_navigation">
-    <p><a href="javascript:;">首页</a> » <a href="javascript:;">产品中心</a> » 产品展示</p>
+    <p><a href="<?php echo $this->createUrl('/Site/Index'); ?>"><?php echo Yii::t('main','Home'); ?></a> » <a href="<?php echo $this->createUrl('/AboutUs/Index'); ?>"><?php echo Yii::t('main','About Us'); ?></a> » <?php echo Yii::t('main','Company Events'); ?></p>
+
   </div>
   <!--右侧内容不同区域-->
   <div class="list_detail dategories_style">
