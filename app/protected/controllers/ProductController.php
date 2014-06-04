@@ -103,9 +103,11 @@ class ProductController extends Controller
                         $order_detail->od_id = Common::getMaxId();
                         $order_detail->oid = $order->oid;
                         $order_detail->model = $product->model;
-                        $order_detail->manufacturer = $product->m->manufacturer_name;
+                        $order_detail->manufacturer = $product->b->brand_name;
                         $order_detail->create_time = time();
                         if($order_detail->save()){
+                            $rt = $this->OrderMail($order,$order_detail);
+                            var_dump($rt);
                             Yii::app()->user->setFlash('success','成功发送！');
                         }
                     }
@@ -172,4 +174,18 @@ class ProductController extends Controller
             }
 		return $this->_model;
 	}
+
+    public function OrderMail($order_obj,$order_detail){
+        $message = new YiiMailMessage;
+        $message->view = "NewOrder";
+        $params = array('order_obj'=>$order_obj,'order_detail'=>$order_detail);
+        $message->subject = '有新订单了！';
+        $message->setBody($params, 'text/html');                
+        $message->addTo(Yii::app()->params['ReceiveEmail']);
+        $message->from = Yii::app()->params['adminEmail'];   
+        if(Yii::app()->mail->send($message))
+            return true;
+        else
+            return false;
+    }
 }
