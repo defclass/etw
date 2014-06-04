@@ -14,7 +14,7 @@
               <tbody>
                 <tr>
                   <?php foreach($brands as $br){ ?>
-                    
+
                     <td width="160" height="90">
                       <div align="center">
                         <table style="BORDER-RIGHT: #e3e3e3 4px solid; BORDER-TOP: #e3e3e3 4px solid; BORDER-LEFT: #e3e3e3 4px solid; BORDER-BOTTOM: #e3e3e3 4px solid" height="56" cellspacing="0" cellpadding="0" width="122" border="0">
@@ -29,6 +29,12 @@
                       </div>
                     </td>
                   <?php } ?>
+                </tr>
+              </tbody>
+            </table>
+            <table cellspacing="0" cellpadding="0" border="0">
+              <tbody>
+                <tr>
                   <td width="160" height="90">
                     <div align="center">
                       <table style="BORDER-RIGHT: #e3e3e3 4px solid; BORDER-TOP: #e3e3e3 4px solid; BORDER-LEFT: #e3e3e3 4px solid; BORDER-BOTTOM: #e3e3e3 4px solid" height="56" cellspacing="0" cellpadding="0" width="122" border="0">
