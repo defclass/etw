@@ -49,7 +49,12 @@
             <a class="detail_line" href="<?php echo $this->createUrl('/ContactUs/Index'); ?>"><?php echo Yii::t('main','Contact Us'); ?></a>
         </li>
     </ul>
-    <div class="product_us"><a href="<?php echo $this->createUrl('/ContactUs/Index'); ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/product_us_03.png"></a></div>
+    <div class="product_us">
+        <a href="<?php echo $this->createUrl('/ContactUs/Index'); ?>">
+            <span class="product_us_nav">有问题? 请咨询我们的电子技术和客户服务人员</span>
+            <span class="product_us_a">点击了解更多</span>
+        </a>
+    </div>
 </div>
 	        <?php echo $content; ?>
 <?php $this->endContent(); ?>
