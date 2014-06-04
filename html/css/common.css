@@ -944,3 +944,22 @@ background:url(../images/mail.png) no-repeat; z-index: 9999; display: block;}
     color: #57657A;
     line-height: 21px;
 }
+
+
+.distribution_main{
+    margin-top: 20px;
+    width: 660px;
+    overflow: hidden;
+}
+.distribution_main li{
+    width: 122px;
+    height: 56px;
+    border: 4px #e3e3e3 solid;
+    float: left;
+    line-height: 56px;
+    text-align: center;
+    margin: 20px 15px;
+}
+.distribution_main li a{
+    display: block;
+}
