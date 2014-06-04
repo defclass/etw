@@ -578,9 +578,25 @@ body{
     font-size: 12px;
     color: #666;
 }
+/*供应商详情*/
+.manufacturer_details{
+    margin-top: 20px;
+}
+.manufacturer_details h1{
+    font-family: Tahoma;
+    font-size: 16px;
+    margin: 0;
+    padding: 8px 0;
+}
+.manufacturer_details h5{
+    color: #3E6E94;
+    font-size: 14px;
+}
+
+
 .product_us{
     margin-top: 20px;
-    background: url(/Themes/StyleJotrin/images/common/product_us_03.png) no-repeat;
+    background: url(../images/product_us_03.png) no-repeat;
     width: 228px;
     height: 126px;
 }
