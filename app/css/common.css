@@ -580,6 +580,28 @@ body{
 }
 .product_us{
     margin-top: 20px;
+    background: url(/Themes/StyleJotrin/images/common/product_us_03.png) no-repeat;
+    width: 228px;
+    height: 126px;
+}
+.product_us a{
+    display: block;
+    width: 228px;
+    height: 126px;
+}
+.product_us_nav{
+    width: 130px;
+    font-size: 14px;
+    display: block;
+    font-family: '微软雅黑';
+    color: #555;
+    padding: 30px 0 0 90px;
+}
+.product_us_a{
+    color: #888;
+    font-family: '微软雅黑';
+    padding: 20px 0 0 90px;
+    display: block;
 }
 
 .detail_navigation p{
