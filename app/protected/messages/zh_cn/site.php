@@ -17,7 +17,17 @@
  * NOTE, this file must be saved in UTF-8 encoding.
  */
 return array (
-  'Product List' => '产品列表',
+  'Captcha' => '验证码',
+  'Change Pic' => '刷新图片',
+  'Click for Pic' => '点击刷新',
+  'Company' => '公司名称',
+  'Company Name' => '公司名称',
+  'Contact' => '联系人',
+  'Content' => '询价内容',
+  'Inquiry Content' => '询价内容',
+  'Price' => '预期价格',
+  'Quantity' => '预购数量',
+  'Telephone' => '电话',
   'Add: Rm. 1005, Block B,Zhonghangbeiyuan Building,Zhonghang Rd.,Futian District,Shenzhen,Guangdong,China' => '地址：中国广东省深圳市福田区中航路中航北苑大厦B座1005室',
   'All' => '所有',
   'Any question? Please consult our technical staff and customer service personnel!' => '有问题？请咨询我们技术人员和客服服务人员！',
@@ -40,6 +50,7 @@ return array (
   'Online Inquiry' => '在线询价',
   'Package' => '封装',
   'Please select a product classify:' => '请选择产品分类',
+  'Product List' => '产品列表',
   'Provide one-stop service' => '提供一站式服务',
   'Quick Quote, quality' => '快速报价，质量上乘',
   'Reliable' => '可靠',

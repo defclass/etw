@@ -1,5 +1,5 @@
 <div class="detail_navigation">
-  <p><a href="javascript:;">首页</a> » <a href="javascript:;">产品中心</a> » 产品展示</p>
+  <p><a href="<?php echo Yii::app()->createUrl('/Site/Index/'); ?>"><?php echo Yii::t('main','Home'); ?></a> » <a href="<?php echo $this->createUrl('/Product/Index');?>"><?php echo Yii::t('main','Products'); ?></a>  » <?php echo Yii::t('main','Product Details'); ?>
 </div>
 
 <!--右侧内容不同区域--> <!-- star-->
@@ -51,7 +51,7 @@
           <div class="clear"></div>
           <div>
             <p></p>
-            <h4 class="relatedtitle"><?php echo Yii::t('main','Price based on quantity, market conditions and other factors vary. Please call or send a quick inquiry ... Thanks!'); ?></h4>
+            <h4 class="relatedtitle"><?php echo Yii::t('main','Tips: Please fill in the following information to facilitate contact!'); ?></h4>
             <p></p>
 
             <?php if(Yii::app()->user->hasFlash('success')){ ?>
