@@ -27,7 +27,7 @@
                   <tbody><tr>
                     <td align="right"><?php echo Yii::t('site','Keyword');?>: </td>
                     <td style="line-height:25px">
-                      <input name="keyword" type="text" class="inputbox" value="" size="20" maxlength="30">  &nbsp;
+                      <input name="keyword" type="text" class="inputbox" value="<?php if(isset($_GET['keyword'])){ echo $_GET['keyword'];} ?>" size="20" maxlength="30">  &nbsp;
                       <select name="classify" class="inputbox" style="width:80px">
                         <option value="0" selected="selected"><?php echo Yii::t('site','All');?></option>
 

@@ -72,13 +72,13 @@
             <p>Main products: Integrated Circuits (ICs), Capacitors, Resistors, RF transistor,Transistor diodes,Mosfet, IGBT Modul, Connectors!!</p>
           </div>
           <div class="header_seach f_right">
-            <form accept-charset="utf-8" method="post" action="">
+            <form accept-charset="utf-8" method="get" action="<?php echo Yii::app()->createUrl('/Product/Index'); ?>">
               <p>
-                <input class="seach_text" type="text" value="" name="">
-                <input class="btnSearch" type="button" value="Search">
+                <input class="seach_text" type="text" value="" name="keyword">
+                <input class="btnSearch" type="submit" value="Search">
               </p>
               <p>
-                <?php echo Yii::t('main','Popular Searches'); ?>：<a href="javascript:;">IGBT Power Module......</a>
+                <?php echo Yii::t('main','Popular Searches'); ?>：<a href="<?php echo Yii::app()->createUrl('/Product/Index').'?keyword=IGBT'; ?>">IGBT Power Module......</a>
               </p>
             </form>
           </div>
