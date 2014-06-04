@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
+    <meta name="keywords" content="<?php echo $this->site_keywords;?>" />
+    <meta name="description" content="<?php echo $this->site_description;?>" />
     <meta name="author" content="" />
     <title><?php echo Yii::t('main','Barum Electronics Co., LTD'); ?></title>
     <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/reset.css"/>

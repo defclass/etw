@@ -10,16 +10,21 @@
         <td class="lt wlt">
           <div class="Newsshow">
             <div class="Newsshow_inner" style="float:left;margin-top:10px; width:375px;">
-              <div><strong>型号: </strong><a href="#" title="在线询价" target="_blank"><?php echo $product->model; ?></a></div>
-              <div><strong>封装: </strong>  <?php echo $product->package;?></div>
-              <div><strong>厂商: </strong> <a href="#"><?php echo $product->m->manufacturer_name; ?> <img src="<?php echo $product->b->logo; ?>"  width=100 height=35 alt="ON" title="More parts Of ON" onerror="this.onerror='';this.src='<?php echo $product->b->logo; ?>'"></a></div>
+              <div><strong><?php echo Yii::t('main','Model');?>: </strong><a href="#" title="在线询价" target="_blank"><?php echo $product->model; ?></a></div>
+              <div><strong><?php echo Yii::t('main','Package'); ?>: </strong>  <?php echo $product->package;?></div>
+              <div><strong><?php echo Yii::t('main','Manufacturer'); ?>: </strong> <a href="#"><?php echo $product->m->manufacturer_name; ?> <img src="<?php echo $product->b->logo; ?>"  width=100 height=35 alt="ON" title="More parts Of ON" onerror="this.onerror='';this.src='<?php echo $product->b->logo; ?>'"></a></div>
               <div><strong>RoHS: </strong><?php echo $product->RoHS;?></div>
-              <div><strong>数量: </strong> <?php echo $product->quantity;?> pcs</div>
-              <div><strong>注释: </strong><?php echo $product->direction;?></div>
-              <div><strong style="vertical-align:middle;height:25px">在线询价:</strong>
-                <a href="#" title="在线询价" target="_blank">
-                  <img src="<?php echo Yii::app()->baseUrl; ?>/images/xunjiapng_03.png" alt="在线询价" title="在线询价"></a></div>
-              <p>* 价格根据数量，市场条件和其他因素而有所不同。请致电或发送一个快速询价...谢谢！
+              <div><strong><?php echo Yii::t('main','Quantity'); ?>: </strong> <?php echo $product->quantity;?> pcs</div>
+              <div>
+                <strong><?php echo Yii::t('main','Feature'); ?>: </strong>
+                <a href="http://www.alldatasheet.net/view.jsp?Searchword=<?php echo $product->model;?>">
+                  <img title="DataSheet PDF" alt="Details" src="<?php echo Yii::app()->baseUrl.'/images/datasheet.gif';?>">
+                  <?php echo $product->model;?></a> </div>
+              <div><strong><?php echo Yii::t('main','Direction'); ?>: </strong><?php echo $product->direction;?></div>
+              <div><strong style="vertical-align:middle;height:25px"><?php echo Yii::t('main','Online Inquiry'); ?>:</strong>
+                <a href="#" title="<?php echo Yii::t('main','Online Inquiry'); ?>" target="_blank">
+                  <img src="<?php echo Yii::app()->baseUrl; ?>/images/xunjiapng_03.png" alt="<?php echo Yii::t('main','Online Inquiry'); ?>" title="在线询价"></a></div>
+              <p>* <?php echo Yii::t('main','Price based on quantity, market conditions and other factors vary. Please call or send a quick inquiry ... Thanks!'); ?>
                 <div class="share">
                   <ul>
                     <li><a class="share1" href="javascript:;"></a></li>
@@ -46,7 +51,7 @@
           <div class="clear"></div>
           <div>
             <p></p>
-            <h4 class="relatedtitle">温馨提示: 请填写以下信息, 方便取得联系！</h4>
+            <h4 class="relatedtitle"><?php echo Yii::t('main','Price based on quantity, market conditions and other factors vary. Please call or send a quick inquiry ... Thanks!'); ?></h4>
             <p></p>
 
             <?php if(Yii::app()->user->hasFlash('success')){ ?>
@@ -70,21 +75,21 @@
                   <?php echo $form->errorSummary($code); ?>
                   
                   <tr>
-                    <td style="text-align: right;">选购数量 : </td>
+                    <td style="text-align: right;"><?php echo Yii::t('site','Quantity');?> : </td>
                     <td>
 		              <?php echo $form->textField($order_detail,'quantity',array('size'=>20,'maxlength'=>38,'class'=>"inputbox required digits")); ?>
                     </td>
-                    <td style="text-align: right;">目标价格 : </td>
+                    <td style="text-align: right;"><?php echo Yii::t('site','Price');?> : </td>
                     <td>
                       <?php echo $form->textField($order_detail,'price',array('size'=>16,'maxlength'=>38,'class'=>"inputbox number")); ?>  &nbsp;(USD)
                   </tr>
                   <tr>
-                    <td style="text-align: right;">联系人 *:  </td>
+                    <td style="text-align: right;"><?php echo Yii::t('site','Contact');?> *:  </td>
                     <td>
                       <?php echo $form->textField($order,'contact_person',array('size'=>20,'maxlength'=>80,'value'=>'','class'=>"inputbox required")); ?>
 		              <?php echo $form->error($order,'contact_person'); ?>
                     </td>
-                    <td style="text-align: right;">公司名称 :  </td>
+                    <td style="text-align: right;"><?php echo Yii::t('site','Company');?>:  </td>
                     <td>
                       <?php echo $form->textField($order,'company_name',array('size'=>20,'maxlength'=>50,'value'=>'','class'=>"inputbox")); ?>
                     </td>
@@ -100,14 +105,14 @@
                     </td>
                   </tr>
                   <tr>
-                    <td style="text-align: right;">电话 : </td>
+                    <td style="text-align: right;"><?php echo Yii::t('site','Telephone');?> : </td>
                     <td colspan="3">
                       <?php echo $form->textField($order,'tel',array('size'=>20,'maxlength'=>50,'value'=>'','class'=>"inputbox")); ?>
                     </td>
                   </tr>
                   <tr>
                     <td valign="top" style="text-align: right;">
-                      询价内容 : 
+                      <?php echo Yii::t('site','Content');?> : 
                     </td>
                     <td colspan="3"><!--834843202 -->
                       <?php echo $form->textArea($order,'inquiry_content',array('cols'=>"71",'rows'=>"2",'style'=>"width:450px",'class'=>"inputbox")); ?>
@@ -115,17 +120,17 @@
                   </tr>
                   <tr>
                     <td style="text-align: right;">
-                      验证码:
+                      <?php echo Yii::t('site','Captcha');?>:
                     </td>
                     <td height="30" colspan="3">
                        <?php echo $form->textField($code,'code',array('size'=>4,'maxlength'=>5,'value'=>'','class'=>"inputbox")); ?>
                       <?php $this->widget('CCaptcha',array(
                         'showRefreshButton'=>true,
                         'clickableImage'=>true,
-                        'buttonLabel'=>'看不清？',
+                        'buttonLabel'=>"Can not see?",
                         'imageOptions'=>array(
-                          'alt'=>'点击换图',
-                          'title'=>'点击换图',
+                          'alt'=>"<?php echo Yii::t('site','Change Pic');?>",
+                          'title'=>"<?php echo Yii::t('site','Click for Pic');?>",
                           'style'=>'cursor:pointer',
                           //'padding'=>'2')
                         )
@@ -151,13 +156,13 @@
   </table>
   
   <div style="width:100%;" class="detail_about_us">
-    <h2>联系我们</h2>
+    <h2><?php echo Yii::t('site','Contact Us');?></h2>
     <div class="f_left">
-      <h4>销售部</h4>
+      <h4><?php echo Yii::t('site','Sales');?></h4>
       <p>
         Email: 
-        <a href="#">sales@jotrin.com</a><br>
-        电话:  +86-755-83343342<br>                                  
+        <a href="#"><?php echo Yii::app()->params['sales_email']; ?></a><br>
+        <?php echo Yii::t('site','Tel');?>:  +86-755-83343342<br>                                  
       </p>
       <br>
       <p>TradeManager: jotrin</p>
@@ -166,16 +171,16 @@
       </p> 
     </div>                              
     <div class="f_left">
-      <h4>技术支持</h4>
+      <h4><?php echo Yii::t('site','Technical Support');?></h4>
       <p>
-        电话: +86-755-89515112<br>
-        Email: <a href="#">support@jotrin.com</a>
+        <?php echo Yii::t('site','Tel');?>: +86-755-89515112<br>
+        Email: <a href="#"><?php echo Yii::app()->params['sales_email']; ?></a>
       </p>
     </div>
     <div class="f_left">
-      <h4>客户服务</h4>
+      <h4><?php echo Yii::t('site','Customer Service');?></h4>
       <p>
-        Email:  <a href="#">service@jotrin.com</a>
+        Email:  <a href="#"><?php echo Yii::app()->params['sales_email']; ?></a>
       </p>
     </div>
     <div class="clear"></div>

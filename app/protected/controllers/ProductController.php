@@ -114,6 +114,8 @@ class ProductController extends Controller
                 $code->addError('code',"验证码不正确");
             }
         }
+
+        $this->site_keywords = $product->model." ".$product->package;
         $this->render('productDetails',array(
             'product'=>$product,
             'order'=>$order,

@@ -60,11 +60,11 @@ class Order extends CActiveRecord
 	{
 		return array(
 			'oid' => '订单ID',
-			'company_name' => '公司名',
-            'contact_person' => '联系人',
+			'company_name' => Yii::t('site','Company Name'),
+            'contact_person' => Yii::t('site','Contact'),
 			'email' => 'email',
-			'tel' => '电话',
-			'inquiry_content' => '询价内容',
+			'tel' => Yii::t('site','Telephone'),
+			'inquiry_content' => Yii::t('site','Inquiry Content'),
 		);
 	}
 

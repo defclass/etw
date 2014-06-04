@@ -23,9 +23,22 @@ class Controller extends CController
 	public $breadcrumbs=array();
     /** 
      * 设置当前站点显示的语言 
-     */  
+     */
+
+    public $site_keywords;
+
+    public $site_description;
+
+        
+
+    
     public function init()  
-    {  
+    {
+        $this->site_keywords = Yii::app()->params['keywords'];
+        
+        $this->site_description = Yii::app()->params['description'];
+
+        
         if(isset($_GET['lang']) && $_GET['lang'] != "")  
             {  
                 // 通过传递参数更改语言  
