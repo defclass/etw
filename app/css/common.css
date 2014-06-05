@@ -1010,5 +1010,10 @@ background:url(../images/mail.png) no-repeat; z-index: 9999; display: block;}
 }
 .manufacturer_b table tr{
     border-bottom: 1px #ccc solid;
-    margin-top: 20px;
+}
+.manufacturer_tab{
+    margin-top: 30px;
+}
+.manufacturer_tab tr{
+    height: 50px;
 }

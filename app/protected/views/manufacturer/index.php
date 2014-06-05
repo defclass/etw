@@ -4,7 +4,7 @@
     <div class="detail_navigation">
          <p><a href="<?php echo Yii::app()->createUrl('/Site/Index/'); ?>"><?php echo Yii::t('main','Home'); ?></a> » <a href="<?php echo $this->createUrl('/Manufacturer/Index/'); ?>"><?php echo Yii::t('main','Manufacturers'); ?></a> </p>
     </div>
-  <table width="100%" class="list">
+  <table class="list manufacturer_tab">
     <tbody>
 
       <?php foreach($brands as $br ){ ?>
