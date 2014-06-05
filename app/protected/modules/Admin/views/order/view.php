@@ -33,7 +33,7 @@
       'columns'=>array(
         'model',
         'quantity',
-        'manufacturer',
+        'brand',
         'price',
         )))
     ?>

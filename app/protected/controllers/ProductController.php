@@ -48,9 +48,9 @@ class ProductController extends Controller
             $data['bid'] = $_GET['brand'];
         }
 
-        if(isset($_GET['manufacturer']) && is_numeric($_GET['manufacturer']) ){
-            $data['mid'] = $_GET['manufacturer'];
-        }
+        /* if(isset($_GET['manufacturer']) && is_numeric($_GET['manufacturer']) ){ */
+        /*     $data['mid'] = $_GET['manufacturer']; */
+        /* } */
 
 
         if(isset($_GET['keyword'])){
@@ -103,7 +103,7 @@ class ProductController extends Controller
                         $order_detail->od_id = Common::getMaxId();
                         $order_detail->oid = $order->oid;
                         $order_detail->model = $product->model;
-                        $order_detail->manufacturer = $product->b->brand_name;
+                        $order_detail->brand = $product->b->brand_name;
                         $order_detail->create_time = time();
                         if($order_detail->save()){
                             $rt = $this->OrderMail($order,$order_detail);

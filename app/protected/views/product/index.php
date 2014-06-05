@@ -57,19 +57,19 @@
             <th></th>
             <th style="text-align: left;"><?php echo Yii::t('site','Model');?></th>
             <th width="80"><?php echo Yii::t('site','Classify');?></th>
-            <th width="150"><?php echo Yii::t('site','Classify');?></th>
+            <th width="150"><?php echo Yii::t('main','Manufacturer');?></th>
             <th width="80"><?php echo Yii::t('site','Package');?></th>
             <th width="120"><?php echo Yii::t('site','Direction');?></th>
           </tr>
           <?php foreach($products as $pro){  ?>
           <tr class="">
             <td style="width:10px" class="icon">&nbsp;</td>
-            <td><div style="width:150px;text-overflow:ellipsis;white-space:nowrap; overflow:hidden;">
-              <a href="<?php echo Yii::app()->createUrl('/Product/ProductDetails/'); ?>/id/<?php echo $pro->pid; ?>" title="B41866-S6107-M001"><u>
+            <td><div style="width:80px;text-overflow:ellipsis;white-space:nowrap; overflow:hidden;">
+              <a href="<?php echo Yii::app()->createUrl('/Product/ProductDetails/'); ?>/id/<?php echo $pro->pid; ?>" title="<?php echo $pro->model; ?>"><u>
               <?php echo $pro->model; ?>
             </u></a></div></td>
             <td align="center"><?php echo $pro->quantity; ?></td>
-            <td align="center"><a href="http://www.jotrin.com/product/mfg/EPCOS"><u><?php echo $pro->m->manufacturer_name; ?></u></a></td>
+            <td align="center"><a href="<?php echo Yii::app()->createUrl('/Product/Index').'/brand/'.$pro->b->bid; ?>"><u><?php echo $pro->b->brand_name; ?></u></a></td>
             <td align="center"><?php echo $pro->package; ?></td>
             <td align="center">
               <a href="#" target="_blank">

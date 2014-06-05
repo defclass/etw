@@ -33,12 +33,12 @@ class OrderDetail extends CActiveRecord
 		return array(
 			array('quantity, status', 'numerical', 'integerOnly'=>true),
 			array('od_id, oid', 'length', 'max'=>16),
-			array('model, manufacturer', 'length', 'max'=>64),
+			array('model, brand', 'length', 'max'=>64),
 			array('price', 'length', 'max'=>12),
 			array('create_time', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('od_id, oid, model, quantity, manufacturer, price, create_time, status', 'safe', 'on'=>'search'),
+			array('od_id, oid, model, quantity, brand, price, create_time, status', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -63,7 +63,7 @@ class OrderDetail extends CActiveRecord
 			'oid' => '订单详情ID',
 			'model' => '产品名',
 			'quantity' => '需求数量',
-			'manufacturer' => '期望厂商',
+			'brand' => '期望厂商',
 			'price' => '期望价格',
 			'create_time' => '创建时间',
 			'status' => '产品状态0显示1不显示',
@@ -92,7 +92,7 @@ class OrderDetail extends CActiveRecord
 		$criteria->compare('oid',$this->oid,true);
 		$criteria->compare('model',$this->model,true);
 		$criteria->compare('quantity',$this->quantity);
-		$criteria->compare('manufacturer',$this->manufacturer,true);
+		$criteria->compare('brand',$this->brand,true);
 		$criteria->compare('price',$this->price,true);
 		$criteria->compare('create_time',$this->create_time,true);
 		$criteria->compare('status',$this->status);

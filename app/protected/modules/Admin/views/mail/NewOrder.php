@@ -31,7 +31,7 @@
       <tr>
         <td><?php echo $order_detail->model; ?></td>
         <td><?php echo $order_detail->quantity; ?></td>
-        <td><?php echo $order_detail->manufacturer; ?></td>
+        <td><?php echo $order_detail->brand; ?></td>
         <td><?php echo $order_detail->price; ?></td>
       </tr>
     </table>

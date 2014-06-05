@@ -21,7 +21,6 @@
  * The followings are the available model relations:
  * @property Classify $c
  * @property Brand $b
- * @property Manufacturer $m
  */
 class Product extends CActiveRecord
 {
@@ -29,7 +28,6 @@ class Product extends CActiveRecord
 
     public $brand;
 
-    public $manufacturer;
 
     /* 搜索中存储按首字母搜索的字段 */
 
@@ -52,7 +50,7 @@ class Product extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('quantity, status', 'numerical', 'integerOnly'=>true),
-            array('classify, brand,manufacturer', 'numerical', 'integerOnly'=>true),
+            array('classify, brand', 'numerical', 'integerOnly'=>true),
 			array('pid, cid, bid, mid', 'length', 'max'=>16),
 			array('model, package, RoHS, datecode, direction', 'length', 'max'=>64),
             array('image_url', 'length', 'max'=>256),
@@ -74,7 +72,6 @@ class Product extends CActiveRecord
 		return array(
 			'c' => array(self::BELONGS_TO, 'Classify', 'cid'),
 			'b' => array(self::BELONGS_TO, 'Brand', 'bid'),
-			'm' => array(self::BELONGS_TO, 'Manufacturer', 'mid'),
 		);
 	}
 
@@ -90,7 +87,6 @@ class Product extends CActiveRecord
 			'mid' => '厂商',
             'classify'=>'产品分类',
             'brand' =>'产品品牌',
-            'manufacturer' => '供应商',
 			'model' => '型号',
 			'package' => '封装',
 			'RoHS' => 'RoHS',
@@ -121,7 +117,7 @@ class Product extends CActiveRecord
 
 		$criteria=new CDbCriteria;
         
-        $criteria->with=array('c','b','m');
+        $criteria->with=array('c','b');
 		$criteria->compare('pid',$this->pid,true);
 		$criteria->compare('t.cid',$this->cid,true);
 		$criteria->compare('t.bid',$this->bid,true);
@@ -129,7 +125,6 @@ class Product extends CActiveRecord
 
         $criteria->compare('c.classify_name',$this->classify,true);
 		$criteria->compare('b.brand_name',$this->brand,true);
-		$criteria->compare('m.manufacturer_name',$this->manufacturer,true);
         
         $criteria->addCondition('model LIKE :i and model REGEXP :j');
         $criteria->params[':i'] = "%".$this->index_search."%";
@@ -158,7 +153,7 @@ class Product extends CActiveRecord
  */
     public function all_product() {
         $criteria = new CDbCriteria;
-        $criteria->with=array('c','b','m');
+        $criteria->with=array('c','b');
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,
         ));

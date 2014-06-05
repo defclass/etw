@@ -12,7 +12,8 @@
       <?php } ?>
       <div style="line-height: 25px;">
         <form method="get" action="<?php echo Yii::app()->createUrl('/Product/index/').'/brand/id/'.$brand->bid ?>">
-          2 E Syscom Part Search :
+          <?php echo $brand->brand_name; ?> Part Search :
+          <br />
           <input type="text" name="keyword" class="inputbox"> 
           <input type="submit" class="button" value="Search">
         </form>

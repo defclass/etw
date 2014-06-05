@@ -31,11 +31,6 @@
 		<?php echo $form->error($model,'bid'); ?>
 	</div>
 
-	<div class="unit">
-		<?php echo $form->labelEx($model,'mid'); ?>
-	  <?php echo $form->dropDownList($model,'mid',Manufacturer::model()->get_manufacturer()); ?>
-		<?php echo $form->error($model,'mid'); ?>
-	</div>
 
 	<div class="unit">
 		<?php echo $form->labelEx($model,'model'); ?>
