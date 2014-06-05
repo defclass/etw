@@ -15,7 +15,7 @@
           <em><a href="<?php echo Yii::app()->createUrl('/Manufacturer/BrandDetails/').'/id/'.$br->bid;?>" target="_blank" title="<?php echo $br->brand_name; ?>"><?php echo $br->brand_name; ?></a></em>
           <br>http://<?php echo $br->company_url; ?>
           <br>
-         <?php echo mb_substr( $br->comment,0 ,100); ?>
+         <?php echo substr( $br->comment,0 ,100); ?>
         </td>
       </tr>
 

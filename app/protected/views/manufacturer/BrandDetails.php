@@ -7,10 +7,13 @@
   <div class="list_detail">
     <div class="manufacturer_details">
       <h1><?php echo $brand->brand_name; ?></h1>
-      <h5>Visit <a target="_blank" href="http://<?php echo $brand->company_url; ?>">http://<?php echo $brand->company_url; ?></a></h5>                
+      <?php if(!empty($brand->company_url)){ ?>
+      <h5>Visit <a target="_blank" href="http://<?php echo $brand->company_url; ?>">http://<?php echo $brand->company_url; ?></a></h5>
+      <?php } ?>
       <div style="line-height: 25px;">
         <form method="get" action="<?php echo Yii::app()->createUrl('/Product/index/').'/brand/id/'.$brand->bid ?>">
-          2 E Syscom Part Search :
+          <?php echo $brand->brand_name; ?> Part Search :
+          <br />
           <input type="text" name="keyword" class="inputbox"> 
           <input type="submit" class="button" value="Search">
         </form>
