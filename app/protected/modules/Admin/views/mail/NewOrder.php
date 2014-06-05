@@ -1,8 +1,13 @@
 <html>
   <head>
+    <style>
+     table{border:1px grey solid;}
+     table td{border-left:1px solid grey;border-top:1px solid grey;}
+    </style>
   </head>
   <body>
     订单如下：
+    <hr>
     <br>
     公司名称：<?php echo $order_obj->company_name;?>
     <br>

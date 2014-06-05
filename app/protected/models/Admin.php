@@ -41,8 +41,11 @@ class Admin extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-            /* 注册验证 */
-            array('login_name,  email ,login_passwd, sex, admin_tel, real_name', 'required','on'=>'register',),
+            /* 注册认证 */
+            array('login_name,  email', 'required','on'=>'Register',),
+            
+            /* 创建认证 */
+            array('login_name,  email ,login_passwd, sex, admin_tel, real_name', 'required','on'=>'Create',),
             array(
                 'login_name,email',
                 'unique',

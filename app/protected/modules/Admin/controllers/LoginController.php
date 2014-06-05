@@ -67,7 +67,7 @@ class LoginController extends BackController
             Yii::app()->request->cookies['puk']=$cookie;
         }
 
-        $model = new Admin('register');
+        $model = new Admin('Register');
         /* 验证登陆，这里如果有错误，会自动收集到model中的errors属性中，呈数组存在 */
         if(isset($_POST['Admin'])) {
             $model->attributes = $_POST['Admin'];
@@ -76,12 +76,6 @@ class LoginController extends BackController
                 if($model->register()){
                     /* 设置推荐人 */
                      $cookie= Yii::app()->request->getCookies();
-                     if(isset($cookie['puk'])) {
-                         $admin_rlt = new AdminRelation();
-                         $admin_rlt->aid = $model->aid;
-                         $admin_rlt->fid = $cookie['puk'];
-                         $admin_rlt->save();
-                     }
                      /* 发送邮件 */
                     $rt = $this->Mail($model);
                     if($rt)

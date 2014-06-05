@@ -107,8 +107,7 @@ class ProductController extends Controller
                         $order_detail->create_time = time();
                         if($order_detail->save()){
                             $rt = $this->OrderMail($order,$order_detail);
-                            var_dump($rt);
-                            Yii::app()->user->setFlash('success','成功发送！');
+                            Yii::app()->user->setFlash('success','Send success！');
                         }
                     }
                 }

@@ -73,7 +73,7 @@ class AdminController extends BackController
 	 */
 	public function actionCreate()
 	{
-		$model=new Admin('register');
+		$model=new Admin('Create');
 
 		// 如果需要AJAX验证请取消下面这一行的注释
 		// $this->performAjaxValidation($model);
