@@ -12,8 +12,9 @@
 		//'cssFile'=>'/css/gridview/styles.css',
 		'columns'=>array(
 			'bid',
-		'brand_name',
-		'logo',
+            'brand_name',
+            'logo',
+            'company_url',
 			array(
 				'class'=>'ext.dwz.DwzButtonColumn',
 			),

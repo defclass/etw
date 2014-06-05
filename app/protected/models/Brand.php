@@ -1,12 +1,14 @@
 <?php
 
 /**
- * This is the model class for table "br_brand".
+ * This is the model class for table "{{brand}}".
  *
  * The followings are the available columns in table 'br_brand':
  * @property string $bid
  * @property string $brand_name
  * @property string $logo
+ * @property string $company_url
+ * @property string $comment
  */
 class Brand extends CActiveRecord
 {
@@ -30,9 +32,11 @@ class Brand extends CActiveRecord
 			array('bid', 'length', 'max'=>16),
 			array('brand_name', 'length', 'max'=>64),
 			array('logo', 'length', 'max'=>128),
+            array('company_url, logo', 'length', 'max'=>128),
+			array('comment', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('bid, brand_name', 'safe', 'on'=>'search'),
+			array('bid, brand_name, company_url, comment', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -44,6 +48,7 @@ class Brand extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+            'products' => array(self::HAS_MANY, 'Product', 'bid'),
 		);
 	}
 
@@ -55,7 +60,9 @@ class Brand extends CActiveRecord
 		return array(
 			'bid' => '品牌ID',
 			'brand_name' => '品牌名',
-            'logo' => 'logo图路径'
+            'logo' => 'logo图路径',
+            'company_url' => '品牌的官网',
+            'comment' => '品牌相关说明',
 		);
 	}
 
@@ -80,6 +87,8 @@ class Brand extends CActiveRecord
 		$criteria->compare('bid',$this->bid,true);
 		$criteria->compare('brand_name',$this->brand_name,true);
 		$criteria->compare('logo',$this->logo,true);
+        $criteria->compare('company_url',$this->company_url,true);
+		$criteria->compare('comment',$this->comment,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

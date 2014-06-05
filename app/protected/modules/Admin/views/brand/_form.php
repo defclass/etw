@@ -26,6 +26,18 @@
 	</div>
 
 	<div class="unit">
+    <?php echo $form->labelEx($model,'company_url'); ?>
+		<?php echo $form->textField($model,'company_url',array('size'=>16,'maxlength'=>128)); ?>(不要填http://)
+		<?php echo $form->error($model,'company_url'); ?>
+	</div>
+
+	<div class="unit">
+		<?php echo $form->labelEx($model,'comment'); ?>
+		<?php echo $form->textArea($model,'comment',array('rows'=>20, 'cols'=>100,'class'=>'editor',"tools"=>"mfull",'upImgExt'=>"jpg,jpeg,gif,png")); ?>
+		<?php echo $form->error($model,'comment'); ?>
+	</div>
+
+	<div class="unit">
 <?php echo $form->labelEx($model,'logo'); ?>：
 		<?php echo $form->fileField($model,'logo',array('size'=>16,'maxlength'=>64)); ?>
 		<?php echo $form->error($model,'logo'); ?>
