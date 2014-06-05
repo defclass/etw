@@ -12,7 +12,7 @@
             <div class="Newsshow_inner" style="float:left;margin-top:10px; width:375px;">
               <div><strong><?php echo Yii::t('main','Model');?>: </strong><a href="#" title="在线询价" target="_blank"><?php echo $product->model; ?></a></div>
               <div><strong><?php echo Yii::t('main','Package'); ?>: </strong>  <?php echo $product->package;?></div>
-              <div><strong><?php echo Yii::t('main','Manufacturer'); ?>: </strong> <a href="#"><?php echo $product->m->manufacturer_name; ?> <img src="<?php echo $product->b->logo; ?>"  width=100 height=35 alt="ON" title="More parts Of ON" onerror="this.onerror='';this.src='<?php echo $product->b->logo; ?>'"></a></div>
+              <div><strong><?php echo Yii::t('main','Manufacturer'); ?>: </strong> <a href="#"><?php echo $product->b->brand_name; ?> <img src="<?php echo $product->b->logo; ?>"  width=100 height=35 alt="ON" title="More parts Of ON" onerror="this.onerror='';this.src='<?php echo $product->b->logo; ?>'"></a></div>
               <div><strong>RoHS: </strong><?php echo $product->RoHS;?></div>
               <div><strong><?php echo Yii::t('main','Quantity'); ?>: </strong> <?php echo $product->quantity;?> pcs</div>
               <div>

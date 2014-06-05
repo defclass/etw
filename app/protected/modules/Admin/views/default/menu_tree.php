@@ -13,7 +13,7 @@
 
 		array('label'=>'产品与供应商', 'url'=>array('#'),'items'=>array(
 			array('label'=>'品牌管理', 'url'=>array('/Admin/Brand/admin'), 'linkOptions'=>array('target'=>'navTab','rel'=>'product')),
-			array('label'=>'供应商管理', 'url'=>array('/Admin/Manufacturer/admin'), 'linkOptions'=>array('target'=>'navTab','rel'=>'product')),
+			/* array('label'=>'供应商管理', 'url'=>array('/Admin/Manufacturer/admin'), 'linkOptions'=>array('target'=>'navTab','rel'=>'product')), */
 			array('label'=>'产品分类', 'url'=>array('/Admin/Classify/admin'), 'linkOptions'=>array('target'=>'navTab','rel'=>'product')),
 			array('label'=>'产品管理', 'url'=>array('/Admin/Product/admin'), 'linkOptions'=>array('target'=>'navTab','rel'=>'product')),
 		)),

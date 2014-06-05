@@ -23,11 +23,7 @@
              'filter' => CHtml::activeTextField($model, 'brand'),
              'value' => '$data->b->brand_name',
          ),
-         array(
-             'name' => '产品供应商',
-             'filter' => CHtml::activeTextField($model, 'manufacturer'),
-             'value' => '$data->m->manufacturer_name',
-         ), 
+        
 		'model',
          'package',
          'image_url',
