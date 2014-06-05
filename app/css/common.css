@@ -1014,6 +1014,7 @@ background:url(../images/mail.png) no-repeat; z-index: 9999; display: block;}
 .manufacturer_tab{
     margin-top: 30px;
     width: 100%;
+    margin-left: 40px;
 }
 .manufacturer_tab tr{
     height: 60px;
