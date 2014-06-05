@@ -1016,8 +1016,15 @@ background:url(../images/mail.png) no-repeat; z-index: 9999; display: block;}
     width: 100%;
 }
 .manufacturer_tab tr{
-    height: 50px;
+    height: 60px;
 }
 .manufacturer_tab tr td.icon{
-    width: 100%;
+    width: 140px;
+    overflow: hidden;
+    height: 60px;
+}
+.manufacturer_tab tr td.icon img{
+    display: inline-block;
+    max-width: 140px;
+    max-height: 49px;
 }
