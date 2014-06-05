@@ -31,6 +31,3 @@
   </div>
   <!--分页 end-->
 </div>
-</div> 
-<div class="clear"></div>
-</div><!-- detail end-->

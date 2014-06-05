@@ -10,13 +10,13 @@
         <tbody><tr>
           <td class="lt">
             <div class="global_products">
-                <?php 
-                if(isset($_GET['classify']) && $_GET['classify'] == Yii::app()->params['display_brand_classify_id'] )
-                  echo $this->renderPartial('_brand_index',array('brands'=>$brands->getData()));
-                else
-                  echo $this->renderPartial('_classify_index',array('classifies'=>$classifies));
-                ?>
-                
+              <?php 
+              if(isset($_GET['classify']) && $_GET['classify'] == Yii::app()->params['display_brand_classify_id'] )
+                echo $this->renderPartial('_brand_index',array('brands'=>$brands->getData()));
+              else
+                echo $this->renderPartial('_classify_index',array('classifies'=>$classifies));
+              ?>
+              
               <a name="details"></a>
               <p><strong><?php echo Yii::t('site','Search Model:');?></strong></p>
               <form name="product_search" method="get" action="">
@@ -30,7 +30,7 @@
 
 
                         <?php foreach($classifies as $cl) { ?>
-                        <option value="<?php echo $cl->cid; ?>"><?php echo $cl->classify_name; ?> </option>
+                          <option value="<?php echo $cl->cid; ?>"><?php echo $cl->classify_name; ?> </option>
                         <?php } ?>
                       </select>
                       &nbsp; <input name="submit" type="submit" class="button" value="<?php echo Yii::t('site','Search');?>">
@@ -62,34 +62,34 @@
             <th width="120"><?php echo Yii::t('site','Direction');?></th>
           </tr>
           <?php foreach($products as $pro){  ?>
-          <tr class="">
-            <td style="width:10px" class="icon">&nbsp;</td>
-            <td><div style="width:80px;text-overflow:ellipsis;white-space:nowrap; overflow:hidden;">
-              <a href="<?php echo Yii::app()->createUrl('/Product/ProductDetails/'); ?>/id/<?php echo $pro->pid; ?>" title="<?php echo $pro->model; ?>"><u>
-              <?php echo $pro->model; ?>
-            </u></a></div></td>
-            <td align="center"><?php echo $pro->quantity; ?></td>
-            <td align="center"><a href="<?php echo Yii::app()->createUrl('/Product/Index').'/brand/'.$pro->b->bid; ?>"><u><?php echo $pro->b->brand_name; ?></u></a></td>
-            <td align="center"><?php echo $pro->package; ?></td>
-            <td align="center">
-              <a href="#" target="_blank">
-                <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/xunjiapng_03.png" alt="<?php echo Yii::t('site','Online Inquiry');?>"></a>
-            </td>
-          </tr>
+            <tr class="">
+              <td style="width:10px" class="icon">&nbsp;</td>
+              <td><div style="width:80px;text-overflow:ellipsis;white-space:nowrap; overflow:hidden;">
+                <a href="<?php echo Yii::app()->createUrl('/Product/ProductDetails/'); ?>/id/<?php echo $pro->pid; ?>" title="<?php echo $pro->model; ?>"><u>
+                  <?php echo $pro->model; ?>
+                </u></a></div></td>
+              <td align="center"><?php echo $pro->quantity; ?></td>
+              <td align="center"><a href="<?php echo Yii::app()->createUrl('/Product/Index').'/brand/'.$pro->b->bid; ?>"><u><?php echo $pro->b->brand_name; ?></u></a></td>
+              <td align="center"><?php echo $pro->package; ?></td>
+              <td align="center">
+                <a href="#" target="_blank">
+                  <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/xunjiapng_03.png" alt="<?php echo Yii::t('site','Online Inquiry');?>"></a>
+              </td>
+            </tr>
           <?php } ?>
         </tbody>
       </table>
     </div><!--产品分类 end-->
     <!--分页-->
     <div class="paging">
-    
-    <?php $this->widget('LinkPager', array(
-      'pages' => $pages,
-    )) ?>
+      
+      <?php $this->widget('LinkPager', array(
+        'pages' => $pages,
+      )) ?>
     </div>
 
     <!--分页 end-->
   </div>
-</div> 
+
 <div class="clear"></div>
 </div><!-- detail end-->

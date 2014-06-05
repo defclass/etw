@@ -8,7 +8,8 @@
     <tbody>
       <tr>
         <td class="lt wlt">
-          <p></p><div class="distribution">
+         
+          <div class="distribution">
             <p>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Bairun has established more than 500 global components brands' channels of supply and distrubutd components of the United States, Europe, Asia these the three brand manufctures, the main lines including integrated circuits, two transistors, resistors and capacitors, connectors, modules, etc. with the famous brands such as XILINX,TI,ST,TOSHIBA,MOTOROLA ,CYPRESS,VISHAY,AVX,AD,MAXIM,NEC,NS,KEMET,ALTERA, EPCOS,ATMEL,IR,ON,AGILENT,LATTICE, SAMSUNG,HITACHI ,NXP,INTERSIL,INFINEON,FAIRCHILD,INTEL,SONY,FUJITSU.and othersemiconductor components.
             </p>
           </div>
@@ -23,14 +24,7 @@
       </tr>
     </tbody>
   </table>
-</div><p></p>
-        </td>
-        <td class="rt wrt">
-        </td>
-      </tr>
-    </tbody>
-  </table>
 </div>
-</div> 
+
 <div class="clear"></div>
-</div><!-- detail end-->
+

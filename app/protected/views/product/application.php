@@ -23,7 +23,4 @@
       </tr>
     </tbody>
   </table>
-</div>
-</div> 
-<div class="clear"></div>
-</div><!-- detail end-->
+
