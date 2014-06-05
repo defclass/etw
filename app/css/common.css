@@ -633,7 +633,7 @@ body{
 
 .list_detail{
     width: 620px;
-    margin: 0 auto;
+    margin: 30px auto;
 }
 .round{
     width: 100%;
@@ -800,7 +800,9 @@ input.button:hover, a.btn_blue:hover, .btn_ul:hover{
 }
 
 table tr.row {
-    background-color: #F2F4F7;
+    border-bottom: 1px #ccc solid;
+    height: 50px;
+    line-height: 30px;
 }
 .manufacturer table tr td{
     border-bottom: 1px solid #DAE1E7;
