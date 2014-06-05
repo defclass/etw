@@ -30,8 +30,8 @@
             <a href="mailto:<?php echo Yii::app()->params['sales_email']; ?>"><?php echo Yii::app()->params['sales_email']; ?></a><br>
             <?php echo Yii::t('site','Tel');?>:  +86-755-83343342<br>
             
-            <p>TradeManager: jotrin</p>
-            <p><a href="http://webatm.alibaba.com/atm_chat.htm?enemberId=enaliintjotrin" target="_blank"><img src="http://amos.us.alitalk.alibaba.com/online.aw?v=2&amp;uid=jotrin&amp;site=enaliint&amp;s=5" alt="Contact Us" border="0"></a>
+            <p>TradeManager: kaijiwei</p>
+            <p><a href="http://webatm.alibaba.com/atm_chat.htm?enemberId=kaijiwei" target="_blank"><img src="http://amos.us.alitalk.alibaba.com/online.aw?v=2&amp;uid=jotrin&amp;site=enaliint&amp;s=5" alt="Contact Us" border="0"></a>
             </p>
 
             
@@ -39,12 +39,12 @@
             <h4><?php echo Yii::t('site','Technical Support');?></h4>
             <p>
               <?php echo Yii::t('site','Tel');?>: +86-755-89515112<br>
-              Email: <a href="mailto:support@jotrin.com"><?php echo Yii::app()->params['sales_email']; ?></a>
+              Email: <a href="mailto:<?php echo Yii::app()->params['sales_email']; ?>"><?php echo Yii::app()->params['sales_email']; ?></a>
             </p>
             <br>
             <h4><?php echo Yii::t('site','Customer Service');?></h4>
             <p>
-              Email:  <a href="mailto:service@jotrin.com"><?php echo Yii::app()->params['sales_email']; ?></a>
+              Email:  <a href="mailto:<?php echo Yii::app()->params['sales_email']; ?>"><?php echo Yii::app()->params['sales_email']; ?></a>
             </p>
 
         </div>

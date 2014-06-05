@@ -116,7 +116,8 @@ class ProductController extends Controller
             }
         }
 
-        $this->site_keywords = $product->model." ".$product->package;
+        $this->site_keywords = $product->model." | ".$product->package .' | '. $this->site_keywords;
+        $this->site_description = $product->model." | ".$product->package .' | '. $this->site_description;
         $this->render('productDetails',array(
             'product'=>$product,
             'order'=>$order,
