@@ -4,7 +4,7 @@
  */
 Yii::import('ext.dwz.DwzHelper');
 
-class ManufacturerController extends Controller
+class ManufacturerController extends BackController
 {
 	/**
 	 * @var CActiveRecord 当前载入的model实例

@@ -4,7 +4,7 @@
  */
 Yii::import('ext.dwz.DwzHelper');
 
-class AdminController extends Controller
+class AdminController extends BackController
 {
 	/**
 	 * @var CActiveRecord 当前载入的model实例

@@ -4,7 +4,7 @@
  */
 Yii::import('ext.dwz.DwzHelper');
 
-class PersonSetController extends Controller
+class PersonSetController extends BackController
 {
 
     /**

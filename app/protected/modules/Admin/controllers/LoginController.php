@@ -1,6 +1,6 @@
 <?php
 
-class LoginController extends Controller
+class LoginController extends BackController
 {
     /**
      * @var CActiveRecord 当前载入的model实例

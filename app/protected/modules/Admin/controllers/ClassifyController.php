@@ -4,7 +4,7 @@
  */
 Yii::import('ext.dwz.DwzHelper');
 
-class ClassifyController extends Controller
+class ClassifyController extends BackController
 {
 	/**
 	 * @var CActiveRecord 当前载入的model实例
