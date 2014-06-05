@@ -1008,3 +1008,7 @@ background:url(../images/mail.png) no-repeat; z-index: 9999; display: block;}
     width: 122px;
     height: 59px;
 }
+.manufacturer_b table tr{
+    border-bottom: 1px #ccc solid;
+    margin-top: 20px;
+}
