@@ -37,26 +37,42 @@ class ManufacturerController extends Controller
 	 */
 	public function actionIndex()
 	{
-        $manufacturer_model = new Manufacturer();
-        $manufacturer = $manufacturer_model->search();
+        $brand_model = new Brand();
+        $brand = $brand_model->search();
         
 		$this->render('index',array(
-			'manufacturers'=>$manufacturer->getData(),
-             'pages'=>$manufacturer->getPagination(),
+			'brands'=>$brand->getData(),
+             'pages'=>$brand->getPagination(),
 		));
 	}
+
+
+    /** 
+     * @todo 供应商详情页
+     * 
+     * @return 
+     */
+    public function actionBrandDetails(){
+        $model = Brand::model();
+        if(isset($_GET['id'])){
+            $brand_obj = $model->findbyPK($_GET['id']);
+            $this->render('BrandDetails',array(
+                'brand'=>$brand_obj,
+            ));
+        }
+    }
 
 
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Manufacturer the loaded model
+	 * @return Brand the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=Manufacturer::model()->findByPk($id);
+		$model=Brand::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -64,11 +80,11 @@ class ManufacturerController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Manufacturer $model the model to be validated
+	 * @param Brand $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='manufacturer-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='brand-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

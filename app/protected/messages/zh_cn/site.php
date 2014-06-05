@@ -17,6 +17,7 @@
  * NOTE, this file must be saved in UTF-8 encoding.
  */
 return array (
+  'Please select a manufacturers:' => '',
   'Company Name' => '@@公司名称@@',
   'Inquiry Content' => '@@询价内容@@',
   'Add: Rm. 1005, Block B,Zhonghangbeiyuan Building,Zhonghang Rd.,Futian District,Shenzhen,Guangdong,China' => '地址：中国广东省深圳市福田区中航路中航北苑大厦B座1005室',
@@ -35,11 +36,11 @@ return array (
   'Create Date' => '创建日期',
   'Customer Service' => '客户服务',
   'Direction' => '注释',
-  'Index' => '快捷库存索引',
   'Fast delivery' => '交货迅速',
   'Fax' => '传真',
   'Headline' => '标题',
   'Honesty' => '诚信',
+  'Index' => '快捷库存索引',
   'Keyword' => '关键字',
   'Large inventory spot' => '大量库存现货',
   'Model' => '型号',
