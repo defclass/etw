@@ -1003,3 +1003,8 @@ background:url(../images/mail.png) no-repeat; z-index: 9999; display: block;}
 .distribution_main li a{
     display: block;
 }
+.distribution_main li a img{
+    display: inline-block;
+    width: 122px;
+    height: 59px;
+}
