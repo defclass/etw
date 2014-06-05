@@ -17,7 +17,8 @@
  * NOTE, this file must be saved in UTF-8 encoding.
  */
 return array (
-  'Product Details' => '产品详情',
+  'Click to learn more' => '点击了解更多',
+  'Questions? Please consult our sales' => '有问题? 请咨询我们的电子技术和客户服务人员',
   'About Us' => '关于我们',
   'Advantage' => '企业优势',
   'All Manufacturers' => '所有供应商',
@@ -42,6 +43,7 @@ return array (
   'Package' => '封装',
   'Popular Searches' => '热门搜索',
   'Price based on quantity, market conditions and other factors vary. Please call or send a quick inquiry ... Thanks!' => '价格根据数量，市场条件和其他因素而有所不同。请致电或发送一个快速询价...谢谢！',
+  'Product Details' => '产品详情',
   'Products' => '产品中心',
   'Products Show' => '产品展示',
   'Quality Control' => '质量控制',

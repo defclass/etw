@@ -51,8 +51,8 @@
     </ul>
     <div class="product_us">
         <a href="<?php echo $this->createUrl('/ContactUs/Index'); ?>">
-            <span class="product_us_nav">有问题? 请咨询我们的电子技术和客户服务人员</span>
-            <span class="product_us_a">点击了解更多</span>
+            <span class="product_us_nav"><?php echo Yii::t('main','Questions? Please consult our sales'); ?></span>
+            <span class="product_us_a"><?php echo Yii::t('main','Click to learn more'); ?></span>
         </a>
     </div>
 </div>
