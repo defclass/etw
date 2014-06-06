@@ -167,7 +167,7 @@
       <br>
       <p>TradeManager: kaijiwei</p>
       <p>
-        <a href="http://webatm.aliba.com/atm_chat.htm?enemberId=kaijiwei" target="_blank"><img src="http://amos.us.alitalk.alibaba.com/online.aw?v=2&amp;uid=jotrin&amp;site=enaliint&amp;s=5" alt="Contact Us" border="0"></a>
+        <a href="http://webatm.aliba.com/atm_chat.htm?enemberId=kaijiwei" target="_blank"><img src="http://amos.us.alitalk.alibaba.com/online.aw?v=2&amp;uid=Barum&amp;site=enaliint&amp;s=5" alt="Contact Us" border="0"></a>
       </p> 
     </div>                              
     <div class="f_left">

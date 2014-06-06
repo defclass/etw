@@ -846,7 +846,7 @@ table tr.row {
     padding: 0px;
 }
 #right_column table.top {
-    background: url("/Themes/StyleJotrin/images/common/table-top.jpg") no-repeat;
+    background: url("/Themes/StyleBarum/images/common/table-top.jpg") no-repeat;
 }
 #right_column table th {
     color: #FFFFFF;
@@ -858,11 +858,11 @@ table tr.row {
     padding: 8px;
 }
 #right_column table.list td.icon {
-    background: url("/Themes/StyleJotrin/images/common/news-icon.gif") no-repeat 10px 9px;
+    background: url("/Themes/StyleBarum/images/common/news-icon.gif") no-repeat 10px 9px;
     width: 12px;
 }
 #right_column table.list td.iconb {
-    background: #F2F4F7 url("/Themes/StyleJotrin/images/common/news-icon.gif") no-repeat 10px 9px;
+    background: #F2F4F7 url("/Themes/StyleBarum/images/common/news-icon.gif") no-repeat 10px 9px;
     width: 12px;
 }
 .left-line {
