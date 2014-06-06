@@ -162,7 +162,7 @@
       <p>
         Email: 
         <a href="#"><?php echo Yii::app()->params['sales_email']; ?></a><br>
-        <?php echo Yii::t('site','Tel');?>:  +86-755-83343342<br>                                  
+        <?php echo Yii::t('site','Tel');?>:  +86-755-82566559<br>                                  
       </p>
       <br>
       <p>TradeManager: kaijiwei</p>

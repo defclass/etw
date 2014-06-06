@@ -28,7 +28,7 @@
           <p>
             Email: 
             <a href="mailto:<?php echo Yii::app()->params['sales_email']; ?>"><?php echo Yii::app()->params['sales_email']; ?></a><br>
-            <?php echo Yii::t('site','Tel');?>:  +86-755-83343342<br>
+            <?php echo Yii::t('site','Tel');?>:  +86-755-82566559<br>
             
             <p>TradeManager: kaijiwei</p>
             <p><a href="http://webatm.alibaba.com/atm_chat.htm?enemberId=kaijiwei" target="_blank"><img src="http://amos.us.alitalk.alibaba.com/online.aw?v=2&amp;uid=Barum&amp;site=enaliint&amp;s=5" alt="Contact Us" border="0"></a>
