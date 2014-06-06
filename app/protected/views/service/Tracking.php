@@ -4,7 +4,7 @@
 
   </div>
   <!--右侧内容不同区域-->
-  <div class="list_detail service_tracking">
+  <div class="list_detail service_tracking f_left">
     <table class="round">
       <tbody>
         <tr>

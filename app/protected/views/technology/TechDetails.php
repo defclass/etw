@@ -3,7 +3,7 @@
     <p><a href="javascript:;">首页</a> » <a href="javascript:;">产品中心</a> » 产品展示</p>
   </div>
   <!--右侧内容不同区域-->
-  <div class="list_detail">
+  <div class="list_detail f_left">
     <div id="right_column">                               
       <div>
         <div id="content_with_box">

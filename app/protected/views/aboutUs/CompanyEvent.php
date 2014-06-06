@@ -4,7 +4,7 @@
 
   </div>
   <!--右侧内容不同区域-->
-  <div class="list_detail dategories_style">
+  <div class="list_detail dategories_style f_left">
     <table width="660">
       <tbody>
         <tr class="dategories_nav">

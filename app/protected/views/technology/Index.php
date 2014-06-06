@@ -3,7 +3,7 @@
      <p><a href="<?php echo Yii::app()->createUrl('/Site/Index/'); ?>"><?php echo Yii::t('main','Home'); ?></a> » <a href="<?php echo $this->createUrl('/Technology/Index/'); ?>"><?php echo Yii::t('main','Technology'); ?></a> </p>
   </div>
   <!--右侧内容不同区域-->
-  <div class="list_detail">
+  <div class="list_detail f_left">
     <div id="rightcolumn">
       <?php foreach($article as $ar){ ?>
       <div>
