@@ -3,7 +3,7 @@
 
 </div>
 <!--右侧内容不同区域-->
-<div class="list_detail">
+<div class="list_detail f_left">
   <table class="round">
     <tbody>
       <tr>
