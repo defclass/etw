@@ -51,12 +51,13 @@ class Controller extends CController
                 // 根据COOKIE中语言类型来设置语言  
                 Yii::app()->language = Yii::app()->request->cookies['lang']->value;  
             }  
-        else  
+/*        else  
             {  
                 // 根据浏览器语言来设置语言  
                 $lang = explode(',',$_SERVER['HTTP_ACCEPT_LANGUAGE']);  
                 Yii::app()->language = strtolower(str_replace('-', '_', $lang[0]));  
-            }  
+            }
+*/
     }  
   
     /** 
