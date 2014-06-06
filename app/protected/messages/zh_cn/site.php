@@ -63,5 +63,5 @@ return array (
   'Telephone' => '电话',
   'View map' => '查看地图',
   'Welcome to Barum Electronics' => '欢迎来到佰润电子有限公司',
-  'Why Barum?' => '为什么选择佰润 ?',
+  'Why Barun?' => '为什么选择佰润 ?',
 );
