@@ -1,6 +1,6 @@
 
 <!--右侧内容不同区域-->
-<div class="list_detail f_left manufacturer_b">
+<div class="list_detail f_left manufacturer_b f_left">
   <div class="detail_navigation">
     <p><a href="<?php echo Yii::app()->createUrl('/Site/Index/'); ?>"><?php echo Yii::t('main','Home'); ?></a> » <a href="<?php echo $this->createUrl('/Manufacturer/Index/'); ?>"><?php echo Yii::t('main','Manufacturers'); ?></a> </p>
   </div>
