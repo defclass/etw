@@ -1029,3 +1029,18 @@ background:url(../images/mail.png) no-repeat; z-index: 9999; display: block;}
     max-width: 140px;
     max-height: 49px;
 }
+
+.errorSummary{
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: red 1px dashed;
+}
+
+
+.order_success {
+    border: 1px dashed;
+    color: #008000;
+    margin: 10px;
+    padding: 10px;
+}

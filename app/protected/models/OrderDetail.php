@@ -62,9 +62,9 @@ class OrderDetail extends CActiveRecord
 			'od_id' => '订单详情ID',
 			'oid' => '订单详情ID',
 			'model' => '产品名',
-			'quantity' => '需求数量',
+			'quantity' => Yii::app('site','Quantity'),
 			'brand' => '期望厂商',
-			'price' => '期望价格',
+			'price' => Yii::app('site','Price'),
 			'create_time' => '创建时间',
 			'status' => '产品状态0显示1不显示',
 		);

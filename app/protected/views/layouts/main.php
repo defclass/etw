@@ -129,9 +129,9 @@
                   <div class="clear"></div>
                 </div>
               </li>
-              <!-- <li class="nav_li">
-              <a class="nav_width" href="javascript:;">提价咨询</a>
-              </li> -->
+              <li class="nav_li">
+              <a class="nav_width" href="<?php echo $this->createUrl('/SendRFQ/Index'); ?>"><?php echo Yii::t('main','SendRFQ'); ?></a>
+              </li> 
               <li class="nav_li">
                 <a class="nav_width" href="<?php echo $this->createUrl('/Service/Index'); ?>"><?php echo Yii::t('main','Service'); ?><b></b></a>
                 <div class="nav_main nav_main2 none">
