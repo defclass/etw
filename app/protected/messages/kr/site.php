@@ -17,7 +17,14 @@
  * NOTE, this file must be saved in UTF-8 encoding.
  */
 return array (
-'Add: Rm. 1005, Block B,Zhonghangbeiyuan Building,Zhonghang Rd.,Futian District,Shenzhen,Guangdong,China'=> '추가 : RM은. 1005 블록 B, Zhonghangbeiyuan 빌딩 Zhonghang RD., 복전 구, 심천, 광동, 중국',
+'Add'=> '추가',
+ 'Delete'=> '삭제',
+ 'Manufacturer'=> '제조업 자',
+ 'Mark is required, please fill out accurate'=> '마크가 필요하며, 정확한 기입 해주세요',
+ 'Please enter the quantity you need. If you have more than one component are looking for, please add additional components to your quote request form. Then fill in your contact information and click on submit an application, our sales representative will contact you as soon as possible, including price and delivery time. If you need help, please send an E-MAIL to sales@Barum.com'=> '당신이 필요로하는 양을 입력 해 주시기 바랍니다. 하나 이상의 구성 요소를 찾고 있다면, 귀하의 견적 요청 양식에 추가 구성 요소를 추가하십시오. 그런 다음 연락처 정보를 입력하고 신청을 클릭, 우리의 영업 담당자는 가격 및 배달 시간을 포함하여, 가능한 한 빨리 연락을 드릴 것입니다. 당신이 도움을 필요로하는 경우, sales@Barum.com에 E-메일을 보내 주시기 바랍니다',
+ 'Submit'=> '제출',
+ 'Mark is required, please fill out accurate。'=> '마크가 필요하며, 정확한 기입 해주십시오.',
+ 'Add: Rm. 1005, Block B,Zhonghangbeiyuan Building,Zhonghang Rd.,Futian District,Shenzhen,Guangdong,China'=> '추가 : RM은. 1005 블록 B, Zhonghangbeiyuan 빌딩 Zhonghang RD., 복전 구, 심천, 광동, 중국',
  'All'=> '모든',
  'Any question? Please consult our technical staff and customer service personnel!'=> '질문? 우리의 기술 직원 및 고객 서비스 담당자에게 문의하시기 바랍니다!',
  'Barum Electronics Co., LTD had been established， in line with the good faith principle, is supreme, the mutually beneficial reciprocal benefit management '=> 'Barum 전자 유한 공사는 성실 원칙에 맞춰, 설립했다, 최고​​, 상호 이익이 상호 이익 관리',

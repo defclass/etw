@@ -17,7 +17,14 @@
  * NOTE, this file must be saved in UTF-8 encoding.
  */
 return array (
-'Add: Rm. 1005, Block B,Zhonghangbeiyuan Building,Zhonghang Rd.,Futian District,Shenzhen,Guangdong,China'=> 'Ajouter: Rm. 1005, Bloc B, Bâtiment Zhonghangbeiyuan, Zhonghang Rd., Futian District, Shenzhen, Guangdong, Chine',
+'Add'=> 'Ajouter',
+ 'Delete'=> 'Effacer',
+ 'Manufacturer'=> 'Fabricant',
+ 'Mark is required, please fill out accurate'=> 'Mark est nécessaire, s\'il vous plaît remplir précis',
+ 'Please enter the quantity you need. If you have more than one component are looking for, please add additional components to your quote request form. Then fill in your contact information and click on submit an application, our sales representative will contact you as soon as possible, including price and delivery time. If you need help, please send an E-MAIL to sales@Barum.com'=> 'S\'il vous plaît entrer la quantité dont vous avez besoin. Si vous avez plus d\'un composant recherchez, s\'il vous plaît ajouter des composants supplémentaires à votre formulaire de demande de devis. Ensuite, remplissez vos coordonnées et cliquez sur soumettre une demande, notre représentant vous contactera dès que possible, y compris le prix et le délai de livraison. Si vous avez besoin d\'aide, s\'il vous plaît envoyez un E-MAIL à sales@Barum.com',
+ 'Submit'=> 'Soumettre',
+ 'Mark is required, please fill out accurate。'=> 'Mark est nécessaire, s\'il vous plaît remplir précis.',
+ 'Add: Rm. 1005, Block B,Zhonghangbeiyuan Building,Zhonghang Rd.,Futian District,Shenzhen,Guangdong,China'=> 'Ajouter: Rm. 1005, Bloc B, Bâtiment Zhonghangbeiyuan, Zhonghang Rd., Futian District, Shenzhen, Guangdong, Chine',
  'All'=> 'Tout',
  'Any question? Please consult our technical staff and customer service personnel!'=> 'Une question? S\'il vous plaît consulter notre personnel technique et le personnel de service à la clientèle!',
  'Barum Electronics Co., LTD had been established， in line with the good faith principle, is supreme, the mutually beneficial reciprocal benefit management '=> 'Barum Electronics Co., LTD a été créée, en ligne avec le principe de bonne foi, est suprême, la gestion des avantages réciproques mutuellement bénéfique',

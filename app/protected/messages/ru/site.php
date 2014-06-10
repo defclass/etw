@@ -17,7 +17,14 @@
  * NOTE, this file must be saved in UTF-8 encoding.
  */
 return array (
-'Add: Rm. 1005, Block B,Zhonghangbeiyuan Building,Zhonghang Rd.,Futian District,Shenzhen,Guangdong,China'=> 'Добавить: Rm. 1005, блок Б, Zhonghangbeiyuan Строительство, Zhonghang Rd., Futian округа, Шэньчжэнь, провинция Гуандун, Китай',
+'Add'=> 'Добавлять',
+ 'Delete'=> 'Удалять',
+ 'Manufacturer'=> 'Производитель',
+ 'Mark is required, please fill out accurate'=> 'Марк требуется, заполните точным',
+ 'Please enter the quantity you need. If you have more than one component are looking for, please add additional components to your quote request form. Then fill in your contact information and click on submit an application, our sales representative will contact you as soon as possible, including price and delivery time. If you need help, please send an E-MAIL to sales@Barum.com'=> 'Пожалуйста, введите необходимое Вам количество. Если у вас есть более одного компонента ищете, пожалуйста, добавить дополнительные компоненты в форму запроса котировок. Тогда заполните контактную информацию и нажмите подать заявку, наш торговый представитель свяжется с Вами как можно скорее, в том числе цены и времени доставки. Если вам нужна помощь, пожалуйста, отправьте электронное письмо по sales@Barum.com',
+ 'Submit'=> 'Представлять',
+ 'Mark is required, please fill out accurate。'=> 'Марк требуется, заполните точным.',
+ 'Add: Rm. 1005, Block B,Zhonghangbeiyuan Building,Zhonghang Rd.,Futian District,Shenzhen,Guangdong,China'=> 'Добавить: Rm. 1005, блок Б, Zhonghangbeiyuan Строительство, Zhonghang Rd., Futian округа, Шэньчжэнь, провинция Гуандун, Китай',
  'All'=> 'Все',
  'Any question? Please consult our technical staff and customer service personnel!'=> 'Любой вопрос? Пожалуйста, обратитесь в наш технический персонал и персонал обслуживания клиента!',
  'Barum Electronics Co., LTD had been established， in line with the good faith principle, is supreme, the mutually beneficial reciprocal benefit management '=> 'Barum Электроника, Лтд была создана в соответствии с хорошей принципе веры, является высшим, взаимовыгодное обратная управления выгода',

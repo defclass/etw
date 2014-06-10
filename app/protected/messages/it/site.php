@@ -17,7 +17,14 @@
  * NOTE, this file must be saved in UTF-8 encoding.
  */
 return array (
-'Add: Rm. 1005, Block B,Zhonghangbeiyuan Building,Zhonghang Rd.,Futian District,Shenzhen,Guangdong,China'=> 'Aggiungi: Rm. 1005, Blocco B, Zhonghangbeiyuan edificio, Zhonghang Rd.., Futian District, Shenzhen, Guangdong, Cina',
+'Add'=> 'Aggiungere',
+ 'Delete'=> 'Cancellare',
+ 'Manufacturer'=> 'Fabbricante',
+ 'Mark is required, please fill out accurate'=> 'Mark è necessaria, si prega di compilare accurate',
+ 'Please enter the quantity you need. If you have more than one component are looking for, please add additional components to your quote request form. Then fill in your contact information and click on submit an application, our sales representative will contact you as soon as possible, including price and delivery time. If you need help, please send an E-MAIL to sales@Barum.com'=> 'Si prega di inserire la quantità che avete bisogno. Se si dispone di più di un componente alla ricerca di, si prega di aggiungere componenti aggiuntivi per il modulo di richiesta preventivo. Allora compila le informazioni di contatto e cliccare su presentare una domanda, il nostro rappresentante vi contatterà al più presto, compreso il prezzo e tempo di consegna. Se hai bisogno di aiuto, si prega di inviare una E-MAIL a sales@Barum.com',
+ 'Submit'=> 'Presentare',
+ 'Mark is required, please fill out accurate。'=> 'Mark è necessaria, si prega di compilare accurate.',
+ 'Add: Rm. 1005, Block B,Zhonghangbeiyuan Building,Zhonghang Rd.,Futian District,Shenzhen,Guangdong,China'=> 'Aggiungi: Rm. 1005, Blocco B, Zhonghangbeiyuan edificio, Zhonghang Rd.., Futian District, Shenzhen, Guangdong, Cina',
  'All'=> 'Tutto',
  'Any question? Please consult our technical staff and customer service personnel!'=> 'Tutta la domanda? Si prega di consultare il nostro staff tecnico e personale di servizio al cliente!',
  'Barum Electronics Co., LTD had been established， in line with the good faith principle, is supreme, the mutually beneficial reciprocal benefit management '=> 'Barum Electronics Co., LTD era stato stabilito, in linea con il principio di buona fede, è suprema, l\'reciprocamente vantaggiosa gestione beneficio reciproco',

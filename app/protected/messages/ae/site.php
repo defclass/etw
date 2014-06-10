@@ -17,7 +17,14 @@
  * NOTE, this file must be saved in UTF-8 encoding.
  */
 return array (
-'Add: Rm. 1005, Block B,Zhonghangbeiyuan Building,Zhonghang Rd.,Futian District,Shenzhen,Guangdong,China'=> 'إضافة: رينغيت ماليزي. 1005، بلوك ب، مبنى Zhonghangbeiyuan، طريق Zhonghang.، مقاطعة الرقمين، شنتشن، قوانغدونغ، والصين',
+'Add'=> 'إضافة',
+ 'Delete'=> 'حذف',
+ 'Manufacturer'=> 'الشركة المصنعة',
+ 'Mark is required, please fill out accurate'=> 'مطلوب علامة، يرجى ملء دقيقة',
+ 'Please enter the quantity you need. If you have more than one component are looking for, please add additional components to your quote request form. Then fill in your contact information and click on submit an application, our sales representative will contact you as soon as possible, including price and delivery time. If you need help, please send an E-MAIL to sales@Barum.com'=> 'يرجى إدخال الكمية التي تحتاج إليها. إذا كان لديك يبحثون أكثر من عنصر واحد ل، يرجى إضافة مكونات إضافية إلى نموذج طلب أقتبس الخاصة بك. ثم ملء معلومات الاتصال الخاصة بك وانقر على تقديم طلب، ومندوب مبيعات لدينا نتصل بك في أقرب وقت ممكن، بما في ذلك السعر ووقت التسليم. إذا كنت بحاجة إلى مساعدة، يرجى إرسال رسالة بالبريد الإلكتروني إلى sales@Barum.com',
+ 'Submit'=> 'عرض',
+ 'Mark is required, please fill out accurate。'=> 'مطلوب علامة، يرجى ملء دقيقة.',
+ 'Add: Rm. 1005, Block B,Zhonghangbeiyuan Building,Zhonghang Rd.,Futian District,Shenzhen,Guangdong,China'=> 'إضافة: رينغيت ماليزي. 1005، بلوك ب، مبنى Zhonghangbeiyuan، طريق Zhonghang.، مقاطعة الرقمين، شنتشن، قوانغدونغ، والصين',
  'All'=> 'كل',
  'Any question? Please consult our technical staff and customer service personnel!'=> 'أي سؤال؟ يرجى استشارة موظفينا التقنية وموظفي خدمة العملاء!',
  'Barum Electronics Co., LTD had been established， in line with the good faith principle, is supreme, the mutually beneficial reciprocal benefit management '=> 'وكان باروم إلكترونيات المحدودة أنشئت، وذلك تمشيا مع مبدأ حسن النية، هي العليا، والمنفعة المتبادلة المنفعة المتبادلة الإدارة',

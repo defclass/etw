@@ -17,7 +17,14 @@
  * NOTE, this file must be saved in UTF-8 encoding.
  */
 return array (
-'Add: Rm. 1005, Block B,Zhonghangbeiyuan Building,Zhonghang Rd.,Futian District,Shenzhen,Guangdong,China'=> 'Add: Rm. 1005, Block B, Zhonghangbeiyuan Building, Zhonghang Rd., Futian District, Shenzhen, Guangdong, China',
+'Add'=> 'Menambahkan',
+ 'Delete'=> 'Hapus',
+ 'Manufacturer'=> 'Pabrikan',
+ 'Mark is required, please fill out accurate'=> 'Mark diperlukan, isilah akurat',
+ 'Please enter the quantity you need. If you have more than one component are looking for, please add additional components to your quote request form. Then fill in your contact information and click on submit an application, our sales representative will contact you as soon as possible, including price and delivery time. If you need help, please send an E-MAIL to sales@Barum.com'=> 'Masukkan jumlah yang Anda butuhkan. Jika Anda memiliki lebih dari satu komponen cari, silahkan menambahkan komponen tambahan untuk formulir permintaan penawaran Anda. Lalu isi informasi kontak Anda dan klik mengajukan permohonan, perwakilan penjualan kami akan menghubungi Anda sesegera mungkin, termasuk harga dan waktu pengiriman. Jika Anda membutuhkan bantuan, silakan kirim E-MAIL ke sales@Barum.com',
+ 'Submit'=> 'Menyerahkan',
+ 'Mark is required, please fill out accurate。'=> 'Mark diperlukan, isilah akurat.',
+ 'Add: Rm. 1005, Block B,Zhonghangbeiyuan Building,Zhonghang Rd.,Futian District,Shenzhen,Guangdong,China'=> 'Add: Rm. 1005, Block B, Zhonghangbeiyuan Building, Zhonghang Rd., Futian District, Shenzhen, Guangdong, China',
  'All'=> 'Semua',
  'Any question? Please consult our technical staff and customer service personnel!'=> 'Setiap pertanyaan? Silakan berkonsultasi staf teknis kami dan petugas layanan pelanggan!',
  'Barum Electronics Co., LTD had been established， in line with the good faith principle, is supreme, the mutually beneficial reciprocal benefit management '=> 'Barum Electronics Co, LTD telah didirikan, sejalan dengan prinsip itikad baik, adalah yang tertinggi, manajemen manfaat timbal balik yang saling menguntungkan',

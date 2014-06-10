@@ -17,7 +17,14 @@
  * NOTE, this file must be saved in UTF-8 encoding.
  */
 return array (
-'Add: Rm. 1005, Block B,Zhonghangbeiyuan Building,Zhonghang Rd.,Futian District,Shenzhen,Guangdong,China'=> 'Añadir: Rm. 1005, Bloque B, Zhonghangbeiyuan Building, Zhonghang RD., El distrito de Futian, Shenzhen, Guangdong, China',
+'Add'=> 'Añadir',
+ 'Delete'=> 'Borrar',
+ 'Manufacturer'=> 'Fabricante',
+ 'Mark is required, please fill out accurate'=> 'Se requiere Marcos, por favor llene exacta',
+ 'Please enter the quantity you need. If you have more than one component are looking for, please add additional components to your quote request form. Then fill in your contact information and click on submit an application, our sales representative will contact you as soon as possible, including price and delivery time. If you need help, please send an E-MAIL to sales@Barum.com'=> 'Por favor ingrese la cantidad que necesita. Si usted tiene más de un componente que busca, por favor, añadir componentes adicionales a su formulario de solicitud de presupuesto. Luego llene su información de contacto y hacer clic en enviar una solicitud, nuestro representante de ventas se comunicará con usted tan pronto como sea posible, incluyendo el precio y tiempo de entrega. Si usted necesita ayuda, por favor envíe un E-MAIL a sales@Barum.com',
+ 'Submit'=> 'Presentar',
+ 'Mark is required, please fill out accurate。'=> 'Se requiere Marcos, por favor llene exacta.',
+ 'Add: Rm. 1005, Block B,Zhonghangbeiyuan Building,Zhonghang Rd.,Futian District,Shenzhen,Guangdong,China'=> 'Añadir: Rm. 1005, Bloque B, Zhonghangbeiyuan Building, Zhonghang RD., El distrito de Futian, Shenzhen, Guangdong, China',
  'All'=> 'Todo',
  'Any question? Please consult our technical staff and customer service personnel!'=> '¿Tiene preguntas? Consulte con nuestro personal técnico y personal de servicio al cliente!',
  'Barum Electronics Co., LTD had been established， in line with the good faith principle, is supreme, the mutually beneficial reciprocal benefit management '=> 'Barum Electrónica Co., LTD se estableció, de conformidad con el principio de buena fe, es suprema, la gestión de las prestaciones recíprocas de beneficio mutuo',

@@ -17,7 +17,14 @@
  * NOTE, this file must be saved in UTF-8 encoding.
  */
 return array (
-'Add: Rm. 1005, Block B,Zhonghangbeiyuan Building,Zhonghang Rd.,Futian District,Shenzhen,Guangdong,China'=> 'Voeg toe: Rm. 1005, Blok B, Zhonghangbeiyuan Building, Zhonghang Rd., Futian District, Shenzhen, Guangdong, China',
+'Add'=> 'Toevoegen',
+ 'Delete'=> 'Verwijder',
+ 'Manufacturer'=> 'Fabrikant',
+ 'Mark is required, please fill out accurate'=> 'Mark is vereist, vul dan nauwkeurig',
+ 'Please enter the quantity you need. If you have more than one component are looking for, please add additional components to your quote request form. Then fill in your contact information and click on submit an application, our sales representative will contact you as soon as possible, including price and delivery time. If you need help, please send an E-MAIL to sales@Barum.com'=> 'Vul de hoeveelheid die u nodig hebt. Als u meer dan een component zoekt, voeg dan extra onderdelen aan uw aanvraagformulier. Vul dan uw contactgegevens in en klik op een aanvraag, zal onze vertegenwoordiger zo spoedig mogelijk contact met u op, met inbegrip van prijs en levertijd. Als je hulp nodig hebt, stuur dan een e-mail naar sales@Barum.com',
+ 'Submit'=> 'Voorleggen',
+ 'Mark is required, please fill out accurate。'=> 'Mark is vereist, vul dan nauwkeurig.',
+ 'Add: Rm. 1005, Block B,Zhonghangbeiyuan Building,Zhonghang Rd.,Futian District,Shenzhen,Guangdong,China'=> 'Voeg toe: Rm. 1005, Blok B, Zhonghangbeiyuan Building, Zhonghang Rd., Futian District, Shenzhen, Guangdong, China',
  'All'=> 'Alle',
  'Any question? Please consult our technical staff and customer service personnel!'=> 'Hebt u een vraag? Raadpleeg onze technische staf en personeel van de klantenservice!',
  'Barum Electronics Co., LTD had been established， in line with the good faith principle, is supreme, the mutually beneficial reciprocal benefit management '=> 'Barum Electronics Co, Ltd werd opgericht, in overeenstemming met het beginsel van goede trouw, is verheven, de wederzijds voordelige wederzijdse beheer van de uitkeringen',

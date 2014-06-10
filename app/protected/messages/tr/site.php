@@ -17,7 +17,14 @@
  * NOTE, this file must be saved in UTF-8 encoding.
  */
 return array (
-'Add: Rm. 1005, Block B,Zhonghangbeiyuan Building,Zhonghang Rd.,Futian District,Shenzhen,Guangdong,China'=> 'Ekle: Rm. 1005, B Blok, Zhonghangbeiyuan Binası, Zhonghang Rd., Futian District, Shenzhen, Guangdong, Çin',
+'Add'=> 'Eklemek',
+ 'Delete'=> 'Silmek',
+ 'Manufacturer'=> 'Üretici',
+ 'Mark is required, please fill out accurate'=> 'Mark gerekli, doğru doldurunuz',
+ 'Please enter the quantity you need. If you have more than one component are looking for, please add additional components to your quote request form. Then fill in your contact information and click on submit an application, our sales representative will contact you as soon as possible, including price and delivery time. If you need help, please send an E-MAIL to sales@Barum.com'=> 'İhtiyacınız miktar giriniz. Birden fazla bileşen arıyorsanız varsa, sizin alıntı talep formuna ek bileşenler eklemek lütfen. Sonra iletişim bilgileri doldurun ve bir başvuru üzerine tıklayın, satış temsilcisi fiyat ve teslim süresi de dahil olmak üzere, en kısa sürede sizinle irtibata geçecektir. Eğer yardıma ihtiyacınız varsa, sales@Barum.com için E-MAIL gönderin',
+ 'Submit'=> 'Sunmak',
+ 'Mark is required, please fill out accurate。'=> 'Mark gerekli, doğru doldurunuz.',
+ 'Add: Rm. 1005, Block B,Zhonghangbeiyuan Building,Zhonghang Rd.,Futian District,Shenzhen,Guangdong,China'=> 'Ekle: Rm. 1005, B Blok, Zhonghangbeiyuan Binası, Zhonghang Rd., Futian District, Shenzhen, Guangdong, Çin',
  'All'=> 'Tüm',
  'Any question? Please consult our technical staff and customer service personnel!'=> 'Herhangi bir soru? Teknik personel ve müşteri hizmetleri personeli danışın!',
  'Barum Electronics Co., LTD had been established， in line with the good faith principle, is supreme, the mutually beneficial reciprocal benefit management '=> 'Barum Electronics Co LTD iyi niyet ilkesi doğrultusunda, kurulmuş olan, yüce, karşılıklı yarar karşılıklı yarar yönetimi',

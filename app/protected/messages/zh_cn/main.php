@@ -17,13 +17,15 @@
  * NOTE, this file must be saved in UTF-8 encoding.
  */
 return array (
-  'Click to learn more' => '点击了解更多',
-  'Questions? Please consult our sales' => '有问题? 请咨询我们的电子技术和客户服务人员',
+  'Contact Person' => '联系人',
+  'Incorrect verification code' => '验证码不正确',
+  'SendRFQ' => '提交询价',
   'About Us' => '关于我们',
   'Advantage' => '企业优势',
   'All Manufacturers' => '所有供应商',
   'Applications' => '应用范围',
   'Barum Electronics Co., LTD' => '佰润电子有限公司',
+  'Click to learn more' => '点击了解更多',
   'Company Events' => '公司新闻',
   'Contact Us' => '联系我们',
   'Culture' => '企业文化',
@@ -48,6 +50,7 @@ return array (
   'Products Show' => '产品展示',
   'Quality Control' => '质量控制',
   'Quantity' => '数量',
+  'Questions? Please consult our sales' => '有问题? 请咨询我们的电子技术和客户服务人员',
   'Service' => '客户服务',
   'Technology' => '技术中心',
   'Tips: Please fill in the following information to facilitate contact!' => '温馨提示: 请填写以下信息, 方便取得联系！',

@@ -17,7 +17,14 @@
  * NOTE, this file must be saved in UTF-8 encoding.
  */
 return array (
-'Add: Rm. 1005, Block B,Zhonghangbeiyuan Building,Zhonghang Rd.,Futian District,Shenzhen,Guangdong,China'=> 'जोड़ें: Rm. 1005, ब्लॉक बी, Zhonghangbeiyuan बिल्डिंग, Zhonghang रोड., Futian जिला, शेन्ज़ेन, गुआंग्डोंग, चीन',
+'Add'=> 'जोड़ना',
+ 'Delete'=> 'हटाना',
+ 'Manufacturer'=> 'निर्माता',
+ 'Mark is required, please fill out accurate'=> 'मार्क आवश्यक है, सही भरें',
+ 'Please enter the quantity you need. If you have more than one component are looking for, please add additional components to your quote request form. Then fill in your contact information and click on submit an application, our sales representative will contact you as soon as possible, including price and delivery time. If you need help, please send an E-MAIL to sales@Barum.com'=> 'आप की जरूरत मात्रा दर्ज करें. आप एक से अधिक घटक के लिए देख रहे हैं, तो अपनी बोली अनुरोध फॉर्म को अतिरिक्त घटकों को जोड़ने के लिए धन्यवाद. फिर अपने संपर्क जानकारी में भरें और एक आवेदन प्रस्तुत पर क्लिक करें, हमारे प्रतिनिधि बिक्री मूल्य और प्रसव के समय सहित, जितनी जल्दी हो सके आपसे संपर्क करेंगे. यदि आपको मदद की जरूरत है, sales@Barum.com को एक ई मेल भेजने के लिए कृपया',
+ 'Submit'=> 'प्रस्तुत करना',
+ 'Mark is required, please fill out accurate。'=> 'मार्क आवश्यक है, सही भरें.',
+ 'Add: Rm. 1005, Block B,Zhonghangbeiyuan Building,Zhonghang Rd.,Futian District,Shenzhen,Guangdong,China'=> 'जोड़ें: Rm. 1005, ब्लॉक बी, Zhonghangbeiyuan बिल्डिंग, Zhonghang रोड., Futian जिला, शेन्ज़ेन, गुआंग्डोंग, चीन',
  'All'=> 'सब',
  'Any question? Please consult our technical staff and customer service personnel!'=> 'कोई सवाल? हमारे तकनीकी स्टाफ और ग्राहक सेवा कर्मियों से परामर्श करें!',
  'Barum Electronics Co., LTD had been established， in line with the good faith principle, is supreme, the mutually beneficial reciprocal benefit management '=> 'Barum इलेक्ट्रॉनिक्स कं, लिमिटेड अच्छा विश्वास के सिद्धांत के साथ लाइन में, स्थापित किया गया था, सर्वोच्च है, पारस्परिक रूप से लाभप्रद पारस्परिक लाभ प्रबंधन',

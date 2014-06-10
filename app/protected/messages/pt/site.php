@@ -17,7 +17,14 @@
  * NOTE, this file must be saved in UTF-8 encoding.
  */
 return array (
-'Add: Rm. 1005, Block B,Zhonghangbeiyuan Building,Zhonghang Rd.,Futian District,Shenzhen,Guangdong,China'=> 'Adicionar: Rm. 1005, Bloco B, Edifício Zhonghangbeiyuan, Zhonghang Rd., Futian District, Shenzhen, Guangdong, China',
+'Add'=> 'Adicionar',
+ 'Delete'=> 'Excluir',
+ 'Manufacturer'=> 'Fabricante',
+ 'Mark is required, please fill out accurate'=> 'Mark é necessária, por favor preencha preciso',
+ 'Please enter the quantity you need. If you have more than one component are looking for, please add additional components to your quote request form. Then fill in your contact information and click on submit an application, our sales representative will contact you as soon as possible, including price and delivery time. If you need help, please send an E-MAIL to sales@Barum.com'=> 'Por favor introduza a quantidade que você precisa. Se você tiver mais de um componente está procurando, por favor, adicionar componentes adicionais para o seu formulário de solicitação de cotação. Em seguida, preencha suas informações de contato e clique em apresentar um pedido, o nosso representante de vendas entrará em contato com você o mais breve possível, inclusive preço e prazo de entrega. Se você precisar de ajuda, por favor envie um e-mail para sales@Barum.com',
+ 'Submit'=> 'Submeter',
+ 'Mark is required, please fill out accurate。'=> 'Mark é necessária, por favor preencha preciso.',
+ 'Add: Rm. 1005, Block B,Zhonghangbeiyuan Building,Zhonghang Rd.,Futian District,Shenzhen,Guangdong,China'=> 'Adicionar: Rm. 1005, Bloco B, Edifício Zhonghangbeiyuan, Zhonghang Rd., Futian District, Shenzhen, Guangdong, China',
  'All'=> 'Tudo',
  'Any question? Please consult our technical staff and customer service personnel!'=> 'Qualquer pergunta? Por favor, consulte nossa equipe técnica e pessoal de serviço ao cliente!',
  'Barum Electronics Co., LTD had been established， in line with the good faith principle, is supreme, the mutually beneficial reciprocal benefit management '=> 'Barum Electronics Co., LTD foi estabelecida, em consonância com o princípio da boa-fé, é supremo, a gestão benefício recíproco mutuamente benéfica',

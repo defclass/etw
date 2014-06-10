@@ -17,7 +17,14 @@
  * NOTE, this file must be saved in UTF-8 encoding.
  */
 return array (
-'Add: Rm. 1005, Block B,Zhonghangbeiyuan Building,Zhonghang Rd.,Futian District,Shenzhen,Guangdong,China'=> 'In: Rm. 1005, Block B, Zhonghangbeiyuan Gebäude, Zhonghang Rd., Futian District, Shenzhen, Guangdong, China',
+'Add'=> 'Hinzufügen',
+ 'Delete'=> 'Löschen',
+ 'Manufacturer'=> 'Hersteller',
+ 'Mark is required, please fill out accurate'=> 'Mark erforderlich ist, füllen Sie bitte das genaue',
+ 'Please enter the quantity you need. If you have more than one component are looking for, please add additional components to your quote request form. Then fill in your contact information and click on submit an application, our sales representative will contact you as soon as possible, including price and delivery time. If you need help, please send an E-MAIL to sales@Barum.com'=> 'Bitte geben Sie die Menge, die Sie benötigen. Wenn Sie mehr als eine Komponente suchen, fügen Sie bitte zusätzliche Komponenten, um Ihre Anfrageformular. Dann füllen Sie Ihre Kontaktinformationen und klicken Sie auf einen Antrag, werden unsere Vertriebsmitarbeiter Sie so bald wie möglich kontaktieren, einschließlich Preis und Lieferzeit. Wenn Sie Hilfe benötigen, senden Sie bitte eine E-Mail an sales@Barum.com',
+ 'Submit'=> 'Einreichen',
+ 'Mark is required, please fill out accurate。'=> 'Mark ist erforderlich, füllen Sie bitte genau.',
+ 'Add: Rm. 1005, Block B,Zhonghangbeiyuan Building,Zhonghang Rd.,Futian District,Shenzhen,Guangdong,China'=> 'In: Rm. 1005, Block B, Zhonghangbeiyuan Gebäude, Zhonghang Rd., Futian District, Shenzhen, Guangdong, China',
  'All'=> 'Alle',
  'Any question? Please consult our technical staff and customer service personnel!'=> 'Noch eine Frage? Bitte beachten Sie unsere technischen Mitarbeiter-und Kundendienstpersonal!',
  'Barum Electronics Co., LTD had been established， in line with the good faith principle, is supreme, the mutually beneficial reciprocal benefit management '=> 'Barum Electronics Co., LTD gegründet worden war, im Einklang mit dem Grundsatz Treu und Glauben, ist oberste, die gegenseitig vorteilhaften wechselseitigen Leistungsmanagement',

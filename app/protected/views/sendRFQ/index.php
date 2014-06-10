@@ -1,5 +1,6 @@
 <div class="detail_navigation">
-  <p><a href="javascript:;">首页</a> » <a href="javascript:;">产品中心</a> » 产品展示</p>
+  <p><a href="<?php echo $this->createUrl('/Site/Index'); ?>"><?php echo Yii::t('main','Home'); ?></a> » <?php echo Yii::t('main','SendRFQ'); ?></a> </p>
+  
 </div>
 <!--右侧内容不同区域-->
 <div class="list_detail f_left">
@@ -110,7 +111,7 @@
       <td>&nbsp;</td>
       
       <td colspan="3">
-        <?php echo CHtml::submitButton('提交',array('id'=>"btnsubmit", 'name'=>"btnsubmit", 'class'=>"button")); ?>
+        <?php echo CHtml::submitButton(Yii::t('site','Submit'),array('id'=>"btnsubmit", 'name'=>"btnsubmit", 'class'=>"button")); ?>
         <span id="submitTip" style="display:none"> <img src="/Themes/StyleBarum/images/common/grid-loading.gif"> *The form is being submitted, please wait a moment!</span></td>
     </tr>
     </tbody></table>
