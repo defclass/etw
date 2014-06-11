@@ -276,7 +276,7 @@ body{
 .slidebar li.on { background: rgba(255,255,255,0.5); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = #50FFFFFF,endColorstr = #50FFFFFF); color: #000; font-weight: 700; }
 .frame { background: none; border: 0px solid #fff; margin-bottom: 0px; }
 .temp { margin: 0; }
-.slidebar { position: absolute; top: 245px; left: 550px; }
+.slidebar { position: absolute; top: 245px; left: 530px; }
 .slideshow span.title, .slidebar li { background: rgba(0,0,0,0.3); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = #90000000,endColorstr = #90000000); color: #FFF; overflow: hidden; }
 .slidebar li.on { background: rgba(255,255,255,0.5); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = #90000000,endColorstr = #90000000); color: #ff0; font-weight: 700; }
 .slideshow SPAN.title { text-indent: 0px; }
