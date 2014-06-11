@@ -20,7 +20,7 @@ body{
     padding-left: 10px;
     font-size: 14px;
 }
-.language_sanjiao,.l_china a,.l_english a,.l_french a,.l_German a,.l_Italian a,.l_Russian a,.l_Spanish a,.l_Foriuguese a,.l_Dutch a,.l_Greek a,.l_Japanese a,.l_Korean a,.l_Arabic a,.l_Hindi a,.l_Turkish a,.l_Indonesian a{
+.language_sanjiao,.l_china a,.l_english a,.l_french a,.l_German a,.l_Italian a,.l_Russian a,.l_Spanish a,.l_Foriuguese a,.l_Dutch a,.l_Greek a,.l_Japanese a,.l_Korean a,.l_Arabic a,.l_Hindi a,.l_Turkish a,.l_Indonesian a,.l_Portugal a{
     background:url(../images/language_img.png) no-repeat;
 }
 .language{
@@ -48,7 +48,7 @@ body{
     display: inline-block; 
     color: #fff;
 }
-.l_english a,.l_french a,.l_German a,.l_Italian a,.l_Russian a,.l_Spanish a,.l_Foriuguese a,.l_Dutch a,.l_Greek a,.l_Japanese a,.l_Korean a,.l_Arabic a,.l_Hindi a,.l_Turkish a,.l_Indonesian a{
+.l_english a,.l_french a,.l_German a,.l_Italian a,.l_Russian a,.l_Spanish a,.l_Foriuguese a,.l_Dutch a,.l_Greek a,.l_Japanese a,.l_Korean a,.l_Arabic a,.l_Hindi a,.l_Turkish a,.l_Indonesian a,.l_Portugal a{
     width: 16px;
     height: 11px;
     margin-top: 5px;
@@ -73,7 +73,7 @@ body{
 .l_Russian a{
     background-position: 0 -98px;
 }
-.l_Russian a{
+.l_Spanish a{
     background-position: 0 -118px;
 }
 .l_Foriuguese a{
@@ -102,6 +102,9 @@ body{
 }
 .l_Indonesian a{
     background-position: 0 -298px;
+}
+.l_Portugal a{
+    background-position: 0 -333px;
 }
 .l_box{
     position: absolute;
