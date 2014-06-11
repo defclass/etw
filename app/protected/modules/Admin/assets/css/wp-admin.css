@@ -6871,7 +6871,7 @@ a.rsswidget
 
 .login h1 a
 {
-    background-image:none,url(../images/wordpress-logo.svg?ver=20131107);
+//    background-image:none,url(../images/wordpress-logo.svg?ver=20131107);
     background-size:80px 80px;
     background-position:center top;
     background-repeat:no-repeat;

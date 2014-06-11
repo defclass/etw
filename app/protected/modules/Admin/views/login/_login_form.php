@@ -26,7 +26,7 @@
 <?php $this->endWidget(); ?>
 
 <p id="nav">
-  <a href="<?php echo $this->createUrl('/Admin/Login/Register/'); ?>" title="注册">注册</a>
+  <!-- <a href="<?php echo $this->createUrl('/Admin/Login/Register/'); ?>" title="注册">注册</a>
   |
-  <a href="#" title="找回密码">忘记密码？</a>
+  <a href="#" title="找回密码">忘记密码？</a> -->
 </p>
