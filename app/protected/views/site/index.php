@@ -13,17 +13,17 @@
           <div class="cl">
             <ul class="slideshow" id="slidesImgs">
               <li><a href="javascript:;" target="_blank">
-                <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/banner5.png" /></a></li>
-                <li><a href="javascript:;" target="_blank">
                 <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/banner6.png" /></a></li>
+              <li><a href="javascript:;" target="_blank">
+                <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/microchip.png" /></a></li>
               <li><a href="javascript:;" target="_blank">
                 <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/banner1.png" /></a></li>
               <li><a href="javascript:;" target="_blank">
                 <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/banner2.png" /></a></li>
               <li><a href="javascript:;" target="_blank">
                 <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/banner3.png" /></a></li>
-              <li><a href="javascript:;" target="_blank">
-                <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/banner4.png" /></a></li>
+              <!-- <li><a href="javascript:;" target="_blank">
+              <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/banner4.png" /></a></li> -->
             </ul>
           </div>
           <div class="slidebar" id="slideBar">
@@ -33,7 +33,7 @@
               <li>3</li>
               <li>4</li>
               <li>5</li>
-              <li>6</li>
+              <!-- <li>6</li> -->
             </ul>
           </div>
         </div>
