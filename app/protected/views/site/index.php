@@ -73,44 +73,44 @@
         <ul>
           <li>
             <a class="product_img" href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401070747046472';?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/product_img_42.png"></a>
-            <span><a href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401070747046472';?>">集成电路 (ICs) </a></span>
-            <p><a href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401070747046472';?>">Integrated circuits are also referred to as ICs, chips, or microchips. The integration of large transistors</a></p>
+            <span><a href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401070747046472';?>"> ICs </a></span>
+            <p><a href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401070747046472';?>"> Integrated circuits are also referred to as ICs, chips, or microchips. The integration of large transistors</a></p>
           </li>
           <li>
             <a class="product_img" href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401357154253413';?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/product_img_44.png"></a>
-            <span><a href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401357154253413';?>">电容(Capacitors)</a></span>
+            <span><a href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401357154253413';?>"> Capacitors </a></span>
             <p><a href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401357154253413';?>">Capacitors (formerly known as condensers) are passive two-terminal electrical components used to store</a></p>
           </li>
           <li>
             <a class="product_img" href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401357162321614';?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/product_img_41.png"></a>
-            <span><a href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401357162321614';?>"> 电阻 (Resistors) </a></span>
+            <span><a href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401357162321614';?>"> Resistors </a></span>
             <p><a href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401357162321614';?>">Resistors are common elements of electrical networks and electronic circuits and are common in most </a></p>
           </li>
           <li>
             <a class="product_img" href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401957628247204';?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/product_img_27.png"></a>
-            <span><a href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401957628247204';?>">高频管(RF transistor)  </a></span>
+    <span><a href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401957628247204';?>"> RF transistor (待改) </a></span>
             <p><a href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401957628247204';?>">Integrated circuits are also referred to as ICs, chips, or microchips. The integration of large transistors</a></p>
           </li>
           <div class="clear"></div>
           <li>
             <a class="product_img" href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401957650234397';?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/product_img_32.png"></a>
-            <span><a href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401957650234397';?>">二三级管 (transistor diodes)</a></span>
-            <p><a href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401957650234397';?>">Integrated circuits are also referred to as ICs, chips, or microchips. The integration of large transistors</a></p>
+            <span><a href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401957650234397';?>">Transistor diodes</a></span>
+            <p><a href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401957650234397';?>">Electronic components with just one circuit element, either passive(resistor, capacitor, inductor)</a></p>
           </li>
           <li>
             <a class="product_img" href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401957663672637';?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/product_img_35.png"></a>
-            <span><a href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401957663672637';?>">场效应晶体管 (Mosfet) </a></span>
+    <span><a href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401957663672637';?>"> Mosfet(待改) </a></span>
             <p><a href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401957663672637';?>">Capacitors (formerly known as condensers) are passive two-terminal electrical components used to store</a></p>
           </li>
           <li>
             <a class="product_img" href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401070747046472';?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/product_img_29.png"></a>
-            <span><a href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401070747046472';?>"> 模块 (IGBT Modul)  </a></span>
+            <span><a href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401070747046472';?>"> IGBT Modul(待改)  </a></span>
             <p><a href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401070747046472';?>">Resistors are common elements of electrical networks and electronic circuits and are common in most </a></p>
           </li>
           <li>
             <a class="product_img" href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401957679674108';?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/product_img_43.png"></a>
-            <span><a href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401957679674108';?>">连接器 (Connectors)  </a></span>
-            <p><a href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401957679674108';?>">Integrated circuits are also referred to as ICs, chips, or microchips. The integration of large transistors</a></p>
+            <span><a href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401957679674108';?>"> Connectors  </a></span>
+            <p><a href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401957679674108';?>">Connectors are electro-mechanical devices for joining electrical circuits as an interface using a me</a></p>
           </li>
           <div class="clear"></div>
         </ul>

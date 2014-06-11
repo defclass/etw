@@ -11,7 +11,7 @@
             <ul>
               <?php foreach($products as $pr){ ?>
               <li style="margin:15px">
-                <a href="detail_product.html" target="_blank"><img src="<?php echo $pr->image_url; ?>"></a>
+                <a href="<?php echo Yii::app()->createUrl('/Product/ProductDetails').'/id/'.$pr->pid; ?>" target="_blank"><img src="<?php echo $pr->image_url; ?>"></a>
                 <h2><a href="detail_product.html"><?php echo $pr->model; ?></a></h2>
               </li>
               <?php }  ?>
