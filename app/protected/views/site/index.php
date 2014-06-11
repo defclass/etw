@@ -130,12 +130,12 @@
       </div>
       <div class="proxy">
         <div class="proxy_inner">
-          <a href="<?php echo Yii::app()->createUrl('/Product/Index').'/brand/1401069774180959'; ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/proxy_45.png"></a>
+          <a href="<?php echo Yii::app()->createUrl('/Product/Index').'/brand/1401956087778228'; ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/proxy_52.png"></a>
           <a href="<?php echo Yii::app()->createUrl('/Product/Index').'/brand/1401069904534027'; ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/proxy_47.png"></a>
           <a href="<?php echo Yii::app()->createUrl('/Product/Index').'/brand/1401604215529617'; ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/proxy_49.png"></a>
           <a href="<?php echo Yii::app()->createUrl('/Product/Index').'/brand/1401604316564534'; ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/proxy_50.png"></a>
           <a href="<?php echo Yii::app()->createUrl('/Product/Index').'/brand/1401956055655378'; ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/proxy_51.png"></a>
-          <a href="<?php echo Yii::app()->createUrl('/Product/Index').'/brand/1401956087778228'; ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/proxy_52.png"></a>
+          <a href="<?php echo Yii::app()->createUrl('/Product/Index').'/brand/1401069774180959'; ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/proxy_45.png"></a>
           <a href="<?php echo Yii::app()->createUrl('/Product/Index').'/brand/1401956137803403'; ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/proxy_57.png"></a>
           <a href="<?php echo Yii::app()->createUrl('/Product/Index').'/brand/1401956182041327'; ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/proxy_58.png"></a>
           <a href="<?php echo Yii::app()->createUrl('/Product/Index').'/brand/1401956182041327'; ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/proxy_59.png"></a>
