@@ -156,30 +156,23 @@
   </table>
   
   <div style="width:100%;" class="detail_about_us">
-    <h2><?php echo Yii::t('site','Contact Us');?></h2>
-    <div class="f_left">
-      <h4><?php echo Yii::t('site','Sales');?></h4>
-      <p>
-        Email: 
-        <a href="#"><?php echo Yii::app()->params['sales_email']; ?></a><br>
-        <?php echo Yii::t('site','Tel');?>:  +86-755-82566559<br>                                  
-      </p>
-      <br>
-      <p>TradeManager: kaijiwei</p>
-      <p>
-        <a href="http://webatm.aliba.com/atm_chat.htm?enemberId=kaijiwei" target="_blank"><img src="http://amos.us.alitalk.alibaba.com/online.aw?v=2&amp;uid=Barum&amp;site=enaliint&amp;s=5" alt="Contact Us" border="0"></a>
-      </p> 
-    </div>                              
+    <h2><?php echo Yii::t('site','Contact Us');?></h2>                             
     <div class="f_left">
       <h4><?php echo Yii::t('site','Technical Support');?></h4>
       <p>
         <?php echo Yii::t('site','Tel');?>: +86-755-89515112<br>
         Email: <a href="#"><?php echo Yii::app()->params['sales_email']; ?></a>
       </p>
+      <br>
+      <p>TradeManager: kaijiwei</p>
+      <p>
+        <a href="http://webatm.aliba.com/atm_chat.htm?enemberId=kaijiwei" target="_blank"><img src="http://amos.us.alitalk.alibaba.com/online.aw?v=2&amp;uid=Barum&amp;site=enaliint&amp;s=5" alt="Contact Us" border="0"></a>
+      </p> 
     </div>
     <div class="f_left">
       <h4><?php echo Yii::t('site','Customer Service');?></h4>
       <p>
+        <?php echo Yii::t('site','Tel');?>:  +86-755-82566559<br> 
         Email:  <a href="#"><?php echo Yii::app()->params['sales_email']; ?></a>
       </p>
     </div>
