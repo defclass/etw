@@ -636,7 +636,7 @@ body{
 
 .list_detail{
     width: 620px;
-    margin: 30px auto;
+    margin: 2px auto;
 }
 .round{
     width: 100%;
@@ -730,7 +730,7 @@ input.button:hover, a.btn_blue:hover, .btn_ul:hover{
     text-decoration: none;
 }
 .detail_about_us{
-    padding: 10px 0 20px;
+    padding: 10px 20px 20px;
 }
 .detail_about_us h2{
     color: #022356;
@@ -826,7 +826,7 @@ table tr.row {
 }
 #right_column {
     width: 670px;
-    padding: 20px 25px 0px 20px;
+    padding: 5px 25px 0px 20px;
     float: left;
 }
 #all-column {
