@@ -163,11 +163,6 @@
         <?php echo Yii::t('site','Tel');?>: +86-755-89515112<br>
         Email: <a href="#"><?php echo Yii::app()->params['sales_email']; ?></a>
       </p>
-      <p>
-        Email: 
-        <a href="#"><?php echo Yii::app()->params['sales_email']; ?></a><br>
-                                         
-      </p>
       <br>
       <p>TradeManager: kaijiwei</p>
       <p>
