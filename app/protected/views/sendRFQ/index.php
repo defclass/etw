@@ -5,7 +5,7 @@
 <!--右侧内容不同区域-->
 <div class="list_detail f_left">
   <p>
-    <?php echo Yii::t('site','Please enter the quantity you need. If you have more than one component are looking for, please add additional components to your quote request form. Then fill in your contact information and click on submit an application, our sales representative will contact you as soon as possible, including price and delivery time. If you need help, please send an E-MAIL to sales@Barum.com'); ?>
+    <?php echo Yii::t('site','Please enter the quantity you need. If you have more than one component are looking for, please add additional components to your quote request form. Then fill in your contact information and click on submit an application, our sales representative will contact you as soon as possible, including price and delivery time. If you need help, please send an E-MAIL to info@barum-hk.com'); ?>
   </p>
   <p>
     * <?php echo Yii::t('site','Mark is required, please fill out accurate'); ?>。

@@ -21,7 +21,7 @@ return array (
  'Delete'=> '削除',
  'Manufacturer'=> 'メーカー',
  'Mark is required, please fill out accurate'=> 'マークが必要となり、正確にご記入ください',
- 'Please enter the quantity you need. If you have more than one component are looking for, please add additional components to your quote request form. Then fill in your contact information and click on submit an application, our sales representative will contact you as soon as possible, including price and delivery time. If you need help, please send an E-MAIL to sales@Barum.com'=> '必要な数量を入力してください。あなたが一度に複数のコンポーネントを探している持っている場合は、見積もり依頼フォームにコンポーネントを追加してください。次に、あなたの連絡先情報を記入し、申請書を提出をクリックして当社の営業担当者は、価格·納期を含め、可能な限り早くご連絡させていただきます。ヘルプが必要な場合は、sales@Barum.comに電子メールを送ってください',
+ 'Please enter the quantity you need. If you have more than one component are looking for, please add additional components to your quote request form. Then fill in your contact information and click on submit an application, our sales representative will contact you as soon as possible, including price and delivery time. If you need help, please send an E-MAIL to info@barum-hk.com'=> '必要な数量を入力してください。あなたが一度に複数のコンポーネントを探している持っている場合は、見積もり依頼フォームにコンポーネントを追加してください。次に、あなたの連絡先情報を記入し、申請書を提出をクリックして当社の営業担当者は、価格·納期を含め、可能な限り早くご連絡させていただきます。ヘルプが必要な場合は、info@barum-hk.comに電子メールを送ってください',
  'Submit'=> '提出する',
  'Mark is required, please fill out accurate。'=> 'マークが必要となり、正確にご記入ください。',
  'Add: Rm. 1005, Block B,Zhonghangbeiyuan Building,Zhonghang Rd.,Futian District,Shenzhen,Guangdong,China'=> '追加：Rmの。 1005、Bブロック、Zhonghangbeiyuanビル、Zhonghang路、福田区、深セン、広東省、中国',
