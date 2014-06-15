@@ -72,7 +72,7 @@
               <td align="center"><a href="<?php echo Yii::app()->createUrl('/Product/Index').'/brand/'.$pro->b->bid; ?>"><u><?php echo $pro->b->brand_name; ?></u></a></td>
               <td align="center"><?php echo $pro->package; ?></td>
               <td align="center">
-                <a href="#" target="_blank">
+                <a href="mailto:dreamdu@163.com?subject=<?php echo $pro->model; ?>" target="_blank">
                   <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/xunjiapng_03.png" alt="<?php echo Yii::t('site','Online Inquiry');?>"></a>
               </td>
             </tr>

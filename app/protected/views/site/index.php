@@ -67,7 +67,7 @@
     <div class="product f_left">
       <div class="product_nav">
         <?php echo  Yii::t('site','Product List'); ?>
-        <span><a class="a_underline" href="list_product.html">more>></a></span>
+        <span><a class="a_underline" href="<?php echo Yii::app()->createUrl('/Product/Index');?>">more>></a></span>
       </div>
       <div class="product_main">
         <ul>
@@ -88,7 +88,7 @@
           </li>
           <li>
             <a class="product_img" href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401957628247204';?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/product_img_27.png"></a>
-    <span><a href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401957628247204';?>"> RF transistor (待改) </a></span>
+    <span><a href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401957628247204';?>"> RF transistor  </a></span>
             <p><a href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401957628247204';?>">Integrated circuits are also referred to as ICs, chips, or microchips. The integration of large transistors</a></p>
           </li>
           <div class="clear"></div>
@@ -99,13 +99,13 @@
           </li>
           <li>
             <a class="product_img" href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401957663672637';?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/product_img_35.png"></a>
-    <span><a href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401957663672637';?>"> Mosfet(待改) </a></span>
-            <p><a href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401957663672637';?>">Capacitors (formerly known as condensers) are passive two-terminal electrical components used to store</a></p>
+    <span><a href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401957663672637';?>"> Mosfet </a></span>
+            <p><a href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401957663672637';?>">Mosfet is metal oxide -semiconductor field effect transistor (semiconductor), or said is metal - an insulator (insulator) - semiconductor</a></p>
           </li>
           <li>
             <a class="product_img" href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401070747046472';?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/product_img_29.png"></a>
-            <span><a href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401070747046472';?>"> IGBT Modul(待改)  </a></span>
-            <p><a href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401070747046472';?>">Resistors are common elements of electrical networks and electronic circuits and are common in most </a></p>
+            <span><a href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401070747046472';?>"> IGBT Modul  </a></span>
+            <p><a href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401070747046472';?>">IGBT modules are a few of the IGBT unit together, such as 3 units, is equal to three single-tube IGBT, the benefits of this can save a space </a></p>
           </li>
           <li>
             <a class="product_img" href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401957679674108';?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/product_img_43.png"></a>
