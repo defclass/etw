@@ -6,6 +6,7 @@
  * The followings are the available columns in table 'br_brand':
  * @property string $bid
  * @property string $brand_name
+ * @property string $classify_id
  * @property string $logo
  * @property string $company_url
  * @property string $comment
@@ -29,14 +30,14 @@ class Brand extends CActiveRecord
 		// will receive user inputs.
 		return array(
             array('bid, brand_name', 'required'),
-			array('bid', 'length', 'max'=>16),
+			array('bid, classify_id', 'length', 'max'=>16),
 			array('brand_name', 'length', 'max'=>64),
 			array('logo', 'length', 'max'=>128),
             array('company_url, logo', 'length', 'max'=>128),
 			array('comment', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('bid, brand_name, company_url, comment', 'safe', 'on'=>'search'),
+			array('bid, brand_name,  classify_id,company_url, comment', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -59,6 +60,7 @@ class Brand extends CActiveRecord
 	{
 		return array(
 			'bid' => '品牌ID',
+            'classify_id' => '分类id',
 			'brand_name' => '品牌名',
             'logo' => 'logo图路径',
             'company_url' => '品牌的官网',
@@ -78,7 +80,7 @@ class Brand extends CActiveRecord
 	 * @return CActiveDataProvider the data provider that can return the models
 	 * based on the search/filter conditions.
 	 */
-	public function search()
+	public function search($page=10)
 	{
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
@@ -86,12 +88,16 @@ class Brand extends CActiveRecord
 
 		$criteria->compare('bid',$this->bid,true);
 		$criteria->compare('brand_name',$this->brand_name,true);
+        $criteria->compare('classify_id',$this->classify_id,true);
 		$criteria->compare('logo',$this->logo,true);
         $criteria->compare('company_url',$this->company_url,true);
 		$criteria->compare('comment',$this->comment,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
+            'pagination'=>array(
+                'pageSize'=>$page,
+            )
 		));
 	}
 

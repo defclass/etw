@@ -64,11 +64,15 @@ class ProductController extends Controller
         $nav_href = '';
 
         $classifies = $classify_model->all_classify();
-        $nav_href = Yii::app()->createUrl('/Product/Index/').'/classify/';
+
+        $brands = array();
+        if(isset($data['cid'])){
+            $brand_obj = new Brand;
+            $brand_obj->classify_id = $data['cid'];
+            $brands = $brand_obj->search(100);
+            $nav_href = Yii::app()->createUrl('/Product/Index/').'/classify/'.$data['cid'].'/brand/';
+        }
         
-//        if(isset($_GET['classify']) && $_GET['classify'] == 1401070747046472){
-        $brands = Brand::Model()->search();
-        $nav_href = Yii::app()->createUrl('/Product/Index/').'/classify/1401070747046472/brand/';
 
         
         $this->render('index',array(

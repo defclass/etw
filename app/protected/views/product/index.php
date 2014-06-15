@@ -11,8 +11,8 @@
           <td class="lt">
             <div class="global_products">
               <?php 
-              if(isset($_GET['classify']) && $_GET['classify'] == Yii::app()->params['display_brand_classify_id'] )
-                echo $this->renderPartial('_brand_index',array('brands'=>$brands->getData()));
+              if(!empty($brands))
+                echo $this->renderPartial('_brand_index',array('brands'=>$brands->getData(),'nav_href'=>$nav_href));
               else
                 echo $this->renderPartial('_classify_index',array('classifies'=>$classifies));
               ?>
@@ -56,7 +56,7 @@
           <tr class="dategories_nav">
             <th></th>
             <th style="text-align: left;"><?php echo Yii::t('site','Model');?></th>
-            <th width="80"><?php echo Yii::t('site','Classify');?></th>
+            <th width="220"><?php echo Yii::t('site','Classify');?></th>
             <th width="150"><?php echo Yii::t('main','Manufacturer');?></th>
             <th width="80"><?php echo Yii::t('site','Package');?></th>
             <th width="120"><?php echo Yii::t('site','Direction');?></th>
@@ -64,11 +64,11 @@
           <?php foreach($products as $pro){  ?>
             <tr class="">
               <td style="width:10px" class="icon">&nbsp;</td>
-              <td><div style="width:80px;text-overflow:ellipsis;white-space:nowrap; overflow:hidden;">
+              <td><div style="width:180px;text-overflow:ellipsis;white-space:nowrap; overflow:hidden;">
                 <a href="<?php echo Yii::app()->createUrl('/Product/ProductDetails/'); ?>/id/<?php echo $pro->pid; ?>" title="<?php echo $pro->model; ?>"><u>
                   <?php echo $pro->model; ?>
                 </u></a></div></td>
-              <td align="center"><?php echo $pro->quantity; ?></td>
+              <td align="center"><?php echo $pro->c->classify_name; ?></td>
               <td align="center"><a href="<?php echo Yii::app()->createUrl('/Product/Index').'/brand/'.$pro->b->bid; ?>"><u><?php echo $pro->b->brand_name; ?></u></a></td>
               <td align="center"><?php echo $pro->package; ?></td>
               <td align="center">

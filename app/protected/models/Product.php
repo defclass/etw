@@ -7,7 +7,6 @@
  * @property string $pid
  * @property string $cid
  * @property string $bid
- * @property string $mid
  * @property string $model
  * @property string $package
  * @property string $RoHS
@@ -51,14 +50,14 @@ class Product extends CActiveRecord
 		return array(
 			array('quantity, status', 'numerical', 'integerOnly'=>true),
             array('classify, brand', 'numerical', 'integerOnly'=>true),
-			array('pid, cid, bid, mid', 'length', 'max'=>16),
+			array('pid, cid, bid', 'length', 'max'=>16),
 			array('model, package, RoHS, datecode, direction', 'length', 'max'=>64),
             array('image_url', 'length', 'max'=>256),
             array('index_search', 'length', 'max'=>1),
 			array('create_time', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('pid, cid, bid, mid, model, package, RoHS, datecode, quantity, direction,image_url, create_time, status', 'safe', 'on'=>'search'),
+			array('pid, cid, bid, model, package, RoHS, datecode, quantity, direction,image_url, create_time, status', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -84,7 +83,6 @@ class Product extends CActiveRecord
 			'pid' => '产品ID',
 			'cid' => '产品分类',
 			'bid' => '产品品牌',
-			'mid' => '厂商',
             'classify'=>'产品分类',
             'brand' =>'产品品牌',
 			'model' => '型号',
@@ -121,7 +119,6 @@ class Product extends CActiveRecord
 		$criteria->compare('pid',$this->pid,true);
 		$criteria->compare('t.cid',$this->cid,true);
 		$criteria->compare('t.bid',$this->bid,true);
-		$criteria->compare('t.mid',$this->mid,true);
 
         $criteria->compare('c.classify_name',$this->classify,true);
 		$criteria->compare('b.brand_name',$this->brand,true);

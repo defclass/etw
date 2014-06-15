@@ -138,6 +138,6 @@ em{font-style:normal;}
 .text_align{ text-align: center;}
 .font_w{ font-weight: bold;}
 /*分页样式*/
-.paging{ width: 225px; margin: 30px auto;}
+.paging{ width: 500px; margin: 30px auto;padding-left: 140px;}
 .paging_cen a{width: 22px; height: 24px; line-height: 22px; background: #e8ecf0; color: #15456f; display:inline-block; border-radius: 3px; text-align: center; margin: 0 2px;}
 .paging_cen a:hover, a.paging_Confirm{ background: #15456f; color: #fff;}
