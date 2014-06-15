@@ -25,6 +25,13 @@
 		<?php echo $form->error($model,'brand_name'); ?>
 	</div>
 
+    <div class="unit">
+      <?php echo $form->labelEx($model,'classify_id'); ?>
+	  <?php echo $form->dropDownList($model,'classify_id',Classify::model()->get_classify()); ?>
+      <?php echo $form->error($model,'classify_id'); ?>
+	</div>
+
+
 	<div class="unit">
     <?php echo $form->labelEx($model,'company_url'); ?>
 		<?php echo $form->textField($model,'company_url',array('size'=>16,'maxlength'=>128)); ?>(不要填http://)

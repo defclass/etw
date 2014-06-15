@@ -149,7 +149,11 @@ class ProductController extends Controller
      */
     public function actionProductDisplay(){
         $product_model = new Product();
-        $products = $product_model->all_product();
+		$criteria=new CDbCriteria;
+        $criteria->addCondition("image_url != ''"); 
+        $products = new CActiveDataProvider($product_model,array(
+			'criteria'=>$criteria,
+        ));
         $this->render('productDisplay',array(
             'products'=>$products->getData(),
             'pages'=>$products->getPagination(),

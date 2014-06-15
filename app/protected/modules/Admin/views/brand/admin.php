@@ -13,6 +13,11 @@
 		'columns'=>array(
 			'bid',
             'brand_name',
+            array(
+             'name' => '产品分类',
+             'filter' => CHtml::activeTextField($model, 'classify_id'),
+             'value' => '$data->c->classify_name',
+            ),
             'logo',
             'company_url',
 			array(
