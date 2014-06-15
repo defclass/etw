@@ -1,6 +1,7 @@
 GRTAGS
 GTAGS
 GPATH
+index.php
 app/protected/config
 app/assets
 app/protected/runtime
