@@ -181,7 +181,7 @@ class DwzGridView extends CGridView
         */
         $totalCount = $pagination->getItemCount();
         $numPerPage = $pagination->getPageSize();
-        $pageNumShown = $pagination->getPageCount();
+        $pageNumShown = 10;
         $currentPage = $pagination->getCurrentPage() + 1;
 
         $pagerHtml = <<<PAGER
