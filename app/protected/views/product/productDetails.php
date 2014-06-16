@@ -160,7 +160,7 @@
     <div class="f_left">
       <h4><?php echo Yii::t('site','Technical Support');?></h4>
       <p>
-        <?php echo Yii::t('site','Tel');?>: +86-755-89515112<br>
+        <?php echo Yii::t('site','Tel');?>: +86-755-82566559<br>
         Email: <a href="#"><?php echo Yii::app()->params['sales_email']; ?></a>
       </p>
       <br>

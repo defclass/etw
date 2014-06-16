@@ -89,7 +89,7 @@
           <li>
             <a class="product_img" href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401957628247204';?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/product_img_27.png"></a>
     <span><a href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401957628247204';?>"> RF transistor  </a></span>
-            <p><a href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401957628247204';?>">Integrated circuits are also referred to as ICs, chips, or microchips. The integration of large transistors</a></p>
+            <p><a href="<?php echo Yii::app()->createUrl('/Product/Index/').'/classify/1401957628247204';?>">RF transistor is commonly used for radio transmission, the occasion of receiver, if it is, of course, wireless remote control can also be used</a></p>
           </li>
           <div class="clear"></div>
           <li>
