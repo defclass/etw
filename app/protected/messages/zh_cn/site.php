@@ -17,13 +17,14 @@
  * NOTE, this file must be saved in UTF-8 encoding.
  */
 return array (
+  'Rm. 1005, Block B,Zhonghangbeiyuan Building,Zhonghang Rd.,Futian District,Shenzhen,Guangdong,China' => '',
   'Submit' => '',
+  'Add: Rm. 1005, Block B,Zhonghangbeiyuan Building,Zhonghang Rd.,Futian District,Shenzhen,Guangdong,China' => '@@地址：中国广东省深圳市福田区中航路中航北苑大厦B座1005室@@',
   'Company Name' => '@@公司名称@@',
   'Inquiry Content' => '@@询价内容@@',
   'Mark is required, please fill out accurate。' => '@@标记为必填项，请准确填写@@',
-  'Why Barum?' => '@@为什么选择佰润 ?@@',
+  'Sales' => '@@销售部@@',
   'Add' => '增加',
-  'Add: Rm. 1005, Block B,Zhonghangbeiyuan Building,Zhonghang Rd.,Futian District,Shenzhen,Guangdong,China' => '地址：中国广东省深圳市福田区中航路中航北苑大厦B座1005室',
   'All' => '所有',
   'Any question? Please consult our technical staff and customer service personnel!' => '有问题？请咨询我们技术人员和客服服务人员！',
   'Barum Electronics Co., LTD had been established， in line with the good faith principle, is supreme, the mutually beneficial reciprocal benefit management ' => '佰润电子有限公司成立以来,本着诚信原则,至上、互利互惠的经营理念,客户,香港基地,面对澳大利亚、台湾,积极发展国内,外的广阔的市场,获得广大客户的一致信赖和好评',
@@ -62,7 +63,6 @@ return array (
   'Quantity' => '预购数量',
   'Quick Quote, quality' => '快速报价，质量上乘',
   'Reliable' => '可靠',
-  'Sales' => '销售部',
   'Search' => '搜索',
   'Search Model:' => '搜索型号',
   'Specialty' => '专业',

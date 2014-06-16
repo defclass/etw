@@ -200,7 +200,10 @@
           </div>
 
           <div class="footer_text">
-            &copy;Copyright BARUM ELECTRONICS LIMITED 
+            &copy;Copyright BARUM ELECTRONICS LIMITED
+            <p>
+              <?php echo Yii::t("main","Website Technology Support"); ?>: <a href="http://63eu.com" style="color:grey;"><?php echo Yii::t("main","63eu.com"); ?></a>
+            </p>
           </div>
         </div><!-- footer end-->
       </div>
