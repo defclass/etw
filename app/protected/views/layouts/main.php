@@ -201,9 +201,9 @@
 
           <div class="footer_text">
             &copy;Copyright BARUM ELECTRONICS LIMITED
-            <p>
-              <?php echo Yii::t("main","Website Technology Support"); ?>: <a href="http://63eu.com" style="color:grey;"><?php echo Yii::t("main","63eu.com"); ?></a>
-            </p>
+            <!-- <p>
+            <?php echo Yii::t("main","Website Technology Support"); ?>: <a href="http://63eu.com" style="color:grey;"><?php echo Yii::t("main","63eu.com"); ?></a>
+            </p> -->
             <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1000489672'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1000489672%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
           </div>
         </div><!-- footer end-->
