@@ -3,6 +3,7 @@ GTAGS
 GPATH
 index.php
 app/protected/config
+/db-backup
 app/assets
 app/protected/runtime
 app/assets
