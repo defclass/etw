@@ -13,6 +13,7 @@
  */
 class Brand extends CActiveRecord
 {
+    public $classify;
 	/**
 	 * @return string the associated database table name
 	 */
@@ -37,7 +38,7 @@ class Brand extends CActiveRecord
 			array('comment', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('bid, brand_name,  classify_id,company_url, comment', 'safe', 'on'=>'search'),
+			array('bid, brand_name,  classify, classify_id,company_url, comment', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -49,7 +50,7 @@ class Brand extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-            'c' => array(self::BELONGS_TO, 'Classify', 'classify_id'),
+			'c' => array(self::BELONGS_TO, 'Classify', 'classify_id'),
             'products' => array(self::HAS_MANY, 'Product', 'bid'),
 		);
 	}
@@ -86,7 +87,8 @@ class Brand extends CActiveRecord
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
 		$criteria=new CDbCriteria;
-
+        $criteria->with = array("c");
+        $criteria->compare('c.classify_name',$this->classify,true);
 		$criteria->compare('bid',$this->bid,true);
 		$criteria->compare('brand_name',$this->brand_name,true);
         $criteria->compare('classify_id',$this->classify_id,true);

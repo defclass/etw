@@ -78,6 +78,7 @@ class Classify extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
+        $criteria->addCondition("cid <> 0");
 		$criteria->compare('cid',$this->cid,true);
 		$criteria->compare('classify_name',$this->classify_name,true);
 
@@ -93,6 +94,7 @@ class Classify extends CActiveRecord
      */
     public function all_classify() {
         $criteria = new CDbCriteria;
+        $criteria->addCondition("cid <> 0");
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,
         ));
@@ -108,6 +110,7 @@ class Classify extends CActiveRecord
         $command = Yii::app()->db->createCommand();
         $data = $command->select('cid,classify_name')
                         ->from('{{classify}}')
+                        ->where('cid <> 0')
                         ->queryAll();
         $container = array(0=>'请选择产品分类');
         foreach($data as $row){
